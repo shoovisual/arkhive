@@ -87,7 +87,7 @@
                     <path d="M28.52,33.28h9.51c2.63,0,4.75-2.13,4.75-4.75v-9.51c0-2.63-2.13-4.75-4.75-4.75h-9.51v-2.38c0-3.94,3.19-7.13,7.13-7.13h2.38c1.31,0,2.38-1.06,2.38-2.38s-1.06-2.38-2.38-2.38h-2.38c-6.56,0-11.88,5.32-11.89,11.89v16.64c0,2.63,2.13,4.75,4.75,4.75ZM4.75,33.28h9.51c2.63,0,4.75-2.13,4.75-4.75v-9.51c0-2.63-2.13-4.75-4.75-4.75H4.75v-2.38c0-3.94,3.19-7.13,7.13-7.13h2.38c1.31,0,2.38-1.06,2.38-2.38s-1.06-2.38-2.38-2.38h-2.38C5.32,0,0,5.32,0,11.89v16.64c0,2.63,2.13,4.75,4.75,4.75Z"/>
                 </svg>
             </div>
-            <p class="md:text-5xl text-3xl anim-child">Focused on <span class="text-ark-brown">enhancing</span> the efficiency and effectiveness of organizations by bringing <span class="text-ark-brown">Order</span> and <span class="text-ark-brown">Access</span> to recorded information. </p>
+            <p class="md:text-5xl text-3xl text-white anim-child">Focused on <span class="text-ark-brown">enhancing</span> the efficiency and effectiveness of organizations by bringing <span class="text-ark-brown">Order</span> and <span class="text-ark-brown">Access</span> to recorded information. </p>
         </blockquote>
 
 
@@ -133,7 +133,7 @@
 </div>
 
 
-<section class="min-h-screen md:flex flex flex-col px-8 py-20">
+<section class="min-h-screen md:flex flex flex-col px-8 py-20" id="services">
   <div class="container px-0 lg:px-10 lg:flex lg:flex-row flex-col justify-center mx-auto">
     <!-- Left sticky section -->
     <div class="lg:w-1/2 w-full anim-section pr-8">

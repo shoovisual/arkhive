@@ -11,7 +11,7 @@
         <div class="relative z-20 flex flex-col items-center mt-15 justify-center h-full w-full text-white text-center px-6">
             <h4 class="hidden group-hover:block translate-y-2 font-[600] uppercase font-[montserrat] hover:-translate-y-2 transition-all duration-300 text-4xl mb-4">{{ $service->sub_1 }}</h4>
             <h2 class="text-4xl group-hover:text-6xl transition-all duration-300 font-[800] uppercase font-[montserrat] mb-4">{{ $service->title }}</h2>
-            <h4 class="hidden group-hover:block -translate-y-2 font-[800] uppercase font-[montserrat] hover:translate-y-2 transition-all duration-300 text-6xl mb-8">{{ $service->sub_2 }}</h4>
+            <h4 class="hidden group-hover:block -translate-y-2 font-[600] uppercase font-[montserrat] hover:translate-y-2 transition-all duration-300 text-4xl mb-8">{{ $service->sub_2 }}</h4>
             <div class="button h-16 w-16 hover:h-24 hover:w-24 bg-white/20 hover:bg-white/100 flex items-center justify-center fill-white hover:fill-black rounded-full transition-all duration-500">
                 <svg class="arrow group-hover:-rotate-45" viewBox="0 0 24 24" width="32" height="32">
                     <path d="M10.7186 17.7593L4.83753 11.8782L3.46777 13.248L11.6873 21.4675L12.3722 20.7826L19.9068 13.248L18.537 11.8782L12.656 17.7593L12.656 2.09326H10.7186L10.7186 17.7593Z" />

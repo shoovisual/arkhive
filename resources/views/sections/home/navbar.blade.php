@@ -77,7 +77,7 @@
                 <div class="logo-2 w-[200px]">
                     <img src="{{ asset('img/main-logo.svg') }}" alt="Arkhive Africa Logo" />
                 </div>
-                <h4 class="uppercase font-[Garamond] text-xl font-medium">It is not a priority, until it is.</h4>
+                <h4 class="text-ark-blue font-[Garamond] text-xl font-medium">It is not a priority, until it is.</h4>
                 <div class="information">
                     <h3 class="text-lg font-medium">Contact Info</h3>
                     <div class="phone mt-6 flex items-center gap-4">

@@ -42,7 +42,7 @@
 </script>
 
 <!-- Full Screen Menu Overlay -->
-<div id="fullScreenMenu" class="fixed inset-0 bg-[#1B1B1B]/40 backdrop-blur-xs transform font-[Montserrat] translate-y-[-130%] transition-all duration-700 ease-in-out z-[9999]">
+<div id="fullScreenMenu" class="fixed inset-0 bg-[#1B1B1B]/40 backdrop-blur-xs transform font-[Montserrat] translate-y-[-100%] transition-all duration-700 ease-in-out z-[9999]">
     <div class="container h-full flex mx-auto w-full items-center flex-col">
         <div class="flex justify-between items-center py-8 px-4 md:px-12 lg:px-24">
             <span class="text-white/50 text-sm">Navigation</span>
@@ -130,14 +130,14 @@ document.addEventListener('DOMContentLoaded', function() {
         isMenuOpen = forceClose ? false : !isMenuOpen;
 
         if (isMenuOpen) {
-            fullScreenMenu.classList.remove('translate-y-[-130%]');
+            fullScreenMenu.classList.remove('translate-y-[-100%]');
             fullScreenMenu.classList.add('translate-y-0');
             menuClose.classList.remove('hidden');
             setTimeout(() => menuClose.classList.remove('opacity-0'), 100);
             menuOpener?.classList.add('hidden');
             document.body.style.overflow = 'hidden';
         } else {
-            fullScreenMenu.classList.add('translate-y-[-130%]');
+            fullScreenMenu.classList.add('translate-y-[-100%]');
             fullScreenMenu.classList.remove('translate-y-0');
             menuClose.classList.add('opacity-0');
             setTimeout(() => menuClose.classList.add('hidden'), 300);

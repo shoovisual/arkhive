@@ -7,7 +7,7 @@
                     <div class="space-y-4 w-[200px]">
                         <img src="{{ asset('img/main-logo.svg') }}" alt="">
                     </div>
-                    <h4 class="mt-6 font-[Garamond] text-ark-blue text-3xl font-medium">It is not a priority, until it is.</h4>
+                    <h4 class="mt-6 font-[Garamond] text-ark-blue text-3xl italic font-medium">It is not a priority, until it is.</h4>
                 </div>
 
                 <!-- Contact Section -->

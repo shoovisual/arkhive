@@ -1,1 +1,1 @@
-@include('sections.home.navbar')
+@include('sections.home.navbar2')

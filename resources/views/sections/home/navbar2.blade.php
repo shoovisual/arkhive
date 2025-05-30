@@ -10,9 +10,9 @@
                     </div>
                 </div>
             </div>
-            <div class="navbar-right flex gap-x-[5em] justify-center items-center">
+            <div class="navbar-right flex md:gap-x-[5em] gap-x-3 justify-center items-center">
                 <!-- New Button for Submitting Brief -->
-                <a href="https://shoovisual.com/contact" class="relative regular-button bg-ark-black hover:bg-[#121212] font-[Montserrat] w-fit group px-6 py-3 rounded-full border-ark-brown border text-white text-lg font-medium transition-all duration-300">
+                <a href="{{ route('contact') }}" class="relative regular-button bg-ark-black hover:bg-[#121212] font-[Montserrat] w-fit group md:px-6 md:py-3 px-3 py-2 rounded-full border-ark-brown border text-white md:text-lg text-[14px] font-medium transition-all duration-300">
                     Contact us
                 </a>
                 <div class="menu-opener cursor-pointer">
@@ -50,23 +50,23 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-5 justify-center">
-            <div class="text-white space-y-8 mt-10 px-4 md:px-12 lg:px-24">
-                <a href="/" class="group block text-4xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
+            <div class="text-white space-y-4 md:space-y-8 mt-5 md:mt-10 px-4 md:px-12 lg:px-24">
+                <a href="/" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
                     <div class="flex items-baseline">
                         <span class="group-hover:text-ark-brown transition-colors duration-300">Home</span>
                     </div>
                 </a>
-                <a href="#" class="group block text-4xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
+                <a href="{{ route('about') }}" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
                     <div class="flex items-baseline">
                         <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
                     </div>
                 </a>
-                <a href="#" class="group block text-4xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
+                <a href="/process" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
                     <div class="flex items-baseline">
                         <span class="group-hover:text-ark-brown transition-colors duration-300">Our Process</span>
                     </div>
                 </a>
-                <a href="#" class="group block text-4xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
+                <a href="{{ route('contact') }}" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
                     <div class="flex items-baseline">
                         <span class="group-hover:text-ark-brown transition-colors duration-300">Contact</span>
                     </div>
@@ -76,7 +76,7 @@
                 <div class="logo-2 w-[200px]">
                     <img src="{{ asset('img/main-logo.svg') }}" alt="Arkhive Africa Logo" />
                 </div>
-                <h4 class="uppercase font-[Garamond] text-xl font-medium">It is not a priority, until it is.</h4>
+                <h4 class="text-ark-blue font-[Garamond] text-3xl italic font-medium">It is not a priority, until it is.</h4>
                 <div class="information">
                     <h3 class="text-lg font-medium">Contact Info</h3>
                     <div class="phone mt-6 flex items-center gap-4">
@@ -105,11 +105,11 @@
         </div>
 
         <div class="fixed bottom-0 left-0 w-full bg-[#1B1B1B] py-4">
-            <div class="px-10 md:flex block justify-between items-center">
-                <div class="flex gap-8">
-                    <a href="https://www.linkedin.com/company/arkhiveafrica" target="_blank" ><i class="bi bi-linkedin text-white text-2xl"></i></a>
-                    <a href="https://instagram.com/arkhive.africa" target="_blank" ><i class="bi bi-instagram text-white text-2xl"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100092265805657" target="_blank" ><i class="bi bi-facebook text-white text-2xl"></i></a>
+            <div class="px-10 flex justify-between gap-x-8 items-center">
+                <div class="flex md:gap-8 gap-3">
+                    <a href="https://www.linkedin.com/company/arkhiveafrica" target="_blank" ><i class="bi bi-linkedin text-white text-xl md:text-2xl"></i></a>
+                    <a href="https://instagram.com/arkhive.africa" target="_blank" ><i class="bi bi-instagram text-white text-xl md:text-2xl"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100092265805657" target="_blank" ><i class="bi bi-facebook text-white text-xl md:text-2xl"></i></a>
                 </div>
                 <div class="lg:flex lg:flex-row flex-col gap-8">
                     <p class="text-white/70 text-sm">©{{ date('Y') }} All Rights Reserved. Arkhive Africa</p>

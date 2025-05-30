@@ -9,11 +9,4 @@ export default defineConfig({
             refresh: true,
         }),tailwindcss(),
     ],
-    server: {
-        host: true,
-        hmr: {
-            host: '9e6c-197-186-2-3.ngrok-free.app', // Only hostname
-            protocol: 'https',
-        },
-    },
 });

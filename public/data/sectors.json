@@ -1,0 +1,32 @@
+{
+    "sectors": [
+        {
+            "name": "Banking",
+            "icon": "img/industries/banking.svg"
+        },
+        {
+            "name": "Insurance",
+            "icon": "img/industries/insurance.svg"
+        },
+        {
+            "name": "Healthcare",
+            "icon": "img/industries/healthcare.svg"
+        },
+        {
+            "name": "Constructions",
+            "icon": "img/industries/constructions.svg"
+        },
+        {
+            "name": "Energy",
+            "icon": "img/industries/energy.svg"
+        },
+        {
+            "name": "Law Firm",
+            "icon": "img/industries/law-firm.svg"
+        },
+        {
+            "name": "Logistics",
+            "icon": "img/industries/logistics.svg"
+        }
+    ]
+}

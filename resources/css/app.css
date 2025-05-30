@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Garamond', sans-serif;
+    --color-ark-black: #1b1b1b;
+    --color-ark-brown: #BE9B61;
+    --color-ark-blue: #1DA1F2;
+}
+
+@media (max-width: 768px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+        height: 25vh;
+    }
+}
+
+body {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    background-image: url('../../public/img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-color: #1b1b1b; */
+    overflow-x: hidden;
+}
+
+:root {
+    --transition-speed: cubic-bezier(0.28, 0.11, 0.32, 1);
+    --transition-fast: 0.21s var(--transition-speed);
+    --transition-default: 0.42s var(--transition-speed);
+    --transition-slow: 1.32s var(--transition-speed);
+}
+
+.logo img {
+    width: 150px;
+}
+
+.anim-child {
+  opacity: 0;
+  transform: translateY(60px);
+  filter: blur(12px);
+  will-change: transform, filter, opacity;
+  transition: none !important;
+}
+
+.arrow path:last-child {
+    /* -webkit-transform: translateY(-100%); */
+    /* transform: translateY(-100%); */
+}
+.arrow {
+    width: 2rem;
+    height: 2rem;
+    rotate: -135deg;
+}
+@media screen and (max-width: 93.75em) {
+    .arrow {
+        width: 1.3125rem;
+        height: 1.3125rem;
+    }
+}
+
+.arrow svg {
+    width: 90px;
+    height: 90px;
+    margin-top: 30px;
+}
+
+
+.services-card .button .arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    rotate: -135deg;
+    position: relative;
+    z-index: 3;
+}
+
+
+@media screen and (max-width: 93.75em) {
+    .button .arrow {
+        width: 1.3125rem;
+        height: 1.3125rem;
+    }
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    border-radius: 3.75rem;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: var(--transition-default);
+    transition: var(--transition-default);
+}
+.button .arrow path {
+    -webkit-transition: -webkit-transform 0.62s var(--transition-speed);
+    transition: -webkit-transform 0.62s var(--transition-speed);
+    transition: transform 0.62s var(--transition-speed);
+    transition: transform 0.62s var(--transition-speed),
+        -webkit-transform 0.62s var(--transition-speed);
+}
+
+.service-btn svg {
+    height: 150px;
+}
+
+.arrow-card:hover .arrow path:last-child {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.arrow-card:hover .arrow path:first-child {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.arrow-card:hover:after {
+    scale: 1.03;
+}
+
+@media screen and (max-width: 93.75em) {
+    .button {
+        padding: 0.75rem 1.375rem;
+    }
+}
+@media screen and (max-width: 80em) {
+    .button {
+        gap: 0.25rem;
+    }
+}
+.glow-button {
+    background-color: #121212;
+    position: relative;
+    border: .3px solid rgb(0, 128, 58, 0.5);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
+    animation: glow 1.5s infinite alternate;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background-color: transparent;
+    box-shadow: inset 1.5px 1.5px 3px #313131 ;
+}
+
+.glow-button:hover {
+    box-shadow: inset 0 0 20px rgba(128, 0, 58, 0.7);
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(128, 0, 58, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgb(0, 128, 58);
+    }
+}
+
+.regular-button {
+    position: relative;
+}
+
+.regular-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background-color: transparent;
+    box-shadow: inset 1.5px 1.5px 3px #313131 ;
+}

@@ -4,7 +4,7 @@
 
 
 <div class="breadcrump h-[70dvh] md:h-[70vh] lg:h-[90vh] relative overflow-hidden w-full flex mx-auto items-center px-3 md:px-20" style="background-image: url('img/hero-bg.webp'); background-position: center; background-size: cover">
-        <div class="absolute inset-0 bg-black/80 transition-all"></div>
+        <div class="absolute inset-0 bg-black/50 transition-all"></div>
         <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
             <div class="relative md:flex anim-section w-auto lg:w-6xl flex-col px-5 z-10 text-white">
                 <h2 class="text-[38px] anim-child md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">@yield('title')</h2>
@@ -23,36 +23,36 @@
                 <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
             </div> --}}
         </div>
-        <div class="grid grid-cols-1 anim-section md:grid-cols-2 gap-4">
-            <img src="{{ asset('img/document_storage.webp') }}" alt="Arkhive Document Storage" class="anim-child object-cover rounded-lg shadow-lg">
-            <img src="{{ asset('img/document_secured_access.webp') }}" alt="Arkhive Document Secured Access" class="anim-child object-cover rounded-lg shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <img src="{{ asset('img/document_storage.webp') }}" alt="Arkhive Document Storage" class="object-cover rounded-lg shadow-lg">
+            <img src="{{ asset('img/document_secured_access.webp') }}" alt="Arkhive Document Secured Access" class="object-cover rounded-lg shadow-lg">
         </div>
     </div>
     <div class="lg:grid grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:flex md:flex-row-reverse items-center gap-8 my-10">
         <div class="grid grid-cols-1 anim-section">
-            <img src="{{ asset('img/about-section.webp') }}" alt="Arkhive Document Storage" class="object-cover md:h-[250px] lg:h-[400px]  w-full anim-child rounded-lg shadow-lg">
+            <img src="{{ asset('img/about-section.webp') }}" alt="Arkhive Document Storage" class="object-cover md:h-[250px] lg:h-[400px]  w-full rounded-lg shadow-lg">
         </div>
         <div class="flex flex-col anim-section">
             <p class="text-lg mb-6 md:w-xl anim-child text-white font-[Montserrat]">
                 We are highly professional experts with a combined experience of over 10 years in the industry
             </p>
             <div class=" text-white py-10">
-                <div class="grid grid-cols-2 md:grid-cols-4 anim-section gap-4 mb-12 stats-wrapper">
-                    <div class="stat-box anim-child text-center font-[Montserrat] px-6">
-                        <div class="text-4xl text-ark-brown anim-child font-medium mb-2 count-up" data-count="542">0</div>
-                        <div class="text-md anim-child">Stored <br />Documents</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 stats-wrapper">
+                    <div class="stat-box text-center font-[Montserrat] px-6">
+                        <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="542">0</div>
+                        <div class="text-md">Stored <br />Documents</div>
                     </div>
-                    <div class="stat-box anim-child text-center font-[Montserrat] px-6 border-l md:border-x border-white">
-                        <div class="text-4xl text-ark-brown anim-child font-medium mb-2 count-up" data-count="120">0</div>
-                        <div class="text-md anim-child">Trusted <br /> Customers</div>
+                    <div class="stat-box text-center font-[Montserrat] px-6 border-l md:border-x border-white">
+                        <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="120">0</div>
+                        <div class="text-md">Trusted <br /> Customers</div>
                     </div>
-                    <div class="stat-box anim-child text-center font-[Montserrat] px-6">
-                        <div class="text-4xl text-ark-brown anim-child font-medium mb-2 count-up" data-count="10">0</div>
-                        <div class="text-md anim-child">Years of <br /> Experience</div>
+                    <div class="stat-box text-center font-[Montserrat] px-6">
+                        <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="10">0</div>
+                        <div class="text-md">Years of <br /> Experience</div>
                     </div>
-                    <div class="stat-box anim-child text-center font-[Montserrat] px-6 border-l border-white">
-                        <div class="text-4xl text-ark-brown anim-child font-medium mb-2 count-up" data-count="10">0</div>
-                        <div class="text-md anim-child">Industries <br /> Served</div>
+                    <div class="stat-box text-center font-[Montserrat] px-6 border-l border-white">
+                        <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="7">0</div>
+                        <div class="text-md">Industries <br /> Served</div>
                     </div>
                 </div>
 
@@ -101,13 +101,13 @@
 <div class="my-12">
     <div class="max-w-7xl mx-auto px-10">
         <div class="anim-section">
-        <h3 class="text-6xl text-ark-brown anim-child font-medium mb-8">Our Core Values</h3>
+        <h3 class="text-6xl text-ark-brown font-medium mb-8">Our Core Values</h3>
         </div>
-        <div class="grid grid-cols-1 anim-section md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             @foreach($coreValues as $title => $description)
-                <div class="bg-ark-black/5 backdrop-blur-sm anim-child anim-section border border-ark-brown/40 p-6 rounded-lg shadow-lg">
-                    <h4 class="text-[26px] anim-child text-ark-brown font-medium mb-4">{{ $title }}</h4>
-                    <p class="text-white anim-child font-regular font-[Montserrat]">{{ $description }}</p>
+                <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg">
+                    <h4 class="text-[26px] text-ark-brown font-medium mb-4">{{ $title }}</h4>
+                    <p class="text-white font-regular font-[Montserrat]">{{ $description }}</p>
                 </div>
             @endforeach
         </div>
@@ -115,9 +115,9 @@
 </div>
 
 {{-- CTA --}}
-<div class="relative overflow-hidden w-full flex mx-auto items-center py-20" style="background-image: url('img/cta-bg.webp'); background-position: bottom; background-size: cover">
-    <div class="absolute inset-0 bg-black/80 transition-all"></div>
-    <div class="container flex justify-center py-10 items-center mx-auto">
+<div class="relative overflow-hidden w-7xl rounded-2xl flex mx-auto items-center py-10" style="background-image: url('img/cta-bg.webp'); background-position: bottom; background-size: cover">
+    <div class="absolute inset-0 bg-black/70 bg-blend-multiply transition-all"></div>
+    <div class="container flex justify-center py-5 items-center mx-auto">
         <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
             <div class="flex flex-col mb-8 md:mb-0 gap-y-4">
                 <h2 class="text-2xl text-ark-brown">Got a document headache?</h2>

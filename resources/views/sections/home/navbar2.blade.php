@@ -1,4 +1,4 @@
-<nav class="w-full fixed top-0 py-2 z-30 transition-opacity duration-300" id="navbar">
+<nav class="w-full fixed top-0 py-2 z-30 transition-opacity duration-300 bg-[#121212]/40 backdrop-blur-sm" id="navbar">
     <div class="mx-auto px-5 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <div class="relative gap-x-10 flex items-center justify-between">
@@ -8,6 +8,30 @@
                             <img src="{{ asset('img/main-logo.svg') }}" alt="Arkhive Africa Logo" />
                         </a>
                     </div>
+                </div>
+            </div>
+            <div class="nav-menu-2">
+                <div class="text-white flex space-x-4 md:space-y-12 mt-5 md:mt-10 px-4 md:px-12 lg:px-24">
+                    <a href="/" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('/') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Home</span>
+                        </div>
+                    </a>
+                    <a href="{{ route('about') }}" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('about') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
+                        </div>
+                    </a>
+                    <a href="/" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('services') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Our Services</span>
+                        </div>
+                    </a>
+                    <a href="/process" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('process') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Our Process</span>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="navbar-right flex md:gap-x-[5em] gap-x-3 justify-center items-center">

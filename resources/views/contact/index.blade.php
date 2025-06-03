@@ -5,7 +5,7 @@
 <main class="w-full">
     {{-- Breadcrumb Section (Optional, you can customize or remove) --}}
     <div  class="breadcrump h-[80vh] relative overflow-hidden w-full flex mx-auto items-center px-20 bg-cover bg-center" style="background-image: url('img/contact-cover.webp'); background-repeat: no-repeat; background-size: cover" >
-        <div class="absolute inset-0 bg-black/70 transition-all"></div>
+        <div class="absolute inset-0 bg-black/50 transition-all"></div>
         <div class="flex justify-center flex-col items-center mx-auto max-w-6xl">
             <div class="relative flex w-6xl flex-col px-5 z-10 text-white">
             <h2 class="text-[64px] w-xl leading-15 font-[500] mb-8">@yield('title')</h2>

@@ -10,6 +10,30 @@
                     </div>
                 </div>
             </div>
+            <div class="nav-menu-2">
+                <div class="text-white flex space-y-4 md:space-y-8 mt-5 md:mt-10 px-4 md:px-12 lg:px-24">
+                    <a href="/" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Home</span>
+                        </div>
+                    </a>
+                    <a href="{{ route('about') }}" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
+                        </div>
+                    </a>
+                    <a href="/process" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Our Process</span>
+                        </div>
+                    </a>
+                    <a href="{{ route('contact') }}" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Contact</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <div class="navbar-right flex md:gap-x-[5em] gap-x-3 justify-center items-center">
                 <!-- New Button for Submitting Brief -->
                 <a href="{{ route('contact') }}" class="relative regular-button bg-ark-black hover:bg-[#121212] font-[Montserrat] w-fit group md:px-6 md:py-3 px-3 py-2 rounded-full border-ark-brown border text-white md:text-lg text-[14px] font-medium transition-all duration-300">
@@ -48,6 +72,8 @@
             <span class="text-white/50 text-sm">Navigation</span>
             {{-- <button id="openForm" class="text-white text-sm">Send a Brief</button> --}}
         </div>
+
+
 
         {{-- Main menu --}}
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-5 bg-[#1B1B1B] w-full lg:w-7xl border py-2 md:py-14 border-white/20 rounded-2xl justify-center">

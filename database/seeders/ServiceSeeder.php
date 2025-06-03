@@ -85,7 +85,7 @@ class ServiceSeeder extends Seeder
                 'sub_2' => 'Certified',
                 'full_title' => 'Document Destruction Certified',
                 'description' => 'Secure document shredding and recycling services',
-                'cover_image' => '/img/services/shredding-cover.webp',
+                'cover_image' => '/img/services/shredding.webp',
                 'service_icon' => '/img/services/icons/shredding.svg',
                 'image_path' => '/img/services/shredding.webp',
                 'url' => '/document-shredding',

@@ -10,7 +10,7 @@
                     </div>
                 </div>
             </div>
-            <div class="nav-menu-2">
+            <div class="nav-menu-2 hidden lg:flex items-center justify-center">
                 <div class="text-white flex space-x-4 md:space-y-12 mt-5 md:mt-10 px-4 md:px-12 lg:px-24">
                     <a href="/" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('/') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
@@ -22,7 +22,7 @@
                             <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
                         </div>
                     </a>
-                    <a href="/" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('services') ? 'text-ark-brown' : '' }}">
+                    <a href="{{ route('services.index') }}" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('services') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
                             <span class="group-hover:text-ark-brown transition-colors duration-300">Our Services</span>
                         </div>

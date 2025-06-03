@@ -19,6 +19,8 @@ Route::get('/process', function () {
     return view('process.index', compact('services'));
 });
 
+Route::get('/services', [ServicesController::class, 'index'])->name('services.index');
+
 Route::get('document-archiving', function () {
     $currentService = \App\Models\Service::where('title', 'Storage')->first();
     $otherServices = \App\Models\Service::where('title', '!=', 'Storage')->get();

@@ -4,7 +4,7 @@
 
 
 <div class="breadcrump h-[70dvh] md:h-[70vh] lg:h-[90vh] relative overflow-hidden w-full flex mx-auto items-center px-3 md:px-20" style="background-image: url('img/hero-bg.webp'); background-position: center; background-size: cover">
-        <div class="absolute inset-0 bg-black/50 transition-all"></div>
+        <div class="absolute inset-0 bg-black/40 transition-all"></div>
         <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
             <div class="relative md:flex anim-section w-auto lg:w-6xl flex-col px-5 z-10 text-white">
                 <h2 class="text-[38px] anim-child md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">@yield('title')</h2>
@@ -33,7 +33,7 @@
             <img src="{{ asset('img/about-section.webp') }}" alt="Arkhive Document Storage" class="object-cover md:h-[250px] lg:h-[400px]  w-full rounded-lg shadow-lg">
         </div>
         <div class="flex flex-col anim-section">
-            <p class="text-lg mb-6 md:w-xl anim-child text-white font-[Montserrat]">
+            <p class="text-lg mb-6 md:w-xl text-white font-[Montserrat]">
                 We are highly professional experts with a combined experience of over 10 years in the industry
             </p>
             <div class=" text-white py-10">
@@ -56,9 +56,9 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col md:justify-center lg:justify-start anim-section sm:flex-row gap-4">
-                    <a href="/contact" class="border anim-child border-ark-brown bg-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/50 transition-colors rounded"> Let&apos;s Talk </a>
-                    <a href="#services" class="border anim-child border-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/10 transition-colors rounded">Check our Services</a>
+                <div class="flex flex-col md:justify-center lg:justify-start sm:flex-row gap-4">
+                    <a href="/contact" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/50 transition-colors rounded"> Let&apos;s Talk </a>
+                    <a href="#services" class="border border-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/10 transition-colors rounded">Check our Services</a>
                 </div>
 
             </div>
@@ -66,28 +66,28 @@
     </div>
 </div>
 
-<section class="our-people bg-ark-black/50 py-10">
-    <div class="max-w-7xl mx-auto anim-section md:px-10 px-6">
+<section class="our-people py-10">
+    <div class="max-w-7xl mx-auto md:px-10 px-6">
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div class="col-span-1">
-                <h3 class="text-6xl text-ark-brown anim-child font-medium mb-8">Our People</h3>
+                <h3 class="text-6xl text-ark-brown font-medium mb-8">Our People</h3>
             </div>
             <div class="col-span-4">
-                <p class="text-lg anim-child text-white font-[Montserrat] lg:px-6 lg:border-l border-ark-brown/40">
+                <p class="text-lg text-white font-[Montserrat] lg:px-6 lg:border-l border-ark-brown/40">
                     Our people are our strength. Our highly trained team manages your documents with expertise and meticulous attention to detail. Rigorous background checks, including police checks, ensure the utmost security and integrity for your sensitive information at every stage.
                 </p>
             </div>
         </div>
 
 
-        <blockquote class="font-regular anim-section md:text-center flex flex-col md:justify-center bg-ark-black/5 backdrop-blur-sm mt-10 p-4 dark:text-white">
-            <div class="flex md:justify-center anim-child">
+        <blockquote class="font-regular md:text-center flex flex-col md:justify-center backdrop-blur-sm mt-10 p-4 dark:text-white">
+            <div class="flex md:justify-center items-center mb-4">
                 <svg id="Layer_1" class="w-[60px] mb-4 fill-ark-brown" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.79 33.28">
                     <path d="M28.52,33.28h9.51c2.63,0,4.75-2.13,4.75-4.75v-9.51c0-2.63-2.13-4.75-4.75-4.75h-9.51v-2.38c0-3.94,3.19-7.13,7.13-7.13h2.38c1.31,0,2.38-1.06,2.38-2.38s-1.06-2.38-2.38-2.38h-2.38c-6.56,0-11.88,5.32-11.89,11.89v16.64c0,2.63,2.13,4.75,4.75,4.75ZM4.75,33.28h9.51c2.63,0,4.75-2.13,4.75-4.75v-9.51c0-2.63-2.13-4.75-4.75-4.75H4.75v-2.38c0-3.94,3.19-7.13,7.13-7.13h2.38c1.31,0,2.38-1.06,2.38-2.38s-1.06-2.38-2.38-2.38h-2.38C5.32,0,0,5.32,0,11.89v16.64c0,2.63,2.13,4.75,4.75,4.75Z"/>
                 </svg>
             </div>
-            <p class="md:text-5xl text-3xl text-white anim-child">Focused on <span class="text-ark-brown">enhancing</span> the efficiency and effectiveness of organizations by bringing <span class="text-ark-brown">Order</span> and <span class="text-ark-brown">Access</span> to recorded information. </p>
+            <p class="md:text-5xl text-3xl text-white">Focused on <span class="text-ark-brown">enhancing</span> the efficiency and effectiveness of organizations by bringing <span class="text-ark-brown">Order</span> and <span class="text-ark-brown">Access</span> to recorded information. </p>
         </blockquote>
 
 

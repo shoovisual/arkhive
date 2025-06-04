@@ -15,20 +15,22 @@ class ContactFormMail extends Mailable
     public $name;
     public $email;
     public $subject;
+    public $service;
     public $messageContent;
 
-    public function __construct($name, $email, $subject, $messageContent)
+    public function __construct($name, $email, $subject, $service, $messageContent)
     {
         $this->name = $name;
         $this->email = $email;
         $this->subject = $subject;
+        $this->service = $service;
         $this->messageContent = $messageContent;
     }
 
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->subject ?? 'New Contact Form Submission',
+            subject: $this->subject ?? 'New Contact Form Submission from ' . $this->name . ' For Service: ' . $this->service,
             replyTo: $this->email
         );
     }

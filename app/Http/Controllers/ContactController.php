@@ -10,26 +10,30 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('contact.index');
+        $services = \App\Models\Service::all();
+        return view('contact.index', compact('services'));
     }
 
     public function store(Request $request)
     {
         // Validate the request data
+
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'subject' => 'required|string|max:255',
+            'service' => 'required|string|exists:services,title',
             'message' => 'required|string|max:1000',
         ]);
 
         try {
             // Send email
-            Mail::to('clientservices@arkhive.africa')
+            Mail::to('clientservices@arkhiveafrica.com')
                 ->send(new ContactFormMail(
                     $validatedData['name'],
                     $validatedData['email'],
                     $validatedData['subject'],
+                    $validatedData['service'],
                     $validatedData['message']
                 ));
 

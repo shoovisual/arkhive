@@ -81,6 +81,16 @@
                     <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
                 </div>
                 <div>
+                    <label for="service" class="block text-white text-lg font-[Montserrat] mb-2">Service</label>
+                    <select id="service" name="service" class="w-full px-4 py-3 rounded-0 font-[Montserrat] bg-ark-black backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
+                        <option class="font-[Montserrat]" value="">Select a Service</option>
+                        @foreach($services as $service)
+                            <option class="font-[Montserrat]" value="{{ $service->title }}">{{ $service->title }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div>
                     <label for="message" class="block text-white text-lg font-[Montserrat] mb-2">Message</label>
                     <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required></textarea>
                 </div>

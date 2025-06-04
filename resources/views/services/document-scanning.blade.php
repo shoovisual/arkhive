@@ -62,18 +62,36 @@
     </div>
     <div class="image-slider">
         <div class="max-w-7xl mx-auto px-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
-                <div class="image-card">
-                    <img src="{{ asset('img/services/archiving-2.webp') }}" alt="Document Archiving" class="h-[100%] object-cover">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
+                <div class="process-card p-5 border border-ark-brown/20 justify-center rounded-lg group cursor-pointer">
+                    <div class="process-icon flex justify-center">
+                        <img src="{{ asset('img/process/collection.svg') }}" alt="Document Archiving" class="h-28 object-cover transition-all duration-300 group-hover:scale-115">
+                    </div>
+                    <h3 class="text-xl text-white font-regular mt-4 text-center font-[Montserrat]">Collection</h3>
                 </div>
-                <div class="image-card">
-                    <img src="{{ asset('img/services/archiving-3.webp') }}" alt="Document Archiving" class="h-[100%] object-cover">
+                <div class="process-card p-5 border border-ark-brown/20 justify-center rounded-lg group cursor-pointer">
+                    <div class="process-icon flex justify-center">
+                        <img src="{{ asset('img/process/preparation.svg') }}" alt="Document Archiving" class="h-28 object-cover transition-all duration-300 group-hover:scale-115">
+                    </div>
+                    <h3 class="text-xl text-white font-regular mt-4 text-center font-[Montserrat]">Preparation</h3>
                 </div>
-                <div class="image-card">
-                    <img src="{{ asset('img/services/archiving-4.webp') }}" alt="Document Archiving" class="h-[100%] object-cover">
+                <div class="process-card p-5 border border-ark-brown/20 justify-center rounded-lg group cursor-pointer">
+                    <div class="process-icon flex justify-center">
+                        <img src="{{ asset('img/process/scanning.svg') }}" alt="Document Archiving" class="h-28 object-cover transition-all duration-300 group-hover:scale-115">
+                    </div>
+                    <h3 class="text-xl text-white font-regular mt-4 text-center font-[Montserrat]">Scanning</h3>
                 </div>
-                <div class="image-card">
-                    <img src="{{ asset('img/services/security.webp') }}" alt="Document Archiving" class="h-[100%] object-cover">
+                <div class="process-card p-5 border border-ark-brown/20 justify-center rounded-lg group cursor-pointer">
+                    <div class="process-icon flex justify-center">
+                        <img src="{{ asset('img/process/secure-return.svg') }}" alt="Document Archiving" class="h-28 object-cover transition-all duration-300 group-hover:scale-115">
+                    </div>
+                    <h3 class="text-xl text-white font-regular mt-4 text-center font-[Montserrat]">Secure Return</h3>
+                </div>
+                <div class="process-card p-5 border border-ark-brown/20 justify-center rounded-lg group cursor-pointer">
+                    <div class="process-icon flex justify-center">
+                        <img src="{{ asset('img/process/shredding.svg') }}" alt="Document Archiving" class="h-28 object-cover transition-all duration-300 group-hover:scale-115">
+                    </div>
+                    <h3 class="text-xl text-white font-regular mt-4 text-center font-[Montserrat]">Shredding</h3>
                 </div>
             </div>
         </div>

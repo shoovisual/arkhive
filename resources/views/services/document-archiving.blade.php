@@ -6,12 +6,12 @@
 @section('content')
 <main class="w-full">
     @include('services.sections.breadcrump')
-    <div id="service" class="max-w-7xl grid grid-cols-5 space-x-8 my-10 mx-auto px-10">
+    <div id="service" class="max-w-7xl grid grid-cols-5 space-x-8 my-10 mx-auto px-8">
         <h2 class="text-6xl text-ark-brown feature-item font-medium mb-8 col-span-3">
             {{ json_decode($currentService->sub_services)[0]->title }}
         </h2>
         <div class="service-list col-span-4">
-            <ul class="text-xl grid grid-cols-1 md:grid-cols-2 font-[Montserrat] gap-y-2 text-white">
+            <ul class="text-xl grid grid-cols-1 gap-x-4 md:grid-cols-2 font-[Montserrat] gap-y-2 text-white">
                 @foreach(json_decode($currentService->sub_services)[0]->features as $feature)
                 <li class="flex gap-x-4 feature-item">
                     <span class="mt-2">
@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="image-slider">
-        <div class="max-w-7xl mx-auto px-10">
+        <div class="max-w-7xl mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
                 <div class="image-card">
                     <img src="{{ asset('img/services/archiving-2.webp') }}" alt="Document Archiving" class="h-[100%] object-cover">
@@ -48,12 +48,12 @@
             </div>
         </div>
     </div>
-    <div id="service" class="max-w-7xl grid grid-cols-5 space-x-8 my-10 mx-auto px-10">
+    <div id="service" class="max-w-7xl grid grid-cols-5 space-x-8 my-10 mx-auto px-8">
         <h2 class="text-6xl text-ark-brown font-medium mb-8 col-span-3 feature-item">
             {{ json_decode($currentService->sub_services)[1]->title }}
         </h2>
         <div class="service-list col-span-4">
-            <ul class="text-xl flex flex-col font-[Montserrat] gap-y-2 text-white">
+            <ul class="text-xl grid grid-cols-1 md:grid-cols-2 gap-x-4 font-[Montserrat] gap-y-2 text-white">
                 @foreach(json_decode($currentService->sub_services)[1]->features as $feature)
                 <li class="flex gap-x-4 feature-item">
                     <span class="mt-2">

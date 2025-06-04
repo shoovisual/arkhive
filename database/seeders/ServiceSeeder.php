@@ -59,12 +59,11 @@ class ServiceSeeder extends Seeder
                         'title' => 'Document Archiving',
                         'description' => 'Secure storage facilities for your physical documents with climate control and fire protection',
                         'features' => [
-                            'Managing an archive is a major and complex task for any business.',
-                            'In allowing ARKHIVE as specialists to handle this function on your behalf, you can be sure that your records are systematized and safeguarded on a professional level.',
-                            'Our document storage warehouse is specifically set up with industry specific shelving, fire control, climate control and access control. It is in a gated compound with 24/7 armed security, CCTV and intruder alarm. Access is strictly monitored.',
-                            'Our staff are trained in sorting, indexing, boxing and barcoding for effective search and retrieving, as well as for disposal.',
-                            'Documents are managed with our globally renowned record management system, O’NEIL.',
-                            'We ensure you stay compliant with regulations by TRA, BOT, TIRA, legal system and the Personal Data Protection (Collection and Processing of Personal Data) regulations.',
+                            'Archiving is a complex task; ARKHIVE offers professional record systematization and safeguarding.',
+                            'Our secure warehouse features industry-specific shelving, fire and climate control, strict access monitoring, and 24/7 armed security with CCTV.',
+                            'Our trained staff manage documents through sorting, indexing, boxing, barcoding, and disposal.',
+                            'We use O’NEIL, a globally renowned record management system.',
+                            'We ensure compliance with TRA, BOT, TIRA, legal, and Personal Data Protection regulations.',
                         ]
                     ],
                     [

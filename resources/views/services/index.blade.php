@@ -4,25 +4,25 @@
 <div class=" h-[70dvh] relative overflow-hidden w-full flex mx-auto items-center px-3 md:px-20">
     <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
         <div class="relative md:flex anim-section w-auto lg:w-6xl flex-col px-5 z-10 text-white">
-            <h2 class="text-[38px] anim-child md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">Our Services</h2>
+            <h2 class="text-[38px]  md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">Our Services</h2>
         </div>
     </div>
 </div>
     <section class="process-section anim-section">
         <div class="max-w-7xl mx-auto px-4 py-8">
-            {{-- <h1 class="md:text-6xl text-4xl text-ark-brown font-medium anim-child mb-8">Our Process</h1> --}}
+            {{-- <h1 class="md:text-6xl text-4xl text-ark-brown font-medium  mb-8">Our Process</h1> --}}
 
             <div class="process-steps grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach ($services as $service)
-                <a href="{{ $service->url }}" class="group flex justify-center items-center md:flex-col relative anim-child service-card bg-ark-brown/2 shadow-lg backdrop-blur-xs p-3 space-x-3 md:space-x-0 md:space-y-6 rounded-xl border border-ark-brown/10">
-                    <div class="service-icon flex justify-center anim-child">
-                        <img src="{{ $service->image_path }}" alt="{{ $service->title }}" class="w-full rounded-lg aspect-square object-cover md:mb-4 group-hover:scale-102 transition-all duration-300">
+                <a href="{{ $service->url }}" class="group flex justify-center items-center md:flex-col relative  service-card bg-ark-brown/2 shadow-lg backdrop-blur-xs p-3 space-x-3 md:space-x-0 md:space-y-6 rounded-xl border border-ark-brown/10">
+                    <div class="service-icon flex justify-center ">
+                        <img src="{{ $service->cover_image }}" alt="{{ $service->title }}" class="w-full rounded-lg aspect-square object-cover md:mb-4 group-hover:scale-102 transition-all duration-300">
                     </div>
-                    <div class="service-desc text-center px-5 anim-child md:mb-10 items-center justify-center">
+                    <div class="service-desc text-center px-5  md:mb-10 items-center justify-center">
                         <h3 class="text-[36px] text-ark-brown font-medium">{{ $service->title }}</h3>
                         <p class="text-white font-[Montserrat] my-4  text-lg">{{ $service->description }}</p>
                     </div>
-                    <div class="card-footer hidden md:block absolute anim-child bottom-0 w-full py-3 right-0 rounded-b-xl text-center">
+                    <div class="card-footer hidden md:block absolute  bottom-0 w-full py-3 right-0 rounded-b-xl text-center">
                         <p class="text-2xl text-white font-medium px-4 py-2 group-hover:ml-5 transition-all duration-300 rounded-md"><i class="bi bi-chevron-right"></i></p>
                     </div>
                 </a>
@@ -81,7 +81,7 @@
 
 
     gsap.utils.toArray(".anim-section").forEach(section => {
-    const children = section.querySelectorAll(".anim-child");
+    const children = section.querySelectorAll(".");
 
     ScrollTrigger.create({
         trigger: section,

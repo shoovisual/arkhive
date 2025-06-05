@@ -94,12 +94,10 @@
     </div>
 </section>
 
-<div class="timeline">
-    <img src="{{ asset('img/timeline-01.png') }}" alt="">
+<div class="timeline h-[70vh] border-y border-ark-brown/10" style="background-image: url('img/timeline-01.png'); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
+    {{-- <img src="{{ asset('img/timeline-01.png') }}" alt=""> --}}
 </div>
-<div class="timeline">
-    <img src="{{ asset('img/timeline-01.png') }}" alt="">
-</div>
+
 <div class="my-12">
     <div class="max-w-7xl mx-auto px-10">
         <div class="anim-section">

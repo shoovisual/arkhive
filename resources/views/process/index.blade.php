@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Our Process')
 @section('content')
-<div class=" h-[70dvh] relative overflow-hidden w-full flex mx-auto items-center px-3 md:px-20">
+<div class=" h-[60dvh] relative overflow-hidden w-full flex mx-auto items-center px-3 md:px-20">
     <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
         <div class="relative md:flex w-auto lg:w-6xl flex-col px-5 z-10 text-white">
             <h2 class="text-[38px] md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">Our Process</h2>
@@ -12,47 +12,47 @@
         <div class="max-w-7xl mx-auto px-4 py-8">
 
             <div class="process-steps grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="process-step md:mt-10 text-white">
-                    <div class="process-icon bg-[#25282A]">
-                        <img src="{{ asset('img/process/assess.png') }}" alt="">
+                <div class="process-step md:mt-10 text-white group">
+                    <div class="process-icon bg-[#25282A]/10 backdrop-blur-xs border-2 border-ark-brown/10 rounded-xl shadow-lg ">
+                        <img src="{{ asset('img/process/assess.png') }}" alt="Arkhive Process" class="group-hover:scale-110 transition-all duration-300">
                     </div>
-                    <h2 class="my-4 text-5xl">Assess</h2>
+                    <h2 class="my-4 text-[52px]">Assess</h2>
                     <p class="font-[Montserrat]">Initial discussion to understand your document management needs.</p>
                 </div>
 
-                <div class="process-step text-white">
-                    <div class="process-icon bg-[#25282A]">
-                        <img src="{{ asset('img/process/customize.png') }}" alt="">
+                <div class="process-step text-white group">
+                    <div class="process-icon bg-[#25282A]/10 backdrop-blur-xs border-2 border-ark-brown/10 rounded-xl shadow-lg ">
+                        <img src="{{ asset('img/process/customize.png') }}" alt="Arkhive Process" class="group-hover:scale-110 transition-all duration-300">
                     </div>
-                    <h2 class="my-4 text-5xl">Customize</h2>
+                    <h2 class="my-4 text-[52px]">Customize</h2>
                     <p class="font-[Montserrat]">Evaluation of your current document workflow and requirements.</p>
                 </div>
 
-                <div class="process-step md:mt-10 text-white">
-                    <div class="process-icon bg-[#25282A]">
-                        <img src="{{ asset('img/process/align.png') }}" alt="">
+                <div class="process-step md:mt-10 text-white group">
+                    <div class="process-icon bg-[#25282A]/10 backdrop-blur-xs border-2 border-ark-brown/10 rounded-xl shadow-lg ">
+                        <img src="{{ asset('img/process/align.png') }}" alt="Arkhive Process" class="group-hover:scale-110 transition-all duration-300">
                     </div>
-                    <h2 class="my-4 text-5xl">Align</h2>
+                    <h2 class="my-4 text-[52px]">Align</h2>
                     <p class="font-[Montserrat]">Customized plan for your document management system.</p>
                 </div>
 
-                <div class="process-step md:mt-10 text-white">
-                    <div class="process-icon bg-[#25282A]">
-                        <img src="{{ asset('img/process/execute.png') }}" alt="">
+                <div class="process-step md:mt-10 text-white group">
+                    <div class="process-icon bg-[#25282A]/10 backdrop-blur-xs border-2 border-ark-brown/10 rounded-xl shadow-lg ">
+                        <img src="{{ asset('img/process/execute.png') }}" alt="Arkhive Process" class="group-hover:scale-110 transition-all duration-300">
                     </div>
-                    <h2 class="my-4 text-5xl">Execute</h2>
+                    <h2 class="my-4 text-[52px]">Execute</h2>
                     <p class="font-[Montserrat]">Deployment of the agreed document management solution.</p>
                 </div>
 
-                <div class="process-step text-white">
-                    <div class="process-icon bg-[#25282A]">
-                        <img src="{{ asset('img/process/report.png') }}" alt="">
+                <div class="process-step text-white group">
+                    <div class="process-icon bg-[#25282A]/10 backdrop-blur-xs border-2 border-ark-brown/10 rounded-xl shadow-lg ">
+                        <img src="{{ asset('img/process/report.png') }}" alt="Arkhive Process" class="group-hover:scale-110 transition-all duration-300">
                     </div>
-                    <h2 class="my-4 text-5xl">Report</h2>
+                    <h2 class="my-4 text-[52px]">Report</h2>
                     <p class="font-[Montserrat]">Continuous maintenance and support for your system.</p>
                 </div>
 
-                <div class="process-step md:mt-10 text-black group flex flex-col justify-center bg-ark-brown h-[395px] items-center">
+                <div class="process-step md:mt-10 text-black group flex flex-col justify-center rounded-xl shadow-lg bg-ark-brown h-[395px] items-center">
                     <h2 class="my-4 text-5xl text-center px-4">Want to know more?</h2>
                     <a href="{{ route('contact') }}" class="font-[Montserrat]">Let's Talk <i class="bi bi-chevron-right ml-2"></i></a>
                 </div>

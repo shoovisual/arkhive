@@ -12,29 +12,62 @@
             </div>
             <div class="nav-menu-2 hidden lg:flex items-center justify-center">
                 <div class="text-white flex space-x-4 md:space-y-12 mt-5 md:mt-10 px-4 md:px-12 lg:px-24">
-                    <a href="/" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('/') ? 'text-ark-brown' : '' }}">
+                    <a href="/" class="group block text-[16px font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('/') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
                             <span class="group-hover:text-ark-brown transition-colors duration-300">Home</span>
                         </div>
                     </a>
-                    <a href="{{ route('about') }}" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('about') ? 'text-ark-brown' : '' }}">
+                    <a href="{{ route('about') }}" class="group block text-[16px font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('about') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
                             <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
                         </div>
                     </a>
-                    <a href="{{ route('services.index') }}" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('services') ? 'text-ark-brown' : '' }}">
-                        <div class="flex items-baseline">
-                            <span class="group-hover:text-ark-brown transition-colors duration-300">Our Services</span>
-                        </div>
-                    </a>
-                    <a href="/process" class="group block text-lg font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('process') ? 'text-ark-brown' : '' }}">
+                   <div x-data="{ open: false }" class="relative" @click.away="open = false">
+    <!-- Trigger -->
+    <button
+        @click="open = !open"
+        class="flex items-center text-[16px] font-[Montserrat] px-3 transition-all duration-300 {{ request()->is('services') ? 'text-ark-brown' : '' }}">
+        <span class="mr-1">Our Services</span>
+        <svg :class="{ 'rotate-180': open }" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <ul
+        x-show="open"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 translate-y-1"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 translate-y-1"
+        class="absolute left-0 mt-2 w-fit p-1 bg-ark-black/80 border border-ark-brown/10 backdrop-blur-md rounded-md shadow-lg z-50 font-[Montserrat]"
+    >
+        @foreach ($services as $service)
+            <li class="py-2 px-4 hover:bg-ark-brown/50">
+                <a href="{{ $service->url }}" class="block text-white transition-all duration-300">
+                    {{ $service->title }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
+</div>
+
+
+                    <a href="/process" class="group block text-[16px font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('process') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
                             <span class="group-hover:text-ark-brown transition-colors duration-300">Our Process</span>
                         </div>
                     </a>
+                    <a href="{{ route('contact') }}" class="group block text-l[16pxfont-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('contact-') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Contact</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="navbar-right flex md:gap-x-[5em] gap-x-3 justify-center items-center">
+            <div class="navbar-right lg:hidden flex md:gap-x-[5em] gap-x-3 justify-center items-center">
                 <!-- New Button for Submitting Brief -->
                 <a href="{{ route('contact') }}" class="relative regular-button bg-ark-black hover:bg-[#121212] font-[Montserrat] w-fit group md:px-6 md:py-3 px-3 py-2 rounded-full border-ark-brown border text-white md:text-lg text-[14px] font-medium transition-all duration-300">
                     Contact us
@@ -107,7 +140,7 @@
                         <div class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-telephone-fill"></i></div>
                         <div class="number">
                             <p>Phone:</p>
-                            <a href="tel:+255712185393">+255 712 185 393</a>
+                            <a href="tel:+255747888555 "> +255747 888 555 </a>
                         </div>
                     </div>
                     <div class="phone mt-6 flex items-center gap-4">

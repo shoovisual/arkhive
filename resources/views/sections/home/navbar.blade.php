@@ -110,7 +110,7 @@
                         <div class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-telephone-fill"></i></div>
                         <div class="number">
                             <p>Phone:</p>
-                            <a href="tel:+255712185393">+255 712 185 393</a>
+                            <a href="tel:+255747888555 "> +255747 888 555 </a>
                         </div>
                     </div>
                     <div class="phone mt-6 flex items-center gap-4">

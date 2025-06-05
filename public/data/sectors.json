@@ -13,7 +13,7 @@
             "icon": "img/industries/healthcare.svg"
         },
         {
-            "name": "Constructions",
+            "name": "Construction",
             "icon": "img/industries/constructions.svg"
         },
         {
@@ -27,6 +27,10 @@
         {
             "name": "Logistics",
             "icon": "img/industries/logistics.svg"
+        },
+        {
+            "name": "NGOs",
+            "icon": "img/industries/ngo.svg"
         }
     ]
 }

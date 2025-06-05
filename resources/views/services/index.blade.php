@@ -5,7 +5,10 @@
     <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
         <div class="relative md:flex anim-section w-auto lg:w-6xl flex-col px-5 z-10 text-white">
             <h2 class="text-[38px]  md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">Our Services</h2>
+            <p class="text-[29px] leading-[1] italic text-white md:w-xl md:text-left">"When you need a document, how long does it take to find it? Our clients' audits and critical operations are made smooth and faster with effective access to their documents"</p>
+            <p class="text-md mt-4 md:w-xl font-[Montserrat]"><span class="font-bold">Neema,</span> <span> Operations Manager.</span></p>
         </div>
+
     </div>
 </div>
     <section class="process-section anim-section">

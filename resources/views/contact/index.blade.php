@@ -24,7 +24,7 @@
             </div>
             <div class="flex gap-x-4 text-white text-lg font-[Montserrat]">
                 <i class="bi bi-telephone-fill text-ark-brown text-2xl"></i>
-                <a href="tel:+255712185393">+255 712 185 393</a>
+                <a href="tel:+255747888555 "> +255747 888 555 </a>
             </div>
             <div class="flex gap-x-4 text-white text-lg font-[Montserrat]">
                 <i class="bi bi-envelope-fill text-ark-brown text-2xl"></i>
@@ -45,19 +45,19 @@
                 Fill out the form below and we will get back to you as soon as possible.
             </p>
             @if(session('success'))
-                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-4 rounded relative mb-4" role="alert">
                     <span class="block sm:inline">{{ session('success') }}</span>
                 </div>
             @endif
 
             @if(session('error'))
-                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <div class="bg-red-100 border font-[Montserrat] border-red-400 text-red-700 px-4 py-4 rounded relative mb-4" role="alert">
                     <span class="block sm:inline">{{ session('error') }}</span>
                 </div>
             @endif
 
             @if ($errors->any())
-                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-4 rounded relative mb-4" role="alert">
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -70,21 +70,21 @@
                 @csrf
                 <div>
                     <label for="name" class="block text-white text-lg font-[Montserrat] mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter Full Name" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
+                    <input type="text" id="name" name="name" placeholder="Enter Full Name" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
                 </div>
                 <div>
                     <label for="email" class="block text-white text-lg font-[Montserrat] mb-2">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
+                    <input type="email" id="email" name="email" placeholder="Your email" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
                 </div>
                 <div>
                     <label for="subject" class="block text-white text-lg font-[Montserrat] mb-2">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Enter Subject" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
+                    <input type="text" id="subject" name="subject" placeholder="Enter Subject" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
                 </div>
                 <div>
                     <label for="service" class="block text-white text-lg font-[Montserrat] mb-2">
                         What service are you interested in?
                     </label>
-                    <select id="service" name="service" class="w-full px-4 py-3 rounded-0 font-[Montserrat] bg-ark-black backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
+                    <select id="service" name="service" class="w-full px-4 py-4 rounded-0 font-[Montserrat] bg-ark-black/5 border shadow-lg backdrop-blur-sm rounded-md border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
                         <option value="" disabled selected hidden>Select Service</option>
                         @foreach($services as $service)
                             <option class="font-[Montserrat]" value="{{ $service->title }}">{{ $service->title }}</option>
@@ -94,7 +94,7 @@
 
                 <div>
                     <label for="message" class="block text-white text-lg font-[Montserrat] mb-2">Message</label>
-                    <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required></textarea>
+                    <textarea id="message" name="message" rows="6" class="w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required></textarea>
                 </div>
 
 

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Our Process')
+@section('title', 'Our Services')
 @section('content')
 <div class=" h-[70dvh] relative overflow-hidden w-full flex mx-auto items-center px-3 md:px-20">
     <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
@@ -31,9 +31,9 @@
         </div>
 
         {{-- CTA --}}
-        <div class="relative overflow-hidden w-full flex mx-auto items-center py-20" style="background-image: url('img/cta-bg.webp'); background-position: bottom; background-size: cover">
-            <div class="absolute inset-0 bg-black/80 transition-all"></div>
-            <div class="container flex justify-center py-10 items-center mx-auto">
+        <div class="relative overflow-hidden w-7xl rounded-2xl flex mx-auto items-center py-10" style="background-image: url('img/cta-bg.webp'); background-position: bottom; background-size: cover">
+            <div class="absolute inset-0 bg-black/70 bg-blend-multiply transition-all"></div>
+            <div class="container flex justify-center py-5 items-center mx-auto">
                 <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
                     <div class="flex flex-col mb-8 md:mb-0 gap-y-4">
                         <h2 class="text-2xl text-ark-brown">Got a document headache?</h2>
@@ -47,6 +47,9 @@
                 </div>
             </div>
         </div>
+
+        {{-- Industries --}}
+        @include('services.sections.industries')
     </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

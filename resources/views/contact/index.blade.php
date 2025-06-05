@@ -101,9 +101,10 @@
 
     {{-- Map Section (Optional) --}}
     {{-- You can embed a map here if needed --}}
-    {{-- <div class="w-full h-[500px] bg-gray-200">
+    <div class="w-full h-[500px] bg-gray-200">
         <!-- Map Embed Code -->
-    </div> --}}
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.7800441588543!2d39.2191999!3d-6.7965949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4fef0d13a259%3A0x6b9c93442cf13258!2sARKHIVE!5e0!3m2!1sen!2stz!4v1749061602159!5m2!1sen!2stz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
 </main>
 @endsection

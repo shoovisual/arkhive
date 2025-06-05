@@ -37,13 +37,13 @@
 <main class="w-full">
     @include('services.sections.breadcrump')
     <div id="service" class="max-w-7xl grid grid-cols-5 space-x-8 my-10 mx-auto px-10">
-        <h2 class="text-6xl text-ark-brown feature-item font-medium mb-8 col-span-3">
+        <h2 class="text-6xl text-ark-brown font-medium mb-8 col-span-3">
             {{ json_decode($currentService->sub_services)[0]->title }}
         </h2>
         <div class="service-list col-span-4">
             <ul class="text-xl grid grid-cols-1 md:grid-cols-2 font-[Montserrat] gap-y-2 text-white">
                 @foreach(json_decode($currentService->sub_services)[0]->features as $feature)
-                <li class="flex gap-x-4 feature-item">
+                <li class="flex gap-x-4">
                     <span class="mt-2">
                         <?xml version="1.0" encoding="UTF-8"?>
                         <svg id="Layer_1" class="w-[20px] fill-ark-brown" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 26.94">
@@ -62,30 +62,54 @@
     </div>
     <div class="image-slider">
         <div class="max-w-7xl mx-auto px-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
-                <div class="image-card">
-                    <img src="{{ asset('img/services/archiving-2.webp') }}" alt="Document Archiving" class="h-[100%] object-cover">
+            <div class="header text-4xl text-ark-brown font-medium mb-8">
+                Our Security Features
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="image-card flex justify-center flex-col mx-auto item-center text-white gap-y-4 p-2 border-2 border-ark-brown/10 rounded-xl bg-ark-brown/5 backdrop-blur-xs font-[Montserrat]">
+                    <img src="{{ asset('img/services/archiving-2.webp') }}" alt="Document Archiving" class="h-[100%] rounded-lg object-cover">
+                    <div class="image-caption">
+                        <p class="text-lg text-center">
+                            Fire Protection System
+                        </p>
+                    </div>
                 </div>
-                <div class="image-card">
-                    <img src="{{ asset('img/services/archiving-3.webp') }}" alt="Document Archiving" class="h-[100%] object-cover">
+                <div class="image-card flex justify-center flex-col mx-auto item-center text-white gap-y-4 p-2 border-2 border-ark-brown/10 rounded-xl bg-ark-brown/5 backdrop-blur-xs font-[Montserrat]">
+                    <img src="{{ asset('img/services/archiving-3.webp') }}" alt="Document Archiving" class="h-[100%] rounded-lg object-cover">
+                    <div class="image-caption">
+                        <p class="text-lg text-center">
+                            Fire Suppressant
+                        </p>
+                    </div>
                 </div>
-                <div class="image-card">
-                    <img src="{{ asset('img/services/archiving-4.webp') }}" alt="Document Archiving" class="h-[100%] object-cover">
+                <div class="image-card flex justify-center flex-col mx-auto item-center text-white gap-y-4 p-2 border-2 border-ark-brown/10 rounded-xl bg-ark-brown/5 backdrop-blur-xs font-[Montserrat]">
+                    <img src="{{ asset('img/services/archiving-4.webp') }}" alt="Document Archiving" class="h-[100%] rounded-lg object-cover">
+                    <div class="image-caption">
+                        <p class="text-lg text-center">
+                            Biometric Access Control
+                        </p>
+                    </div>
                 </div>
-                <div class="image-card">
-                    <img src="{{ asset('img/services/security.webp') }}" alt="Document Archiving" class="h-[100%] object-cover">
+                <div class="image-card flex justify-center flex-col mx-auto item-center text-white gap-y-4 p-2 border-2 border-ark-brown/10 rounded-xl bg-ark-brown/5 backdrop-blur-xs font-[Montserrat]">
+                    <img src="{{ asset('img/services/security.webp') }}" alt="Document Archiving" class="h-[100%] rounded-lg object-cover">
+                    <div class="image-caption">
+                        <p class="text-lg text-center">
+                            Surveillance Cameras
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div id="service" class="max-w-7xl grid grid-cols-5 space-x-8 my-10 mx-auto px-10">
-        <h2 class="text-6xl text-ark-brown font-medium mb-8 col-span-3 feature-item">
+        <h2 class="text-6xl text-ark-brown font-medium mb-8 col-span-3">
             {{ json_decode($currentService->sub_services)[1]->title }}
         </h2>
         <div class="service-list col-span-4">
             <ul class="text-xl grid grid-cols-1 md:grid-cols-2 font-[Montserrat] gap-y-2 text-white">
                 @foreach(json_decode($currentService->sub_services)[1]->features as $feature)
-                <li class="flex gap-x-4 feature-item">
+                <li class="flex gap-x-4">
                     <span class="mt-2">
                         <svg id="Layer_1" class="w-[20px] fill-ark-brown" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.02 514.01">
                         <g id="Layer_2" data-name="Layer 2">

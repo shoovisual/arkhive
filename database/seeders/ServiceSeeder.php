@@ -59,21 +59,21 @@ class ServiceSeeder extends Seeder
                         'title' => 'Document Archiving',
                         'description' => 'Secure storage facilities for your physical documents with climate control and fire protection',
                         'features' => [
-                            'Archiving is a complex task; ARKHIVE offers professional record systematization and safeguarding.',
-                            'Our secure warehouse features industry-specific shelving, fire and climate control, strict access monitoring, and 24/7 armed security with CCTV.',
-                            'Our trained staff manage documents through sorting, indexing, boxing, barcoding, and disposal.',
-                            'We use O’NEIL, a globally renowned record management system.',
-                            'We ensure compliance with TRA, BOT, TIRA, legal, and Personal Data Protection regulations.',
+                            'Archiving is complex—ARKHIVE provides expert systematization and secure record safeguarding.',
+                            'Our warehouse includes fire and climate control, CCTV, and 24/7 armed security access monitoring.                    ',
+                            'Documents are sorted, indexed, boxed, barcoded, and securely managed by our trained professionals.',
+                            'We operate with O’NEIL, a globally trusted system for reliable records and inventory management.',
+                            'We ensure compliance with TRA, BOT, TIRA, legal standards, and Personal Data Protection laws.',
                         ]
                     ],
                     [
                         'title' => 'Document Retrieval',
                         'description' => 'Cloud-based digital storage solutions with advanced encryption and backup systems',
                         'features' => [
-                            'Our systems are set up to make retrieval of your documents quick and efficient. We use our own couriers to securely deliver your documents.',
-                            'We also retrieve, scan, encrypt and email required documents as you need them.',
-                            'We can respond to your requests at any time of day.',
-                            'Retrievals and returns are strictly controlled and tracked end to end and signed off at each point.'
+                            'Our systems ensure fast and efficient retrieval, with secure delivery by our own trusted couriers.',
+                            'We retrieve, scan, encrypt, and email your documents securely—whenever you need them.',
+                            'Our team is available to respond to your document requests at any time of day.',
+                            'All retrievals and returns are strictly tracked, verified, and signed off at every stage.',
                         ]
                     ]
                 ])

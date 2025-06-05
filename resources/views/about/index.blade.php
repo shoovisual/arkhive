@@ -95,9 +95,11 @@
 </section>
 
 <div class="timeline">
-    <img src="{{ asset('img/timeline.png') }}" alt="">
+    <img src="{{ asset('img/timeline-01.png') }}" alt="">
 </div>
-
+<div class="timeline">
+    <img src="{{ asset('img/timeline-01.png') }}" alt="">
+</div>
 <div class="my-12">
     <div class="max-w-7xl mx-auto px-10">
         <div class="anim-section">

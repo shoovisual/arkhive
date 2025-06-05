@@ -70,20 +70,22 @@
                 @csrf
                 <div>
                     <label for="name" class="block text-white text-lg font-[Montserrat] mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
+                    <input type="text" id="name" name="name" placeholder="Enter Full Name" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
                 </div>
                 <div>
                     <label for="email" class="block text-white text-lg font-[Montserrat] mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
+                    <input type="email" id="email" name="email" placeholder="Your email" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
                 </div>
                 <div>
                     <label for="subject" class="block text-white text-lg font-[Montserrat] mb-2">Subject</label>
-                    <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
+                    <input type="text" id="subject" name="subject" placeholder="Enter Subject" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
                 </div>
                 <div>
-                    <label for="service" class="block text-white text-lg font-[Montserrat] mb-2">Service</label>
+                    <label for="service" class="block text-white text-lg font-[Montserrat] mb-2">
+                        What service are you interested in?
+                    </label>
                     <select id="service" name="service" class="w-full px-4 py-3 rounded-0 font-[Montserrat] bg-ark-black backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
-                        <option class="font-[Montserrat]" value="">Select a Service</option>
+                        <option value="" disabled selected hidden>Select Service</option>
                         @foreach($services as $service)
                             <option class="font-[Montserrat]" value="{{ $service->title }}">{{ $service->title }}</option>
                         @endforeach
@@ -94,6 +96,8 @@
                     <label for="message" class="block text-white text-lg font-[Montserrat] mb-2">Message</label>
                     <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-none bg-ark-brown/5 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required></textarea>
                 </div>
+
+
                 <button type="submit" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out self-start">Send Message</button>
             </form>
         </div>

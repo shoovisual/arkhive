@@ -24,13 +24,13 @@
             </div> --}}
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <img src="{{ asset('img/document_storage.webp') }}" alt="Arkhive Document Storage" class="object-cover rounded-lg shadow-lg">
-            <img src="{{ asset('img/document_secured_access.webp') }}" alt="Arkhive Document Secured Access" class="object-cover rounded-lg shadow-lg">
+            <img src="{{ asset('img/document_storage.webp') }}" alt="Arkhive Document Storage" class="object-cover gsap-image  gsap-scroll-image rounded-lg shadow-lg">
+            <img src="{{ asset('img/document_secured_access.webp') }}" alt="Arkhive Document Secured Access" class="object-cover gsap-image  gsap-scroll-image rounded-lg shadow-lg">
         </div>
     </div>
     <div class="lg:grid grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:flex md:flex-row-reverse items-center gap-8 my-10">
         <div class="grid grid-cols-1 anim-section">
-            <img src="{{ asset('img/about-section.webp') }}" alt="Arkhive Document Storage" class="object-cover md:h-[250px] lg:h-[400px]  w-full rounded-lg shadow-lg">
+            <img src="{{ asset('img/about-section.webp') }}" alt="Arkhive Document Storage" class="object-cover gsap-scroll-image md:h-[250px] lg:h-[400px]  w-full rounded-lg shadow-lg">
         </div>
         <div class="flex flex-col anim-section">
             <p class="text-lg mb-6 md:w-xl text-white font-[Montserrat]">
@@ -196,6 +196,47 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.gsap-image').forEach((img, index) => {
+        gsap.from(img, {
+            scrollTrigger: {
+                trigger: img,
+                start: "top 80%", // when the image is near the viewport
+                toggleActions: "play none none none",
+            },
+            x: 100,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out",
+            delay: index * 0.2 // slight stagger effect
+        });
+    });
+</script>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.gsap-scroll-image').forEach((img) => {
+        gsap.fromTo(img,
+            { y: 50 }, // start 30px lower
+            {
+                y: -50, // move 30px upward as you scroll
+                ease: "none",
+                scrollTrigger: {
+                    trigger: img,
+                    start: "top bottom", // when image enters viewport
+                    end: "bottom top",   // until it leaves viewport
+                    scrub: true,         // link to scroll position
+                }
+            }
+        );
+    });
+</script>
+
+
+
+<script>
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -209,7 +250,7 @@
             { innerText: 0 },
             {
                 innerText: target,
-                duration: 2,
+                duration: 5,
                 ease: "power1.out",
                 snap: { innerText: 1 },
                 onUpdate() {

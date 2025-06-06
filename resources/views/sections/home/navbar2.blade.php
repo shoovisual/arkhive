@@ -102,10 +102,10 @@
                 </a>
             </div>
             <div class="text-white space-y-6 px-4 mt-10 md:px-12 lg:px-24">
-                <div class="logo-2 w-[200px]">
+                {{-- <div class="logo-2 w-[200px]">
                     <img src="{{ asset('img/main-logo.svg') }}" alt="Arkhive Africa Logo" />
                 </div>
-                <h4 class="text-ark-blue font-[Garamond] text-3xl italic font-medium">It is not a priority, until it is.</h4>
+                <h4 class="text-ark-blue font-[Garamond] text-3xl italic font-medium">It is not a priority, until it is.</h4> --}}
                 <div class="information">
                     <h3 class="text-lg font-medium">Contact Info</h3>
                     <div class="phone mt-6 flex items-center gap-4">
@@ -133,7 +133,7 @@
             </div>
         </div>
 
-        <div class="fixed bottom-0 left-0 w-full bg-[#1B1B1B] py-4">
+        <div class="fixed hidden lg:block bottom-0 left-0 w-full bg-[#1B1B1B] py-4">
             <div class="px-10 flex justify-between gap-x-8 items-center">
                 <div class="flex md:gap-8 gap-3">
                     <a href="https://www.linkedin.com/company/arkhiveafrica" target="_blank" ><i class="bi bi-linkedin text-white text-xl md:text-2xl"></i></a>

@@ -80,17 +80,34 @@
                     <label for="subject" class="block text-white text-lg font-[Montserrat] mb-2">Subject</label>
                     <input type="text" id="subject" name="subject" placeholder="Enter Subject" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
                 </div>
-                <div>
-                    <label for="service" class="block text-white text-lg font-[Montserrat] mb-2">
+
+                <div x-data="{ isOpen: false, selected: null, services: {{ json_encode($services->pluck('title')) }}, placeholder: 'Select Service' }" class="relative font-[Montserrat]">
+
+                    <input type="hidden" name="service" x-model="selected" required>
+
+                    <label class="block text-white text-lg mb-2">
                         What service are you interested in?
                     </label>
-                    <select id="service" name="service" class="w-full px-4 py-4 rounded-0 font-[Montserrat] bg-ark-black/5 border shadow-lg backdrop-blur-sm rounded-md border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
-                        <option value="" disabled selected hidden>Select Service</option>
-                        @foreach($services as $service)
-                            <option class="font-[Montserrat]" value="{{ $service->title }}">{{ $service->title }}</option>
-                        @endforeach
-                    </select>
+
+                    <button type="button" @click="isOpen = !isOpen" class="w-full px-4 py-4 text-left bg-ark-black/5 backdrop-blur-sm border border-ark-brown/30 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" >
+                        <span x-text="selected || placeholder"></span>
+                        <svg class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <div x-show="isOpen" @click.away="isOpen = false" class="absolute z-10 mt-1 w-full rounded-md shadow-lg bg-ark-black/50 backdrop-blur-sm border border-ark-brown/30" >
+                        <ul class="py-1 max-h-60 overflow-auto">
+                            <template x-for="(service, index) in services" :key="index">
+                                <li @click="selected = service; isOpen = false" class="px-4 py-3 text-white hover:bg-ark-black/30 cursor-pointer" >
+                                    <span x-text="service"></span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
                 </div>
+
+
 
                 <div>
                     <label for="message" class="block text-white text-lg font-[Montserrat] mb-2">Message</label>
@@ -111,4 +128,8 @@
     </div>
 
 </main>
+
+
+<!-- Add this in your layout file's head -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 @endsection

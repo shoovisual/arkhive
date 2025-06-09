@@ -9,7 +9,7 @@
     </div>
 </div>
     <section class="process-section">
-        <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="max-w-7xl mx-auto px-4 mb-5 py-8">
 
             <div class="process-steps grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="process-step md:mt-10 text-white group">

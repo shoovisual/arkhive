@@ -4,7 +4,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<main id="servicesWrapper" class="flex lg:flex-row flex-col h-screen w-full overflow-hidden">
+<main id="servicesWrapper" class="flex lg:flex-row flex-col h-[100dvh] w-full overflow-hidden">
     @foreach($services as $index => $service)
     <a href="{{ $service->url }}" class="service-slide services-card group relative overflow-hidden bg-center bg-cover transition-transform duration-500 ease-in-out grayscale-90 hover:grayscale-0 origin-left" style="background-image: url('{{ $service->cover_image }}'); transform: scaleX(1);" data-index="{{ $index }}">
         <div class="absolute inset-0 bg-black/70 overlay z-10 transition-all"></div>

@@ -28,7 +28,7 @@
             </div>
             <div class="flex gap-x-4 text-white text-md font-[Montserrat]">
                 <i class="bi bi-envelope-fill text-ark-brown text-2xl"></i>
-                <a href="mailto:clientservices@arkhiveafrica.com">clientservices@arkhiveafrica.com</a>
+                <a href="mailto:clientservices@arkhive.africa">clientservices@arkhive.africa</a>
             </div>
             {{-- Add Social Media Links if needed --}}
             <div class="flex gap-x-6 mt-4">

@@ -117,7 +117,7 @@
                         <div class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-envelope-fill"></i></div>
                         <div class="number">
                             <p>Email:</p>
-                            <a href="mailto:clientservices@arkhiveafrica.com">clientservices@arkhiveafrica.com</a>
+                            <a href="mailto:clientservices@arkhive.africa">clientservices@arkhive.africa</a>
                         </div>
                     </div>
                     <div class="phone mt-6 flex items-center gap-4">

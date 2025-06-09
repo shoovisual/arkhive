@@ -7,7 +7,7 @@
                     <div class="space-y-4 w-[200px]">
                         <img src="{{ asset('img/main-logo.svg') }}" alt="">
                     </div>
-                    <h4 class="mt-4 font-[Garamond] text-ark-blue text-xl ml-[2px] font-medium">It is not a priority, until it is.</h4>
+                    <h4 class="mt-2 font-[Garamond] text-ark-blue text-lg ml-[2px] font-medium">"It is not a priority, until it is."</h4>
                 </div>
 
                 <!-- Contact Section -->
@@ -25,7 +25,7 @@
                             <div class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-envelope-fill"></i></div>
                             <div class="number">
                                 <p>Email:</p>
-                                <a class="group-hover:text-ark-brown" href="mailto:clientservices@arkhiveafrica.com">clientservices@arkhiveafrica.com</a>
+                                <a class="group-hover:text-ark-brown" href="mailto:clientservices@arkhive.africa">clientservices@arkhive.africa</a>
                             </div>
                         </div>
                         <div class="phone mt-6 group flex items-center gap-4">

@@ -4,7 +4,7 @@
 @push('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
+<script src="//unpkg.com/alpinejs" defer></script>
 @endpush
 
 @section('content')
@@ -35,47 +35,7 @@
         </div>
     </div>
 
-    <div class="image-slider">
-        <div class="max-w-7xl mx-auto px-10">
-            <div class="header text-4xl text-ark-brown font-medium mb-8">
-                Our Security Features
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="image-card flex justify-center flex-col mx-auto item-center text-white gap-y-4 p-2 border-2 border-ark-brown/10 rounded-xl bg-ark-brown/5 backdrop-blur-xs font-[Montserrat]">
-                    <img src="{{ asset('img/services/archiving-2.webp') }}" alt="Document Archiving" class="h-[100%] rounded-lg object-cover">
-                    <div class="image-caption">
-                        <p class="text-lg text-center">
-                            Fire Protection System
-                        </p>
-                    </div>
-                </div>
-                <div class="image-card flex justify-center flex-col mx-auto item-center text-white gap-y-4 p-2 border-2 border-ark-brown/10 rounded-xl bg-ark-brown/5 backdrop-blur-xs font-[Montserrat]">
-                    <img src="{{ asset('img/services/archiving-3.webp') }}" alt="Document Archiving" class="h-[100%] rounded-lg object-cover">
-                    <div class="image-caption">
-                        <p class="text-lg text-center">
-                            Fire Suppressant
-                        </p>
-                    </div>
-                </div>
-                <div class="image-card flex justify-center flex-col mx-auto item-center text-white gap-y-4 p-2 border-2 border-ark-brown/10 rounded-xl bg-ark-brown/5 backdrop-blur-xs font-[Montserrat]">
-                    <img src="{{ asset('img/services/archiving-4.webp') }}" alt="Document Archiving" class="h-[100%] rounded-lg object-cover">
-                    <div class="image-caption">
-                        <p class="text-lg text-center">
-                            Biometric Access Control
-                        </p>
-                    </div>
-                </div>
-                <div class="image-card flex justify-center flex-col mx-auto item-center text-white gap-y-4 p-2 border-2 border-ark-brown/10 rounded-xl bg-ark-brown/5 backdrop-blur-xs font-[Montserrat]">
-                    <img src="{{ asset('img/services/security.webp') }}" alt="Document Archiving" class="h-[100%] rounded-lg object-cover">
-                    <div class="image-caption">
-                        <p class="text-lg text-center">
-                            Surveillance Cameras
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('services.sections.form-section')
 
     {{-- <div class="image-slider">
         <div class="max-w-7xl mx-auto px-10">

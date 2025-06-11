@@ -12,19 +12,16 @@ class ServicesController extends Controller
     {
         return match ($title) {
             'Storage' => [
-                ['text' => 'Are you running out of space in your current office for document archives?'],
-                ['text' => 'Do you have physical documents that require secure, off-site storage?'],
-                ['text' => 'Do you need to retain documents for regulatory or historical purposes, but rarely access them?'],
+                ['text' => 'Are you running out of space to store physical documents?'],
+                ['text' => 'Do you need quick access to your archived files when needed?'],
             ],
             'Scanning' => [
-                ['text' => 'Do you have a large volume of paper documents you wish to convert to digital format?'],
-                ['text' => 'Would having searchable digital versions of your documents improve your operational efficiency?']
+                ['text' => 'Do you have critical documents that should be digitized'],
+                ['text' => 'Is it difficult to search and retrieve specific documents in your current system?']
             ],
             'Destruction' => [
-                ['text' => 'Do you have sensitive or confidential documents that need to be securely disposed of?'],
-                ['text' => 'Are you concerned about complying with data protection regulations when discarding documents?'],
-                ['text' => 'Do you want assurance that your documents are destroyed beyond recovery?'],
-                ['text' => 'Do you require a Certificate of Destruction as proof of secure disposal?']
+                ['text' => 'Do you have sensitive documents that need to be destroyed?'],
+                ['text' => 'Are you looking for a safe and compliant way to dispose of documents?'],
             ],
             default => []
         };

@@ -36,12 +36,14 @@
                             </div>
                         @endif
 
-                        <form action="#" method="POST" class="flex flex-col gap-y-6 font-[Montserrat]">
+                        <form action="{{ route('service.form.submit') }}" method="POST" class="flex flex-col gap-y-6 font-[Montserrat]">
                             @csrf
+                            <input type="hidden" name="service_name" value="{{ $currentService->title }}">
 
                             @if(isset($currentService->questions) && $currentService->questions)
                             <div class="grid col-grid-1 md:grid-cols-2 mt-3 gap-x-3">
-                                @foreach(json_decode($currentService->questions) as $question)
+                                @foreach(json_decode($currentService->questions) as $index => $question)
+                                <input type="hidden" name="service_questions[]" value="{{ $question->text }}">
                                 <div x-data="{ selected: 'yes' }" class="mb-6">
                                     <p class="text-white mb-2">{{ $question->text }}</p>
 
@@ -51,7 +53,7 @@
 
                                         <!-- Yes -->
                                         <label class="w-1/2 relative z-10 cursor-pointer text-center">
-                                            <input type="radio" :name="'question_' + $loop->index" value="yes" x-model="selected" class="hidden" required>
+                                            <input type="radio" name="question_{{ $index }}" value="yes" x-model="selected" class="hidden" required>
                                             <div class="px-3 py-2 text-white peer-checked:text-black transition-all duration-300" :class="{ 'text-black': selected === 'yes', 'text-white': selected !== 'yes' }">
                                                 Yes
                                             </div>
@@ -59,7 +61,7 @@
 
                                         <!-- No -->
                                         <label class="w-1/2 relative z-10 cursor-pointer text-center">
-                                            <input type="radio" :name="'question_' + $loop->index" value="no" x-model="selected" class="hidden" required>
+                                            <input type="radio" name="question_{{ $index }}" value="no" x-model="selected" class="hidden" required>
                                             <div class="px-3 py-2 text-white peer-checked:text-black transition-all duration-300" :class="{ 'text-black': selected === 'no', 'text-white': selected !== 'no' }">
                                                 No
                                             </div>

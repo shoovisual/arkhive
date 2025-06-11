@@ -91,6 +91,9 @@
     @if(!Request::is('/'))
         @include('sections.footer')
     @endif
+
+
+
     @include('layouts.vendor-js')
 
 </body>

@@ -33,6 +33,7 @@ class ContactController extends Controller
                     $validatedData['name'],
                     $validatedData['email'],
                     $validatedData['subject'],
+                    $validatedData['phone'],
                     $validatedData['service'],
                     $validatedData['message']
                 ));

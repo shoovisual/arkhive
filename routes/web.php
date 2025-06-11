@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\ServiceFormController;
 use Illuminate\Support\Facades\App;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -25,6 +26,8 @@ Route::get('/services', [ServicesController::class, 'index'])->name('services.in
 Route::get('document-archiving', [ServicesController::class, 'showArchiving'])->name('services.archiving');
 Route::get('document-scanning', [ServicesController::class, 'showScanning'])->name('services.scanning');
 Route::get('document-shredding', [ServicesController::class, 'showShredding'])->name('services.shredding');
+
+Route::post('service-form', [ServiceFormController::class, 'submit'])->name('service.form.submit');
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');

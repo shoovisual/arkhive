@@ -44,10 +44,26 @@
         <div class="content">
             <p><strong>Name:</strong> {{ $name }}</p>
             <p><strong>Email:</strong> {{ $email }}</p>
-            <p><strong>Subject:</strong> {{ $subject }}</p>
+            <p><strong>Phone:</strong> {{ $phone }}</p>
             <p><strong>Service:</strong> {{ $service }}</p>
+
+            @if(!empty($questions) && !empty($answers))
             <div style="margin-top: 20px;">
-                <strong>Message:</strong>
+                <strong>Service Questions & Answers:</strong>
+                <div style="margin-top: 10px; padding: 15px; background-color: #fff; border-radius: 5px;">
+                    @foreach($questions as $index => $question)
+                        <div style="margin-bottom: 15px;">
+                            <p style="margin: 0; color: #666;"><strong>Q:</strong> {{ $question }}</p>
+                            <p style="margin: 5px 0 0 20px; color: #333;"><strong>A:</strong> {{ $answers[$index] ?? 'Not answered' }}</p>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            @endif
+
+            @if($messageContent)
+            <div style="margin-top: 20px;">
+                <strong>Additional Message:</strong>
                 <p>{{ $messageContent }}</p>
             </div>
         </div>

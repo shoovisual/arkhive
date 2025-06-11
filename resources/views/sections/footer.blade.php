@@ -1,4 +1,61 @@
 @if (!Request::is('/'))
+
+@php
+    $serviceRoutes = ['services.archiving', 'services.scanning', 'services.shredding'];
+    $isServicePage = in_array(Route::currentRouteName(), $serviceRoutes);
+@endphp
+
+<!-- Toggle Button -->
+@if($isServicePage)
+    @include('sections.form-pop')
+@endif
+
+            
+
+        @if($isServicePage)
+        <div class="fixed bottom-6 right-6 z-50 gap-y-4 floating-btn flex flex-col">
+            <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class=" bg-white text-black px-3 py-4 rounded-full shadow-md hover:bg-gray-100 cursor-pointer">
+                <i class="bi bi-chevron-up text-2xl"></i>
+            </button>
+            <button id="toggleChat" class=" bg-ark-black border border-ark-brown/30 text-white px-4 py-4 rounded-full flex items-center justify-center shadow-lg hover:bg-[#1b1b1b] cursor-pointer">
+                <i class="bi bi-chat-square-dots text-2xl"></i>
+            </button>
+        </div>
+        @else
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-100 cursor-pointer">
+            <i class="bi bi-chevron-up text-2xl"></i>
+        </button>
+        @endif
+
+    <script>
+        const toggleBtn = document.getElementById('toggleChat');
+        const chatPopup = document.getElementById('chatPopup');
+        const closeBtn = document.getElementById('closeChat');
+        let hasOpenedOnScroll = false;
+
+        // Toggle form on main chat icon click
+        toggleBtn.addEventListener('click', () => {
+            chatPopup.classList.toggle('hidden');
+        });
+
+        // Close form on close button click
+        closeBtn.addEventListener('click', () => {
+            chatPopup.classList.add('hidden');
+        });
+
+        // Open form when scrolling halfway down the page
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const pageHeight = document.documentElement.scrollHeight;
+
+            if (scrollPosition >= pageHeight / 2 && !hasOpenedOnScroll) {
+            chatPopup.classList.remove('hidden');
+            hasOpenedOnScroll = true;
+            }
+        });
+    </script>
+
+
     <footer class="bg-ark-black text-white border-t border-white/10 py-8">
         <div class="container mx-auto px-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,7 +1,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
     <div class="breadcrumb md:h-[70vh] lg:h-[70vh] relative overflow-hidden w-full flex mx-auto items-center px-3 md:px-20" style="background-image: url('{{ $currentService->cover_image }}'); background-position: center; background-size: cover">
-        <div class="absolute inset-0 bg-black/80 transition-all"></div>
+        <div class="absolute inset-0 bg-black/50 transition-all"></div>
         <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
             <div class="relative md:flex w-auto lg:w-6xl flex-col px-5 z-10 text-white">
                 <h2 class="text-[38px] text-center md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">{{ $currentService->title }}</h2>

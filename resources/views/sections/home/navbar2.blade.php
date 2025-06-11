@@ -12,37 +12,58 @@
             </div>
             <div class="nav-menu-2 hidden lg:flex items-center justify-center">
                 <div class="text-white flex space-x-4 md:space-y-12 mt-5 md:mt-10 px-4 md:px-12 lg:px-24">
-                    <a href="/" class="group block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('/') ? 'text-ark-brown' : '' }}">
+                    <a href="/" class="group py-3 block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('/') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
                             <span class="group-hover:text-ark-brown transition-colors duration-300">Home</span>
                         </div>
                     </a>
-                    <a href="{{ route('about') }}" class="group block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('about') ? 'text-ark-brown' : '' }}">
-                        <div class="flex items-baseline">
-                            <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
-                        </div>
-                    </a>
-                    <a href="{{ route('services.index') }}" class="group block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('services') ? 'text-ark-brown' : '' }}">
-                        <div class="flex items-baseline">
+                    <div class="relative py-3 group">
+                        <button class="flex items-center text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('services*') ? 'text-ark-brown' : '' }}">
                             <span class="group-hover:text-ark-brown transition-colors duration-300">Our Services</span>
+                            <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <div class="absolute z-10 hidden group-hover:block hover:block w-48 mt-3 bg-ark-black/80 p-2 border border-ark-brown/20 backdrop-blur-xs rounded-md shadow-lg">
+                            <a href="{{ route('services.index') }}" class="block px-4 py-3 text-sm text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[16px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services') ? 'bg-ark-black/50 text-ark-brown' : '' }}">
+                                All Services
+                            </a>
+                            @foreach($services as $service)
+                                <a href="{{ $service->url }}" class="block px-4 py-3 text-sm text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[16px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services/'.$service->id) ? 'bg-gray-100 text-ark-brown' : '' }}">
+                                    {{ $service->title }}
+                                </a>
+                            @endforeach
                         </div>
-                    </a>
-                    <a href="/process" class="group block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('process') ? 'text-ark-brown' : '' }}">
+                    </div>
+                    <a href="/process" class="group py-3 block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('process') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
                             <span class="group-hover:text-ark-brown transition-colors duration-300">Our Process</span>
                         </div>
                     </a>
-                    <a href="{{ route('contact') }}" class="group block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('contact-') ? 'text-ark-brown' : '' }}">
+                    <a href="{{ route('about') }}" class="group py-3 block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('about') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
+                        </div>
+                    </a>
+                    <a href="{{ route('contact') }}" class="group py-3 block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('contact-') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
                             <span class="group-hover:text-ark-brown transition-colors duration-300">Contact</span>
                         </div>
                     </a>
                 </div>
             </div>
+            <div class="cta-btn items-center hidden lg:flex gap-x-3">
+                <!-- New Button for Submitting Brief -->
+                <a href="{{ route('contact') }}" class="relative regular-button bg-ark-black hover:bg-[#121212] font-[Montserrat] w-fit group md:px-4 md:py-2 px-2 py-2 rounded-full border-ark-brown border text-white md:text-[18px] text-[14px] font-medium transition-all duration-300">
+                    Get Quote
+                </a>
+                <a href="tel:+255747888555" class="text-white md:text-[16px] text-[14px] font-regular font-[Montserrat]">+255 747 888 555</a>
+            </div>
             <div class="navbar-right lg:hidden flex md:gap-x-[5em] gap-x-3 justify-center items-center">
                 <!-- New Button for Submitting Brief -->
                 <a href="{{ route('contact') }}" class="relative regular-button bg-ark-black hover:bg-[#121212] font-[Montserrat] w-fit group md:px-6 md:py-3 px-3 py-2 rounded-full border-ark-brown border text-white md:text-lg text-[14px] font-medium transition-all duration-300">
-                    Contact us
+                    Get Quote
                 </a>
                 <div class="menu-opener cursor-pointer">
                     <svg width="47" height="26" viewBox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,21 +1,19 @@
 <div class="image-slider">
         <div class="max-w-7xl mx-auto px-10">
-            <div class="header text-4xl text-ark-brown font-medium mb-8">
-                Our Security Features
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-                <div class="image-card flex justify-center col-span-2 mx-auto item-center text-white gap-y-4 p-2 font-[Montserrat]">
-                    <img src="{{ asset('img/services/archiving-2.webp') }}" alt="Document Archiving" class="h-[100%] rounded-lg object-cover">
+            <div class="flex justify-center items-center gap-4">
+                <div class="image-card w-1/2 flex justify-center col-span-2 mx-auto item-center text-white gap-y-4 p-2 font-[Montserrat]">
+                    <img src="{{ $currentService->cover_image }}" alt="Document Archiving" class="aspect-video rounded-lg object-cover">
                 </div>
-                <div class="flex justify-center flex-col col-span-3 mx-auto item-center text-white gap-y-4 font-[Montserrat]">
-                    <div class="contact-form col-span-4">
-                        <h3 class="text-4xl text-ark-brown font-medium mb-4">Get a Free Assessment</h3>
-                        <p class="text-md text-white font-[Montserrat] mb-6">
-                            Answer a few quick questions and we’ll get back to you with a solution.
-                        </p>
-
+                <div class="col-span-3 gap-y-4 font-[Montserrat]">
+                    <div class="contact-form">
                         @if(session('success'))
-                            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-4 rounded relative mb-4">
+                            <div x-data="{ show: true }"
+                                x-init="setTimeout(() => show = false, 3000)"
+                                x-show="show"
+                                x-transition:leave="transition ease-in duration-300"
+                                x-transition:leave-start="opacity-100"
+                                x-transition:leave-end="opacity-0"
+                                class="bg-green-100 border border-green-400 text-green-700 px-4 py-4 rounded relative mb-4">
                                 <span class="block sm:inline">{{ session('success') }}</span>
                             </div>
                         @endif
@@ -41,53 +39,32 @@
                             <input type="hidden" name="service_name" value="{{ $currentService->title }}">
 
                             @if(isset($currentService->questions) && $currentService->questions)
-                            <div class="grid col-grid-1 md:grid-cols-2 mt-3 gap-x-3">
                                 @foreach(json_decode($currentService->questions) as $index => $question)
+
+                                @php
+                                    $questionIndex = $index + 1;
+                                @endphp
+
                                 <input type="hidden" name="service_questions[]" value="{{ $question->text }}">
-                                <div x-data="{ selected: 'yes' }" class="mb-6">
-                                    <p class="text-white mb-2">{{ $question->text }}</p>
-
-                                    <div class="relative flex w-[130px] rounded-md overflow-hidden border border-ark-brown/40 bg-ark-black/30">
-                                        <!-- Sliding background -->
-                                        <div class="absolute top-0 left-0 h-full w-1/2 bg-ark-brown transition-all duration-300 z-0" :class="{ 'translate-x-0': selected === 'yes', 'translate-x-full': selected === 'no' }" style="will-change: transform;"></div>
-
-                                        <!-- Yes -->
-                                        <label class="w-1/2 relative z-10 cursor-pointer text-center">
-                                            <input type="radio" name="question_{{ $index }}" value="yes" x-model="selected" class="hidden" required>
-                                            <div class="px-3 py-2 text-white peer-checked:text-black transition-all duration-300" :class="{ 'text-black': selected === 'yes', 'text-white': selected !== 'yes' }">
-                                                Yes
-                                            </div>
-                                        </label>
-
-                                        <!-- No -->
-                                        <label class="w-1/2 relative z-10 cursor-pointer text-center">
-                                            <input type="radio" name="question_{{ $index }}" value="no" x-model="selected" class="hidden" required>
-                                            <div class="px-3 py-2 text-white peer-checked:text-black transition-all duration-300" :class="{ 'text-black': selected === 'no', 'text-white': selected !== 'no' }">
-                                                No
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
+                                    <p class="text-white text-[16px]">Qn {{ $questionIndex }}: &nbsp; {{ $question->text }}</p>
                                 @endforeach
-                                </div>
                             @endif
 
+                            {{-- email --}}
+                            <input type="email" name="email" placeholder="Email" required class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
 
                             {{-- Name and Phone --}}
                             <div class="flex flex-col sm:flex-row gap-4">
                                 <input type="text" name="name" placeholder="Name" required
-                                    class="w-full px-4 py-4 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
+                                    class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
                                 <input type="text" name="phone" placeholder="Phone" required
-                                    class="w-full px-4 py-4 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
+                                    class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
                             </div>
 
-                            {{-- Email --}}
-                            <input type="email" name="email" placeholder="Email" required
-                                class="w-full px-4 py-4 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
 
                             {{-- Submit Button --}}
-                            <button type="submit" class="bg-ark-brown text-black font-medium px-6 py-3 rounded shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
-                                Submit
+                            <button type="submit" class="bg-ark-brown text-black w-full font-medium px-6 py-3 rounded-full text-md cursor-pointer font-[Montserrat] shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
+                                Get Free Consultation
                             </button>
                         </form>
                     </div>

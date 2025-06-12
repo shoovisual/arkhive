@@ -66,6 +66,7 @@
                 <strong>Additional Message:</strong>
                 <p>{{ $messageContent }}</p>
             </div>
+            @endif
         </div>
 
         <div class="footer">

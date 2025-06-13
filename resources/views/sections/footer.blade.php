@@ -11,21 +11,24 @@
 @endif
 
 
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-100 cursor-pointer">
+            <i class="bi bi-chevron-up text-2xl"></i>
+        </button>
 
-        @if($isServicePage)
+        {{-- @if($isServicePage)
         <div class="fixed bottom-6 right-6 z-50 gap-y-4 floating-btn flex flex-col">
             <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class=" bg-white text-black px-3 py-4 rounded-full shadow-md hover:bg-gray-100 cursor-pointer">
                 <i class="bi bi-chevron-up text-2xl"></i>
             </button>
-            {{-- <button id="toggleChat" class=" bg-ark-black border border-ark-brown/30 text-white px-4 py-4 rounded-full flex items-center justify-center shadow-lg hover:bg-[#1b1b1b] cursor-pointer">
+            <button id="toggleChat" class=" bg-ark-black border border-ark-brown/30 text-white px-4 py-4 rounded-full flex items-center justify-center shadow-lg hover:bg-[#1b1b1b] cursor-pointer">
                 <i class="bi bi-chat-square-dots text-2xl"></i>
-            </button> --}}
+            </button>
         </div>
         @else
         <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-100 cursor-pointer">
             <i class="bi bi-chevron-up text-2xl"></i>
         </button>
-        @endif
+        @endif --}}
 
     <script>
         const toggleBtn = document.getElementById('toggleChat');

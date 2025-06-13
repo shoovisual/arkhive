@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    {{-- @include('services.sections.form-section') --}}
+    @include('services.sections.form-section')
 
     {{-- <div class="image-slider">
         <div class="max-w-7xl mx-auto px-10">

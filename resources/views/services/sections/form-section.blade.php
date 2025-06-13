@@ -1,3 +1,6 @@
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
 <div class="image-slider">
         <div class="max-w-7xl mx-auto px-10">
             <div class="flex justify-center items-center gap-4">
@@ -13,7 +16,7 @@
                                 x-transition:leave="transition ease-in duration-300"
                                 x-transition:leave-start="opacity-100"
                                 x-transition:leave-end="opacity-0"
-                                class="bg-green-100 border border-green-400 text-green-700 px-4 py-4 rounded relative mb-4">
+                                class="bg-green-100 border gsap-slide-in border-green-400 text-green-700 px-4 py-4 rounded relative mb-4">
                                 <span class="block sm:inline">{{ session('success') }}</span>
                             </div>
                         @endif
@@ -46,26 +49,28 @@
                                 @endphp
 
                                 <input type="hidden" name="service_questions[]" value="{{ $question->text }}">
-                                    <p class="text-white text-[16px]">Qn {{ $questionIndex }}: &nbsp; {{ $question->text }}</p>
+                                    <p class="text-white text-[16px] gsap-slide-in">{{ $question->text }}</p>
                                 @endforeach
                             @endif
 
-                            {{-- email --}}
-                            <input type="email" name="email" placeholder="Email" required class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
+                            <div class="flex flex-col gap-y-6 form gsap-slide-in">
+                                {{-- email --}}
+                                <input type="email" name="email" placeholder="Email" required class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
 
-                            {{-- Name and Phone --}}
-                            <div class="flex flex-col sm:flex-row gap-4">
-                                <input type="text" name="name" placeholder="Name" required
-                                    class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
-                                <input type="text" name="phone" placeholder="Phone" required
-                                    class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
+                                {{-- Name and Phone --}}
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <input type="text" name="name" placeholder="Name" required
+                                        class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
+                                    <input type="text" name="phone" placeholder="Phone" required
+                                        class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
+                                </div>
+
+
+                                {{-- Submit Button --}}
+                                <button type="submit" class="bg-ark-brown text-black w-full font-medium px-6 py-3 rounded-full text-md cursor-pointer font-[Montserrat] shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
+                                    Get Free Consultation
+                                </button>
                             </div>
-
-
-                            {{-- Submit Button --}}
-                            <button type="submit" class="bg-ark-brown text-black w-full font-medium px-6 py-3 rounded-full text-md cursor-pointer font-[Montserrat] shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
-                                Get Free Consultation
-                            </button>
                         </form>
                     </div>
 
@@ -73,3 +78,20 @@
             </div>
         </div>
     </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".gsap-slide-in", {
+            scrollTrigger: {
+                trigger: ".gsap-slide-in",
+                start: "top 80%",
+                toggleActions: "play none none none",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.3,
+            ease: "power3.out"
+        });
+    });
+</script>

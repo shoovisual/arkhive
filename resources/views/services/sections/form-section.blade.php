@@ -3,8 +3,8 @@
 
 <div class="image-slider">
         <div class="max-w-7xl mx-auto px-10">
-            <div class="flex justify-center items-center gap-4">
-                <div class="image-card w-1/2 flex justify-center col-span-2 mx-auto item-center text-white gap-y-4 p-2 font-[Montserrat]">
+            <div class="flex md:flex-row flex-col justify-center items-center gap-4">
+                <div class="image-card md:w-1/2 flex justify-center col-span-2 mx-auto item-center text-white gap-y-4 p-2 font-[Montserrat]">
                     <img src="{{ $currentService->cover_image }}" alt="Document Archiving" class="aspect-video rounded-lg object-cover">
                 </div>
                 <div class="col-span-3 gap-y-4 font-[Montserrat]">

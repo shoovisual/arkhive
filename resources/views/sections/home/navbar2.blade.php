@@ -101,26 +101,45 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-5 justify-center">
             <div class="text-white space-y-4 md:space-y-8 mt-5 md:mt-10 px-4 md:px-12 lg:px-24">
-                <a href="/" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
-                    <div class="flex items-baseline">
-                        <span class="group-hover:text-ark-brown transition-colors duration-300">Home</span>
+                <a href="/" class="group py-3 block text-[21px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('/') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Home</span>
+                        </div>
+                    </a>
+                    <div class="relative py-3 group">
+                        <button class="flex items-center text-[21px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('services*') ? 'text-ark-brown' : '' }}">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Our Services</span>
+                            <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <div class="absolute z-10 hidden group-hover:block hover:block w-48 mt-3 bg-ark-black/80 p-2 border border-ark-brown/20 backdrop-blur-xs rounded-md shadow-lg">
+                            <a href="{{ route('services.index') }}" class="block px-4 py-3 text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[21px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services') ? 'bg-ark-black/50 text-ark-brown' : '' }}">
+                                All Services
+                            </a>
+                            @foreach($services as $service)
+                                <a href="{{ $service->url }}" class="block px-4 py-3 text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[21px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services/'.$service->id) ? 'bg-gray-100 text-ark-brown' : '' }}">
+                                    {{ $service->title }}
+                                </a>
+                            @endforeach
+                        </div>
                     </div>
-                </a>
-                <a href="{{ route('about') }}" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
-                    <div class="flex items-baseline">
-                        <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
-                    </div>
-                </a>
-                <a href="/process" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
-                    <div class="flex items-baseline">
-                        <span class="group-hover:text-ark-brown transition-colors duration-300">Our Process</span>
-                    </div>
-                </a>
-                <a href="{{ route('contact') }}" class="group block text-2xl md:text-6xl font-light hover:pl-3 transition-all duration-300">
-                    <div class="flex items-baseline">
-                        <span class="group-hover:text-ark-brown transition-colors duration-300">Contact</span>
-                    </div>
-                </a>
+                    <a href="/process" class="group py-3 block text-[21px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('process') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Our Process</span>
+                        </div>
+                    </a>
+                    <a href="{{ route('about') }}" class="group py-3 block text-[21px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('about') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
+                        </div>
+                    </a>
+                    <a href="{{ route('contact') }}" class="group py-3 block text-[21px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('contact-') ? 'text-ark-brown' : '' }}">
+                        <div class="flex items-baseline">
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">Contact</span>
+                        </div>
+                    </a>
             </div>
             <div class="text-white space-y-6 px-4 mt-10 md:px-12 lg:px-24">
                 {{-- <div class="logo-2 w-[200px]">

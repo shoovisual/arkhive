@@ -11,7 +11,7 @@
 @endif
 
 
-        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-100 cursor-pointer">
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-white text-black px-3 md:py-2 py-3 rounded-full shadow-md hover:bg-gray-100 cursor-pointer">
             <i class="bi bi-chevron-up text-2xl"></i>
         </button>
 

@@ -56,10 +56,10 @@ body {
   transition: none !important;
 }
 
-.arrow path:last-child {
-    /* -webkit-transform: translateY(-100%); */
-    /* transform: translateY(-100%); */
-}
+/* .arrow path:last-child {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+} */
 .arrow {
     width: 2rem;
     height: 2rem;
@@ -70,6 +70,10 @@ body {
         width: 1.3125rem;
         height: 1.3125rem;
     }
+}
+
+.timeline {
+    background-image: url('../../public/img/timeline-01.png');
 }
 
 .arrow svg {

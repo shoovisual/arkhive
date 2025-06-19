@@ -3,8 +3,12 @@
     "file": "assets/bg-DNebm3WW.jpg",
     "src": "public/img/bg.jpg"
   },
+  "public/img/timeline-01.png": {
+    "file": "assets/timeline-01-CFa_lv9m.png",
+    "src": "public/img/timeline-01.png"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-DpQsx5i3.css",
+    "file": "assets/app-BEPdAqWC.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },

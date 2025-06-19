@@ -92,7 +92,7 @@
 </script>
 
 <!-- Full Screen Menu Overlay -->
-<div id="fullScreenMenu" class="fixed inset-0 bg-[#1B1B1B] transform font-[Montserrat] translate-y-[-115%] transition-all duration-700 ease-in-out z-[9999]">
+<div id="fullScreenMenu" class="fixed inset-0 bg-[#1B1B1B] transform font-[Montserrat] translate-y-[-120%] transition-all duration-700 ease-in-out z-[9999]">
     <div class="container h-full flex flex-col">
         <div class="flex justify-between items-center py-8 px-4 md:px-12 lg:px-24">
             <span class="text-white/50 text-sm">Navigation</span>
@@ -106,25 +106,26 @@
                             <span class="group-hover:text-ark-brown transition-colors duration-300">Home</span>
                         </div>
                     </a>
-                    <div class="relative py-3 group">
-                        <button class="flex items-center text-[21px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('services*') ? 'text-ark-brown' : '' }}">
-                            <span class="group-hover:text-ark-brown transition-colors duration-300">Our Services</span>
-                            <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
+                    <div x-data="{ open: false }" class="relative py-3">
+    <button @click="open = !open" class="flex items-center text-[21px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('services*') ? 'text-ark-brown' : '' }}">
+        <span class="transition-colors duration-300" :class="{ 'text-ark-brown': open }">Our Services</span>
+        <svg :class="{ 'rotate-180': open }" class="w-4 h-4 ml-2 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
 
-                        <div class="absolute z-10 hidden group-hover:block hover:block w-48 mt-3 bg-ark-black/80 p-2 border border-ark-brown/20 backdrop-blur-xs rounded-md shadow-lg">
-                            <a href="{{ route('services.index') }}" class="block px-4 py-3 text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[21px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services') ? 'bg-ark-black/50 text-ark-brown' : '' }}">
-                                All Services
-                            </a>
-                            @foreach($services as $service)
-                                <a href="{{ $service->url }}" class="block px-4 py-3 text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[21px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services/'.$service->id) ? 'bg-gray-100 text-ark-brown' : '' }}">
-                                    {{ $service->title }}
-                                </a>
-                            @endforeach
-                        </div>
-                    </div>
+    <div x-show="open" @click.away="open = false" x-transition class="absolute z-10 w-48 mt-3 bg-ark-black/80 p-2 border border-ark-brown/20 backdrop-blur-xs rounded-md shadow-lg">
+        <a href="{{ route('services.index') }}" class="block px-4 py-3 text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[21px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services') ? 'bg-ark-black/50 text-ark-brown' : '' }}">
+            All Services
+        </a>
+        @foreach($services as $service)
+            <a href="{{ $service->url }}" class="block px-4 py-3 text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[21px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services/'.$service->id) ? 'bg-gray-100 text-ark-brown' : '' }}">
+                {{ $service->title }}
+            </a>
+        @endforeach
+    </div>
+</div>
+
                     <a href="/process" class="group py-3 block text-[21px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('process') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
                             <span class="group-hover:text-ark-brown transition-colors duration-300">Our Process</span>
@@ -141,36 +142,7 @@
                         </div>
                     </a>
             </div>
-            <div class="text-white space-y-6 px-4 mt-10 md:px-12 lg:px-24">
-                {{-- <div class="logo-2 w-[200px]">
-                    <img src="{{ asset('img/main-logo.svg') }}" alt="Arkhive Africa Logo" />
-                </div>
-                <h4 class="text-ark-blue font-[Garamond] text-3xl italic font-medium">It is not a priority, until it is.</h4> --}}
-                <div class="information">
-                    <h3 class="text-lg font-medium">Contact Info</h3>
-                    <div class="phone mt-6 flex items-center gap-4">
-                        <div class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-telephone-fill"></i></div>
-                        <div class="number">
-                            <p>Phone:</p>
-                            <a href="tel:+255747888555 "> +255 747 888 555 </a>
-                        </div>
-                    </div>
-                    <div class="phone mt-6 flex items-center gap-4">
-                        <div class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-envelope-fill"></i></div>
-                        <div class="number">
-                            <p>Email:</p>
-                            <a href="mailto:clientservices@arkhive.africa">clientservices@arkhive.africa</a>
-                        </div>
-                    </div>
-                    <div class="phone mt-6 flex items-center gap-4">
-                        <div class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-geo-alt-fill"></i></div>
-                        <div class="number">
-                            <p>Address:</p>
-                            <a href="https://maps.app.goo.gl/3NDbT5jLuoF39YsX6">Ubungo Business Park, Morogoro Road, P.O. BOX 79910, <br> Dar es Salaam, Tanzania.</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
 
         <div class="fixed hidden lg:block bottom-0 left-0 w-full bg-[#1B1B1B] py-4">
@@ -207,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleMenu() {
         isMenuOpen = !isMenuOpen;
         if (isMenuOpen) {
-            fullScreenMenu.classList.remove('translate-y-[-115%]');
+            fullScreenMenu.classList.remove('translate-y-[-120%]');
             fullScreenMenu.classList.add('translate-y-0');
             menuClose.classList.add('z-[10000]');
             menuClose.classList.remove('hidden');
@@ -216,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
             menuOpener.classList.add('hidden');
         } else {
-            fullScreenMenu.classList.add('translate-y-[-115%]');
+            fullScreenMenu.classList.add('translate-y-[-120%]');
             fullScreenMenu.classList.remove('translate-y-0');
             menuClose.classList.add('opacity-0');
             setTimeout(() => {

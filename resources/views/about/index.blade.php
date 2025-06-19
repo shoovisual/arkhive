@@ -94,7 +94,11 @@
     </div>
 </section>
 
-<div class="timeline h-[70vh] border-y border-ark-brown/10 bg-cover bg-center bg-no-repeat lg:bg-fixed" style="">
+<div class="h-[70vh] border-y border-ark-brown/10 bg-cover hidden lg:block bg-center bg-no-repeat bg-fixed" style="background-image: url('img/timeline-01.png');">
+    {{-- <img src="{{ asset('img/timeline-01.png') }}" alt=""> --}}
+</div>
+
+<div class="md:h-[100vh] h-[100vh] border-y border-ark-brown/10 bg-contain bg-center lg:hidden block bg-no-repeat" style="background-image: url('img/timeline-mobile-01.png');">
     {{-- <img src="{{ asset('img/timeline-01.png') }}" alt=""> --}}
 </div>
 
@@ -115,7 +119,7 @@
 </div>
 
 {{-- CTA --}}
-<div class="relative overflow-hidden lg:w-7xl rounded-2xl flex mx-auto items-center py-10" style="background-image: url('img/cta-bg.webp'); background-position: bottom; background-size: cover">
+<div class="relative overflow-hidden md:w-7xl rounded-2xl flex mx-auto items-center py-10" style="background-image: url('img/cta-bg.webp'); background-position: bottom; background-size: cover">
     <div class="absolute inset-0 bg-black/70 bg-blend-multiply transition-all"></div>
     <div class="container flex justify-center py-5 items-center mx-auto">
         <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">

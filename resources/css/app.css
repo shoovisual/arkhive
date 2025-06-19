@@ -72,10 +72,6 @@ body {
     }
 }
 
-.timeline {
-    background-image: url('../../public/img/timeline-01.png');
-}
-
 .arrow svg {
     width: 90px;
     height: 90px;

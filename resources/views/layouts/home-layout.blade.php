@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGHXQWYBCG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WGHXQWYBCG');
+    </script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script>
+        window.isAuthenticated = {{ Auth::check() ? 'true' : 'false' }};
+    </script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script>
         window.isAuthenticated = {{ Auth::check() ? 'true' : 'false' }};

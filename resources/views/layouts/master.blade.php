@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGHXQWYBCG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WGHXQWYBCG');
+    </script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script>
         window.isAuthenticated = {{ Auth::check() ? 'true' : 'false' }};
@@ -88,17 +97,14 @@
     </script>
 </head>
 <body>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WGHXQWYBCG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-WGHXQWYBCG');
-</script>
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+
+<!-- Preloader -->
+<div id="preloader" class="fixed inset-0 z-50 bg-ark-black flex items-center justify-center">
+  <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-ark-brown border-opacity-75"></div>
+</div>
 
 
     @include('sections.header')
@@ -165,6 +171,18 @@
             });
 
         </script>
+        <script>
+            window.addEventListener('load', function () {
+                const preloader = document.getElementById('preloader');
+                if (preloader) {
+                preloader.classList.add('opacity-0');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500); // Wait for fade-out transition
+                }
+            });
+        </script>
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         @stack('styles')
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

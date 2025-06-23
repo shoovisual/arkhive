@@ -39,7 +39,7 @@
             <div class=" text-white py-10">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 stats-wrapper">
                     <div class="stat-box text-center font-[Montserrat] px-6">
-                        <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="542">0</div>
+                        <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="2000000">0</div>
                         <div class="text-md">Stored <br />Documents</div>
                     </div>
                     <div class="stat-box text-center font-[Montserrat] px-6 border-l md:border-x border-white">
@@ -51,7 +51,7 @@
                         <div class="text-md">Years of <br /> Experience</div>
                     </div>
                     <div class="stat-box text-center font-[Montserrat] px-6 border-l border-white">
-                        <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="7">0</div>
+                        <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="8">0</div>
                         <div class="text-md">Industries <br /> Served</div>
                     </div>
                 </div>
@@ -60,7 +60,6 @@
                     <a href="/contact" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/50 transition-colors rounded"> Let&apos;s Talk </a>
                     <a href="#services" class="border border-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/10 transition-colors rounded">Check our Services</a>
                 </div>
-
             </div>
         </div>
     </div>
@@ -242,11 +241,7 @@
 
 <script>
 
-    gsap.registerPlugin(ScrollTrigger);
-
-    const counters = document.querySelectorAll(".count-up");
-
-    function runCounters(section) {
+   function runCounters(section) {
     const counters = section.querySelectorAll(".count-up");
     counters.forEach(counter => {
         const target = +counter.dataset.count;
@@ -254,18 +249,30 @@
             { innerText: 0 },
             {
                 innerText: target,
-                duration: 5,
+                duration: 3,
                 ease: "power1.out",
                 snap: { innerText: 1 },
                 onUpdate() {
                     const value = Math.floor(counter.innerText);
-                    counter.innerText =
-                        value.toLocaleString() + (target >= 100 ? "+" : "");
+                    let displayValue;
+
+                    if (target >= 1000000) {
+                        displayValue = (value / 1000000).toFixed(0) + "M" + (value >= 1000000 ? "+" : "");
+                    } else if (target >= 1000) {
+                        displayValue = (value / 1000).toFixed(0) + "K" + (value >= 1000 ? "+" : "");
+                    } else if (target >= 100) {
+                        displayValue = value.toFixed(0) + (value >= 100 ? "+" : "");
+                    } else {
+                        displayValue = value.toLocaleString();
+                    }
+
+                    counter.innerText = displayValue;
                 }
             }
         );
     });
-    }
+}
+
 
 
     gsap.utils.toArray(".anim-section").forEach(section => {

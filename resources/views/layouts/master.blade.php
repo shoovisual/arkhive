@@ -88,9 +88,7 @@
     </script>
 </head>
 <body>
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Google tag (gtag.js) -->
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGHXQWYBCG"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -99,6 +97,7 @@
 
   gtag('config', 'G-WGHXQWYBCG');
 </script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 
 
@@ -123,7 +122,6 @@
         <script>
             setTimeout(() => {
                 let script = document.createElement('script');
-                script.src = "https://www.googletagmanager.com/gtag/js?id=G-LRAWT78KE5";
                 script.async = true;
                 document.head.appendChild(script);
             }, 3000);

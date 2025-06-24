@@ -113,15 +113,16 @@
 
     @include('layouts.vendor-js')
 <script>
-            window.addEventListener('load', function () {
-                const preloader = document.getElementById('preloader');
-                if (preloader) {
-                preloader.classList.add('opacity-0');
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 500); // Wait for fade-out transition
-                }
-            });
+    window.addEventListener('load', function () {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+        preloader.classList.add('opacity-0');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500); // Wait for fade-out transition
+        }
+    });
+</script>
 </body>
 </html>
 

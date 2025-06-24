@@ -36,7 +36,6 @@ class GenerateSitemap extends Command
         ->add(Url::create('/document-archiving'))
         ->add(Url::create('/process'))
         ->writeToFile(public_path('sitemap.xml'));
-
     $this->info('Sitemap generated successfully!');
     }
 }

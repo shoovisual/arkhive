@@ -31,6 +31,9 @@ class GenerateSitemap extends Command
         ->add(Url::create('/about'))
         ->add(Url::create('/contact'))
         ->add(Url::create('/services'))
+        ->add(Url::create('/document-shredding'))
+        ->add(Url::create('/document-scanning'))
+        ->add(Url::create('/document-archiving'))
         ->add(Url::create('/process'))
         ->writeToFile(public_path('sitemap.xml'));
 

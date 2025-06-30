@@ -2,11 +2,11 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
 <div class="image-slider">
-        <div class="max-w-7xl mx-auto px-10">
+        <div class="max-w-7xl mx-auto p-4 lg:p-10">
             <div class="flex md:flex-row flex-col justify-center items-center gap-4">
-                <div class="image-card md:w-1/2 flex justify-center col-span-2 mx-auto item-center text-white gap-y-4 p-2 font-[Montserrat]">
+                {{-- <div class="image-card md:w-1/2 flex justify-center col-span-2 mx-auto item-center text-white gap-y-4 p-2 font-[Montserrat]">
                     <img src="{{ $currentService->cover_image }}" alt="Document Archiving" class="aspect-video rounded-lg object-cover">
-                </div>
+                </div> --}}
                 <div class="col-span-3 gap-y-4 font-[Montserrat]">
                     <div class="contact-form">
                         @if(session('success'))
@@ -49,7 +49,7 @@
                                 @endphp
 
                                 <input type="hidden" name="service_questions[]" value="{{ $question->text }}">
-                                    <p class="text-white text-[16px] gsap-slide-in">{{ $question->text }}</p>
+                                    <p class="text-white text-sm md:text-[16px] gsap-slide-in">{{ $question->text }}</p>
                                 @endforeach
                             @endif
 

@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    @include('services.sections.form-section')
+    {{-- @include('services.sections.form-section') --}}
 
     <div id="service" class="max-w-7xl grid grid-cols-5 space-x-8 my-10 mx-auto px-8">
         <h2 class="text-6xl text-ark-brown font-medium mb-8 col-span-3 feature-item">

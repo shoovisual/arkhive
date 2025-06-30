@@ -29,11 +29,16 @@
                             <a href="{{ route('services.index') }}" class="block px-4 py-3 text-sm text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[16px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services') ? 'bg-ark-black/50 text-ark-brown' : '' }}">
                                 All Services
                             </a>
-                            @foreach($services as $service)
-                                <a href="{{ $service->url }}" class="block px-4 py-3 text-sm text-ark-brown font-[Montserrat] hover:bg-ark-black/50 text-[16px] hover:text-ark-brown transition-colors duration-200 {{ request()->is('services/'.$service->id) ? 'bg-gray-100 text-ark-brown' : '' }}">
-                                    {{ $service->title }}
-                                </a>
-                            @endforeach
+                            @foreach($services->sortBy('id') as $service)
+    <a href="{{ $service->url }}"
+       class="block px-4 py-3 text-sm text-ark-brown font-[Montserrat]
+              hover:bg-ark-black/50 text-[16px] hover:text-ark-brown
+              transition-colors duration-200
+              {{ request()->is('services/'.$service->id) ? 'bg-gray-100 text-ark-brown' : '' }}">
+        {{ $service->title }}
+    </a>
+@endforeach
+
                         </div>
                     </div>
                     <a href="/process" class="group py-3 block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('process') ? 'text-ark-brown' : '' }}">

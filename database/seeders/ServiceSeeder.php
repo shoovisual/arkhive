@@ -11,39 +11,9 @@ class ServiceSeeder extends Seeder
     {
         $services = [
 
+
             [
-                'title' => 'Scanning',
-                'sub_1' => 'Digital',
-                'sub_2' => null,
-                'full_title' => 'Digital Scanning',
-                'description' => 'Efficient document scanning and indexing solutions',
-                'cover_image' => '/img/services/scanning-cover.webp',
-                'service_icon' => '/img/services/icons/scanning.svg',
-                'image_path' => '/img/services/scanning.webp',
-                'url' => '/document-scanning',
-                'order' => 3,
-                'sub_services' => json_encode([
-                    [
-                        'title' => 'Bulk Document Scanning',
-                        'description' => 'High-volume document scanning services with OCR technology',
-                        'features' => [
-                            'Digitizes paper records and captures data (off or on-site).',
-                            'Uses industry-leading scanning technology.',
-                            'Delivers in your preferred format.',
-                            'Heavy-duty scanners handle up to 10,000 pages daily.',
-                            'Allows for centralized and organized information.',
-                        ]
-                    ],
-                    [
-                        'title' => 'Professional Indexing',
-                        'description' => 'Professional indexing services for easy document retrieval and management',
-                        'features' => [
-                            'ARKHIVE will advise and index your digitized records in line with your search and access requirements, giving you the ability to pull up a record in minutes.',
-                        ]
-                    ]
-                ])
-            ],
-            [
+                'id' => 1,
                 'title' => 'Storage',
                 'sub_1' => 'Document',
                 'sub_2' => null,
@@ -79,6 +49,40 @@ class ServiceSeeder extends Seeder
                 ])
             ],
             [
+                'id' => 2,
+                'title' => 'Scanning',
+                'sub_1' => 'Digital',
+                'sub_2' => null,
+                'full_title' => 'Digital Scanning',
+                'description' => 'Efficient document scanning and indexing solutions',
+                'cover_image' => '/img/services/scanning-cover.webp',
+                'service_icon' => '/img/services/icons/scanning.svg',
+                'image_path' => '/img/services/scanning.webp',
+                'url' => '/document-scanning',
+                'order' => 3,
+                'sub_services' => json_encode([
+                    [
+                        'title' => 'Bulk Document Scanning',
+                        'description' => 'High-volume document scanning services with OCR technology',
+                        'features' => [
+                            'Digitizes paper records and captures data (off or on-site).',
+                            'Uses industry-leading scanning technology.',
+                            'Delivers in your preferred format.',
+                            'Heavy-duty scanners handle up to 10,000 pages daily.',
+                            'Allows for centralized and organized information.',
+                        ]
+                    ],
+                    [
+                        'title' => 'Professional Indexing',
+                        'description' => 'Professional indexing services for easy document retrieval and management',
+                        'features' => [
+                            'ARKHIVE will advise and index your digitized records in line with your search and access requirements, giving you the ability to pull up a record in minutes.',
+                        ]
+                    ]
+                ])
+            ],
+            [
+                'id' => 3,
                 'title' => 'Destruction',
                 'sub_1' => 'Document',
                 'sub_2' => 'Certified',

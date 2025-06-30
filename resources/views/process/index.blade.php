@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Our Process')
 @section('content')
-<div class="h-[70dvh] md:h-[70vh] lg:h-[90vh] relative overflow-hidden md:w-full flex mx-auto items-center px-3 md:px-20" style="background-image: url('img/document_storage.webp'); background-position: bottom; background-size: cover">
+<div class="h-[70dvh] md:h-[70vh] lg:h-[90vh] relative overflow-hidden md:w-full flex mx-auto items-center px-3 md:px-20" style="background-image: url('img/document_storage.webp'); background-position: center; background-size: cover">
     <div class="absolute inset-0 bg-black/40 transition-all"></div>
     <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
         <div class="relative md:flex w-auto lg:w-6xl flex-col px-5 z-10 text-white">

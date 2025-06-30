@@ -89,36 +89,22 @@
                         What service are you interested in?
                     </label>
 
-                    <div x-data="dropdown()" class="relative w-full">
-                        <!-- Button -->
-                        <button type="button"
-                            @click="toggle()"
-                            class="w-full px-4 py-4 text-left bg-ark-black/5 backdrop-blur-sm border border-ark-brown/30 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50 relative">
-                            <span x-text="selected?.title || placeholder"></span>
-                            <svg class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
+                    <button type="button" @click="isOpen = !isOpen" class="w-full px-4 py-4 text-left bg-ark-black/5 backdrop-blur-sm border border-ark-brown/30 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" >
+                        <span x-text="selected || placeholder"></span>
+                        <svg class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
 
-                        <!-- Dropdown List -->
-                        <div x-show="isOpen"
-                            @click.away="isOpen = false"
-                            x-transition
-                            class="absolute z-10 mt-1 w-full rounded-md shadow-lg bg-ark-black/50 backdrop-blur-sm border border-ark-brown/30">
-                            <ul class="py-1 max-h-60 overflow-auto">
-                                <template x-for="service in sortedServices" :key="service.id">
-                                    <li @click="select(service)"
-                                        class="px-4 py-3 text-white hover:bg-ark-black/30 cursor-pointer">
-                                        <span x-text="service.title"></span>
-                                    </li>
-                                </template>
-                            </ul>
-                        </div>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="absolute z-10 mt-1 w-full rounded-md shadow-lg bg-ark-black/50 backdrop-blur-sm border border-ark-brown/30" >
+                        <ul class="py-1 max-h-60 overflow-auto">
+                            <template x-for="(service, index) in services" :key="index">
+                                <li @click="selected = service; isOpen = false" class="px-4 py-3 text-white hover:bg-ark-black/30 cursor-pointer" >
+                                    <span x-text="service"></span>
+                                </li>
+                            </template>
+                        </ul>
                     </div>
-
                 </div>
 
                 <div>

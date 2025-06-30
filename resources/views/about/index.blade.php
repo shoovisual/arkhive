@@ -5,13 +5,12 @@
 
 <div class="h-[70dvh] md:h-[70vh] lg:h-[90vh] relative overflow-hidden md:w-full flex mx-auto items-center px-3 md:px-20" style="background-image: url('img/hero-bg.webp'); background-position: center; background-size: cover">
     <div class="absolute inset-0 bg-black/40 transition-all"></div>
-    <div class="flex justify-center md:flex-col w-auto items-center mx-auto w-full lg:max-w-6xl">
+    <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
         <div class="relative md:flex anim-section w-auto lg:w-6xl flex-col px-5 z-10 text-white">
             <h2 class="text-[38px] anim-child md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">@yield('title')</h2>
             <p class="text-xl md:w-xl font-[Montserrat] anim-child">We are dedicated to providing the best document management solutions for our clients.</p>
         </div>
     </div>
-
 </div>
 
 <div class="md:max-w-7xl py-10 mx-auto px-10">

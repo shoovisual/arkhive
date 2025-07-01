@@ -35,8 +35,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="http://arkhive.trueno.co.tz" target="_blank">
-                <img src="http://arkhive.trueno.co.tz/img/main-logo.png" alt="Arkhive Africa Logo" style="max-width: 150px; height: auto; ">
+            <a href="http://arkhive.africa" target="_blank">
+                <img src="https://arkhive.africa/img/main-logo.png" alt="Arkhive Africa Logo" style="max-width: 150px; height: auto; ">
             </a>
             <h1>Form Submission from {{ $name }}</h1>
         </div>
@@ -47,19 +47,21 @@
             <p><strong>Phone:</strong> {{ $phone }}</p>
             <p><strong>Service:</strong> {{ $service }}</p>
 
-            @if(!empty($questions) && !empty($answers))
-            <div style="margin-top: 20px;">
-                <strong>Service Questions & Answers:</strong>
-                <div style="margin-top: 10px; padding: 15px; background-color: #fff; border-radius: 5px;">
-                    @foreach($questions as $index => $question)
-                        <div style="margin-bottom: 15px;">
-                            <p style="margin: 0; color: #666;"><strong>Q:</strong> {{ $question }}</p>
-                            <p style="margin: 5px 0 0 20px; color: #333;"><strong>A:</strong> {{ $answers[$index] ?? 'Not answered' }}</p>
-                        </div>
-                    @endforeach
+            @if(!empty($questions))
+                <div style="margin-top: 20px;">
+                    <strong>Service Questions:</strong>
+                    <div style="margin-top: 10px; padding: 15px; background-color: #fff; border-radius: 5px;">
+                        @foreach($questions as $question)
+                            <div style="margin-bottom: 15px;">
+                                <p style="margin: 0; color: #666;">
+                                    <strong>Q:</strong> {{ $question }}
+                                </p>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            </div>
             @endif
+
 
             @if($messageContent)
             <div style="margin-top: 20px;">

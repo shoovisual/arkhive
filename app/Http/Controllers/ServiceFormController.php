@@ -33,7 +33,7 @@ class ServiceFormController extends Controller
         ]);
 
         // Send email (with questions only)
-        Mail::to('clientservices@arkhive.africa')
+        Mail::to('shoovisual@gmail.com')
             ->send(new ContactFormMail(
                 $validatedData['name'],
                 $validatedData['email'],

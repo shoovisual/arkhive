@@ -23,7 +23,6 @@ class ContactController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'subject' => 'required|string|max:255',
-            'phone' => 'nullable|string|max:20',
             'service' => 'required|string|exists:services,title',
             'message' => 'required|string|max:1000',
         ]);
@@ -35,7 +34,6 @@ class ContactController extends Controller
                     $validatedData['name'],
                     $validatedData['email'],
                     $validatedData['subject'],
-                    $validatedData['phone'],
                     $validatedData['service'],
                     $validatedData['message']
                 ));

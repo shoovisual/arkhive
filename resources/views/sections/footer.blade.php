@@ -76,6 +76,7 @@
                     <div class="space-y-2 font-[Montserrat]">
                         <div class="phone mt-6 group flex items-center gap-4">
                             <div class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-telephone-fill"></i></div>
+                            <a href="https://wa.me/255747888555" target="_blank" class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-whatsapp"></i></a>
                             <div class="number">
                                 <p>Phone:</p>
                                 <a class="group-hover:text-ark-brown" href="tel:+255747888555 "> +255 747 888 555 </a>

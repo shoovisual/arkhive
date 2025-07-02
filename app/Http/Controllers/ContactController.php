@@ -33,7 +33,7 @@ class ContactController extends Controller
                 ->send(new ContactFormMail(
                     $validatedData['name'],
                     $validatedData['email'],
-                    'Service Inquiry from ' . $validatedData['name'],
+                    $validatedData['phone'] ?? null,
                     $validatedData['subject'],
                     $validatedData['service'],
                     $validatedData['message']

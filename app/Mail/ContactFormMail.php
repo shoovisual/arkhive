@@ -14,14 +14,16 @@ class ContactFormMail extends Mailable
 
     public $name;
     public $email;
+    public $phone;
     public $subject;
     public $service;
     public $messageContent;
     public $questions;
-    public function __construct($name, $email, $subject, $service, $messageContent, $questions = [])
+    public function __construct($name, $email, $phone, $subject, $service, $messageContent, $questions = [])
     {
         $this->name = $name;
         $this->email = $email;
+        $this->phone = $phone;
         $this->subject = $subject;
         $this->service = $service;
         $this->messageContent = $messageContent;

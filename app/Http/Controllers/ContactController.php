@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
@@ -22,6 +23,7 @@ class ContactController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'subject' => 'required|string|max:255',
+            'phone' => 'required|string|max:20',
             'service' => 'required|string|exists:services,title',
             'message' => 'required|string|max:1000',
         ]);
@@ -40,6 +42,7 @@ class ContactController extends Controller
 
             return redirect()->back()->with('success', 'Thank you for your message. We will get back to you soon!');
         } catch (\Exception $e) {
+            Log::error(['message'=>$e->getMessage(),'trace'=>$e->getTraceAsString()]);
             return redirect()->back()
                 ->with('error', 'Sorry, there was an error sending your message. Please try again later.')
                 ->withInput();

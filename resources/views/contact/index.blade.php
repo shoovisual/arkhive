@@ -24,7 +24,8 @@
             </div>
             <div class="flex gap-x-4 text-white text-md font-[Montserrat]">
                 <i class="bi bi-telephone-fill text-ark-brown text-2xl"></i>
-                <a href="tel:+255747888555 "> +255 747 888 555 </a>
+                <a href="https://wa.me/255747888555" target="_blank"><i class="bi bi-whatsapp text-ark-brown text-2xl"></i></a>
+                <a href="tel:+255747888555"> +255 747 888 555 </a>
             </div>
             <div class="flex gap-x-4 text-white text-md font-[Montserrat]">
                 <i class="bi bi-envelope-fill text-ark-brown text-2xl"></i>

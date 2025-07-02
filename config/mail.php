@@ -47,6 +47,8 @@ return [
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
+            'auto_tls'   => false,   // stops Symfony from issuing STARTTLS
+            'verify_peer'=> false,   // skips the CN check on GoDaddy’s cert
         ],
 
         'ses' => [
@@ -111,7 +113,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'shoovisual@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'clientservice@arkhive.africa'),
         'name' => env('MAIL_FROM_NAME', 'ARKHIVE'),
     ],
 

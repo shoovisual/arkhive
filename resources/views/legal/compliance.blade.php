@@ -5,7 +5,7 @@
 <div class="empty-breadcrumb spacer h-[30vh]"> </div>
 <div class="container py-12 max-w-4xl mx-auto text-white">
     <h1 class="text-6xl font-regular text-ark-brown mb-8">Data Compliance</h1>
-    <p class="mb-4 font-[Montserrat]">Effective Date: July 9, 2025</p>
+    <p class="mb-4 font-[Montserrat]">Effective Date: June 15, 2025</p>
 
     <h2 class="text-xl font-regular mt-6 mb-2">1. Data Protection Standards</h2>
     <p class="mb-4 font-[Montserrat]">We use encryption, firewalls, and access control to secure your data.</p>

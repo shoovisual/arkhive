@@ -5,7 +5,7 @@
 <div class="empty-breadcrumb spacer h-[30vh]"> </div>
 <div class="container py-12 max-w-4xl mx-auto text-white">
     <h1 class="text-6xl font-regular mb-8 text-ark-brown">Terms & Conditions</h1>
-    <p class="mb-4 font-[Montserrat]">Effective Date: July 9, 2025</p>
+    <p class="mb-4 font-[Montserrat]">Effective Date: June 15, 2025</p>
 
     <p class="mb-4 font-[Montserrat]">Welcome to Arkhive Africa. These Terms & Conditions outline the rules and regulations for using our website and services.</p>
 

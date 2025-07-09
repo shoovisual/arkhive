@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\ServiceFormController;
 use Illuminate\Support\Facades\App;
+use App\Http\Controllers\LegalController;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -32,3 +33,11 @@ Route::post('service-form', [ServiceFormController::class, 'submit'])->name('ser
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+
+Route::prefix('legal')->group(function () {
+    Route::get('/terms', [LegalController::class, 'terms'])->name('legal.terms');
+    Route::get('/privacy', [LegalController::class, 'privacy'])->name('legal.privacy');
+    Route::get('/cookie', [LegalController::class, 'cookie'])->name('legal.cookie');
+    Route::get('/compliance', [LegalController::class, 'compliance'])->name('legal.compliance');
+});

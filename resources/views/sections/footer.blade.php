@@ -103,10 +103,10 @@
                 <div>
                     <h3 class="text-2xl font-medium mb-4">Legal</h3>
                     <ul class="space-y-2 block md:flex md:space-x-6 lg:block font-[Montserrat]">
-                        <li><a href="#" class="hover:text-ark-brown transition-all duration-300">Terms & Conditions</a></li>
-                        <li><a href="#" class="hover:text-ark-brown transition-all duration-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-ark-brown transition-all duration-300">Cookie Policy</a></li>
-                        <li><a href="#" class="hover:text-ark-brown transition-all duration-300">Data Compliance</a></li>
+                        <li><a href="{{ route('legal.terms') }}" class="hover:text-ark-brown transition-all duration-300">Terms & Conditions</a></li>
+                        <li><a href="{{ route('legal.privacy') }}" class="hover:text-ark-brown transition-all duration-300">Privacy Policy</a></li>
+                        <li><a href="{{ route('legal.cookie') }}" class="hover:text-ark-brown transition-all duration-300">Cookie Policy</a></li>
+                        <li><a href="{{ route('legal.compliance') }}" class="hover:text-ark-brown transition-all duration-300">Data Compliance</a></li>
                     </ul>
                 </div>
             </div>

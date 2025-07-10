@@ -18,7 +18,7 @@
     <p class="mb-4 font-[Montserrat]">We do not sell your data. We may share with service providers under strict confidentiality.</p>
 
     <h2 class="text-xl font-regular mt-6 mb-2">4. Your Rights</h2>
-    <p class="mb-4 font-[Montserrat]">You may request access, updates, or deletion of your data. Email: <a href="mailto:support@arkhive.africa" class="underline">support@arkhive.africa</a></p>
+    <p class="mb-4 font-[Montserrat]">You may request access, updates, or deletion of your data. Email: <a href="mailto:clientservices@arkhive.africa" class="underline">clientservices@arkhive.africa</a></p>
 
     <h2 class="text-xl font-regular mt-6 mb-2">5. Data Retention</h2>
     <p class="mb-4 font-[Montserrat]">We retain your data as long as necessary for services or legal reasons.</p>

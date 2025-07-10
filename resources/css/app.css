@@ -14,6 +14,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+    font-family: 'Garamond';
+    src: url('../../public/fonts/Garamond.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond';
+    src: url('../../public/al-veshion-personaluseonly.regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @media (max-width: 768px) {
     .home-grid {
         grid-template-columns: 1fr;

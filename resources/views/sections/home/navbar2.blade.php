@@ -30,14 +30,14 @@
                                 All Services
                             </a>
                             @foreach($services->sortBy('id') as $service)
-    <a href="{{ $service->url }}"
-       class="block px-4 py-3 text-sm text-ark-brown font-[Montserrat]
-              hover:bg-ark-black/50 text-[16px] hover:text-ark-brown
-              transition-colors duration-200
-              {{ request()->is('services/'.$service->id) ? 'bg-gray-100 text-ark-brown' : '' }}">
-        {{ $service->title }}
-    </a>
-@endforeach
+                                <a href="{{ $service->url }}"
+                                class="block px-4 py-3 text-sm text-ark-brown font-[Montserrat]
+                                        hover:bg-ark-black/50 text-[16px] hover:text-ark-brown
+                                        transition-colors duration-200
+                                        {{ request()->is('services/'.$service->id) ? 'bg-gray-100 text-ark-brown' : '' }}">
+                                    {{ $service->title }}
+                                </a>
+                            @endforeach
 
                         </div>
                     </div>

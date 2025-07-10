@@ -65,9 +65,9 @@
                 <!-- Useful Links Section -->
                 <div>
                     <div class="space-y-4 w-[200px]">
-                        <img src="{{ asset('img/main-logo.svg') }}" alt="">
+                        <img src="{{ asset('img/footer-logo.svg') }}" alt="">
                     </div>
-                    <h4 class="mt-2 font-[Garamond] text-ark-blue text-[17px] md:text-[18px] ml-[2px] font-medium">It is not a priority, until it is.</h4>
+                    {{-- <h4 class="mt-2 font-[al-veshion-personaluseonly] text-ark-blue text-[17px] md:text-[18px] ml-[2px] font-medium">It is not a priority, until it is.</h4> --}}
                 </div>
 
                 <!-- Contact Section -->

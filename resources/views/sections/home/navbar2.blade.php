@@ -48,7 +48,7 @@
                     </a>
                     <a href="{{ route('about') }}" class="group py-3 block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('about') ? 'text-ark-brown' : '' }}">
                         <div class="flex items-baseline">
-                            <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
+                            <span class="group-hover:text-ark-brown transition-colors duration-300">About Us</span>
                         </div>
                     </a>
                     <a href="{{ route('contact') }}" class="group py-3 block text-[16px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('contact-') ? 'text-ark-brown' : '' }}">
@@ -148,7 +148,7 @@
     <!-- About -->
     <a href="{{ route('about') }}" class="group py-3 block text-[21px] font-[Montserrat] font-regular px-3 transition-all duration-300 {{ request()->is('about') ? 'text-ark-brown' : '' }}">
         <div class="flex items-baseline">
-            <span class="group-hover:text-ark-brown transition-colors duration-300">About us</span>
+            <span class="group-hover:text-ark-brown transition-colors duration-300">About Us</span>
         </div>
     </a>
 

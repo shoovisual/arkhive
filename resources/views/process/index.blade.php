@@ -18,7 +18,7 @@
                         <img src="{{ asset('img/process/assess.png') }}" alt="Arkhive Process" class="w-[300px] group-hover:scale-110 transition-all duration-300">
                     </div>
                     <div class="process-text px-12">
-                        <h2 class="my-4 text-[52px]">Assess</h2>
+                        <h2 class="my-4 text-[52px]">Access</h2>
                         <p class="font-[Montserrat]">Initial discussion to understand your document management needs.</p>
                     </div>
                 </div>

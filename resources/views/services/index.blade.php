@@ -39,8 +39,8 @@
             <div class="container flex justify-center py-5 items-center mx-auto">
                 <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
                     <div class="flex flex-col mb-8 md:mb-0 gap-y-4">
-                        <h2 class="text-2xl text-ark-brown">Got a document headache?</h2>
-                        <h2 class="text-6xl text-white">Tell us everything.</h2>
+                        <h2 class="text-2xl text-ark-brown font-[Montserrat]">Got a document headache?</h2>
+                        <h2 class="text-6xl text-white">Tell Us Everything.</h2>
                     </div>
                     <div class="flex md:justify-center items-center">
                         <div class="contact-btn">

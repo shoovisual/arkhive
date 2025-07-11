@@ -57,7 +57,7 @@
 
                 <div class="flex flex-col md:justify-center lg:justify-start sm:flex-row gap-4">
                     <a href="/contact" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/50 transition-colors rounded"> Let&apos;s Talk </a>
-                    <a href="#services" class="border border-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/10 transition-colors rounded">Check our Services</a>
+                    <a href="#services" class="border border-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/10 transition-colors rounded">Check Our Services</a>
                 </div>
             </div>
         </div>
@@ -122,8 +122,8 @@
     <div class="container flex justify-center py-5 items-center mx-auto">
         <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
             <div class="flex flex-col mb-8 md:mb-0 gap-y-4">
-                <h2 class="text-2xl text-ark-brown">Got a document headache?</h2>
-                <h2 class="text-6xl text-white">Tell us everything.</h2>
+                <h2 class="text-2xl text-ark-brown font-[Montserrat]">Got a document headache?</h2>
+                <h2 class="text-6xl text-white">Tell Us Everything.</h2>
             </div>
             <div class="flex md:justify-center items-center">
                 <div class="contact-btn">
@@ -165,7 +165,7 @@
             @endforeach
             <a href="/contact" class="service-card group  bg-ark-brown text-ark-black py-10 px-4 flex items-center rounded-lg shadow-lg">
                 <div class="flex flex-col service-desc space-y-6 text-center">
-                    <h3 class="md:text-6xl text-5xl  font-medium">What is the Cost to you?</h3>
+                    <h3 class="md:text-6xl text-5xl  font-medium">What is the Cost to You?</h3>
                     <p class="text-6xl  px-4 py-2 group-hover:ml-5 transition-all duration-300 rounded-md"><i class="bi group-hover:ml-5 transition-all duration-300  bi-chevron-right"></i></p>
                 </div>
             </a>
@@ -182,8 +182,8 @@
     <div class="container flex justify-center py-10 items-center mx-auto">
         <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
             <div class="flex flex-col gap-y-4">
-                <h2 class="text-2xl text-ark-brown">Got a document headache?</h2>
-                <h2 class="text-6xl text-white">Tell us everything.</h2>
+                <h2 class="text-2xl text-ark-brown font-[Montserrat]">Got a document headache?</h2>
+                <h2 class="text-6xl text-white">Tell Us Everything.</h2>
             </div>
             <div class="flex md:justify-center md:mt-0 mt-8 items-center">
                 <div class="contact-btn">

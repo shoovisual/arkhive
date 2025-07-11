@@ -32,7 +32,7 @@ class ServiceSeeder extends Seeder
                             'Archiving is complex—ARKHIVE provides expert systematization and secure record safeguarding.',
                             'Our warehouse includes fire and climate control, CCTV, and 24/7 armed security access monitoring.                    ',
                             'Documents are sorted, indexed, boxed, barcoded, and securely managed by our trained professionals.',
-                            'We operate with O’NEIL, a globally trusted system for reliable records and inventory management.',
+                            'Documents are managed with our effective records management system (RMS), and controlled access is available on our client portal.',
                             'We ensure compliance with TRA, BOT, TIRA, legal standards, and Personal Data Protection laws.',
                         ]
                     ],

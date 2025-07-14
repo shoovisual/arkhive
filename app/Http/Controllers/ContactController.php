@@ -31,7 +31,7 @@ class ContactController extends Controller
 
         try {
             // Send email
-            Mail::to('shoovisual@gmail.com')
+            Mail::to('clientservices@arkhive.africa')
                 ->send(new ContactFormMail(
                     $validatedData['name'],
                     $validatedData['email'],

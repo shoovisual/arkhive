@@ -73,7 +73,7 @@
                                 </div>
 
                                 {{-- Submit Button --}}
-                                <button type="submit" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown g-recaptcha text-black w-full font-medium px-6 py-3 rounded-full text-md cursor-pointer font-[Montserrat] shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
+                                <button type="submit" data-sitekey="{{ config('services.recaptcha.site_key') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown g-recaptcha text-black w-full font-medium px-6 py-3 rounded-full text-md cursor-pointer font-[Montserrat] shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
                                     Get Free Consultation
                                 </button>
                             </div>

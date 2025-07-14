@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
+
 
 class ServiceFormController extends Controller
 {

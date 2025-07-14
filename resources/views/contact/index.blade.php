@@ -78,8 +78,8 @@
                     <input type="email" id="email" name="email" placeholder="Your email" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
                 </div>
                 <div>
-                    <label for="subject" class="block text-white mb-2">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Enter Subject" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
+                    <label for="phone" class="block text-white mb-2">Phone Number</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter Phone Number" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
                 </div>
 
                 <div x-data="{ isOpen: false, selected: null, services: {{ json_encode($services->pluck('title')) }}, placeholder: 'Select Service' }" class="relative font-[Montserrat]">

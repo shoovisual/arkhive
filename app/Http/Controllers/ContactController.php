@@ -22,7 +22,7 @@ class ContactController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'subject' => 'required|string|max:255',
+            'phone' => 'required|string|max:13|regex:/^\+?[0-9]{9,13}$/|',
             'service' => 'required|string|exists:services,title',
             'message' => 'required|string|max:1000',
         ]);
@@ -33,8 +33,8 @@ class ContactController extends Controller
                 ->send(new ContactFormMail(
                     $validatedData['name'],
                     $validatedData['email'],
-                    $validatedData['phone'] ?? null,
-                    $validatedData['subject'],
+                    $validatedData['phone'],
+                    $validatedData['subject'] ?? null,
                     $validatedData['service'],
                     $validatedData['message']
                 ));

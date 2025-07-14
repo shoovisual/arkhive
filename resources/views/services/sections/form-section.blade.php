@@ -61,7 +61,7 @@
                                     <input type="text" name="name" id="name" placeholder="Name" required
                                         class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
 
-                                    <input type="text" name="phone" placeholder="Phone" required
+                                    <input type="text" name="phone" placeholder="Phone" id="phone" pattern="^\+?\d{9,13}$" required
                                         class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
                                 </div>
 

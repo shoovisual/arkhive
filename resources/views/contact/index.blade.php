@@ -67,7 +67,7 @@
                 </div>
             @endif
 
-            <form action="{{ route('contact.store') }}" method="POST" class="flex font-[Montserrat] flex-col gap-y-4">
+            <form action="{{ route('contact.store') }}" method="POST" id="contact-form" class="flex font-[Montserrat] flex-col gap-y-4">
                 @csrf
                 <div>
                     <label for="name" class="block text-white mb-2">Name</label>
@@ -123,7 +123,7 @@
                 </div>
 
 
-                <button type="submit" class="bg-ark-brown text-ark-black font-medium px-4 py-3 rounded-md text-md cursor-pointer font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out self-start">Send Message</button>
+                <button type="submit" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown text-ark-black g-recaptcha font-medium px-4 py-3 rounded-md text-md cursor-pointer font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out self-start">Send Message</button>
             </form>
         </div>
     </div>
@@ -176,6 +176,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
+
+<script>
+   function onSubmit(token) {
+     document.getElementById("contact-form").submit();
+   }
+ </script>
 
 
 @endsection

@@ -46,6 +46,7 @@
             <p><strong>Email:</strong> {{ $email }}</p>
             <p><strong>Phone:</strong> {{ $phone }}</p>
             <p><strong>Service:</strong> {{ $service }}</p>
+            <p><strong>reCAPTCHA Status:</strong> ✅ Passed</p>
 
             @if(!empty($questions))
                 <div style="margin-top: 20px;">

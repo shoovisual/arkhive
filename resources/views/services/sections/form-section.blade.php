@@ -1,5 +1,12 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<style>
+    .grecaptcha-badge {
+        display: none !important;
+    }
+</style>
 
 <div class="image-slider">
         <div class="max-w-7xl mx-auto p-4 lg:p-10">
@@ -37,7 +44,7 @@
                             </div>
                         @endif
 
-                        <form action="{{ route('service.form.submit') }}" onsubmit="return validateForm(this)"  method="POST" class="flex form flex-col gap-y-6 font-[Montserrat]">
+                        <form action="{{ route('service.form.submit') }}" onsubmit="return validateForm(this)" id="service-form"  method="POST" class="flex form flex-col gap-y-6 font-[Montserrat]">
                             @csrf
                             <input type="hidden" name="service_name" value="{{ $currentService->title }}">
 
@@ -65,9 +72,8 @@
                                         class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
                                 </div>
 
-
                                 {{-- Submit Button --}}
-                                <button type="submit" class="bg-ark-brown text-black w-full font-medium px-6 py-3 rounded-full text-md cursor-pointer font-[Montserrat] shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
+                                <button type="submit" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown g-recaptcha text-black w-full font-medium px-6 py-3 rounded-full text-md cursor-pointer font-[Montserrat] shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
                                     Get Free Consultation
                                 </button>
                             </div>
@@ -95,6 +101,12 @@
         });
     });
 </script>
+
+ <script>
+   function onSubmit(token) {
+     document.getElementById("service-form").submit();
+   }
+ </script>
 
 <script>
 function containsLink(str) {

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
+use App\Rules\reCaptcha;
 
 class ContactController extends Controller
 {
@@ -25,11 +26,12 @@ class ContactController extends Controller
             'phone' => 'required|string|max:13|regex:/^\+?[0-9]{9,13}$/|',
             'service' => 'required|string|exists:services,title',
             'message' => 'required|string|max:1000',
+            'g-recaptcha-response' => ['required', new reCaptcha()]
         ]);
 
         try {
             // Send email
-            Mail::to('clientservices@arkhive.africa')
+            Mail::to('shoovisual@gmail.com')
                 ->send(new ContactFormMail(
                     $validatedData['name'],
                     $validatedData['email'],

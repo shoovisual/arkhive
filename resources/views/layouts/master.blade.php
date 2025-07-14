@@ -41,6 +41,8 @@
     <link rel="icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/png">
 
+     <script src="https://www.google.com/recaptcha/api.js"></script>
+
 
 
     <!-- Styles / Scripts -->

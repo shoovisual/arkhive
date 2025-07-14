@@ -4,7 +4,7 @@
 
 <style>
     .grecaptcha-badge {
-        /* display: none !important; */
+        display: none !important;
     }
 </style>
 

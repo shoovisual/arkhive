@@ -123,7 +123,7 @@
                 </div>
 
 
-                <button type="submit" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown text-ark-black g-recaptcha font-medium px-4 py-3 rounded-md text-md cursor-pointer font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out self-start">Send Message</button>
+                <button type="submit" data-sitekey="6Ldl0YIrAAAAANIs0HSqri35dUmrMMFHmAlD5Cq6" data-callback='onSubmit' data-action='submit' class="bg-ark-brown text-ark-black g-recaptcha font-medium px-4 py-3 rounded-md text-md cursor-pointer font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out self-start">Send Message</button>
             </form>
         </div>
     </div>

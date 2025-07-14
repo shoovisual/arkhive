@@ -37,36 +37,35 @@ return [
 
     'mailers' => [
 
-        'smtp' => [
-            'transport' => 'smtp',
-            'url' => env('MAIL_URL'),
-            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'), // <- required for STARTTLS
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
-            'timeout' => null,
-            'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
-
-            // Remove or set auto_tls to true
-            'auto_tls' => true,         // <- enable STARTTLS
-            'verify_peer' => true,      // <- optional, for strict SSL validation
-        ],
-
-
         // 'smtp' => [
         //     'transport' => 'smtp',
-        //     'scheme' => env('MAIL_SCHEME'),
         //     'url' => env('MAIL_URL'),
-        //     'host' => env('MAIL_HOST', '127.0.0.1'),
-        //     'port' => env('MAIL_PORT', 2525),
+        //     'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+        //     'port' => env('MAIL_PORT', 587),
+        //     'encryption' => env('MAIL_ENCRYPTION', 'tls'), // <- required for STARTTLS
         //     'username' => env('MAIL_USERNAME'),
         //     'password' => env('MAIL_PASSWORD'),
         //     'timeout' => null,
         //     'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
-        //     'auto_tls'   => false,
-        //     'verify_peer'=> false,
+
+        //     'auto_tls' => true,
+        //     'verify_peer' => true,
         // ],
+
+
+        'smtp' => [
+            'transport' => 'smtp',
+            'scheme' => env('MAIL_SCHEME'),
+            'url' => env('MAIL_URL'),
+            'host' => env('MAIL_HOST', '127.0.0.1'),
+            'port' => env('MAIL_PORT', 2525),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => null,
+            'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
+            'auto_tls'   => false,
+            'verify_peer'=> false,
+        ],
 
         'ses' => [
             'transport' => 'ses',

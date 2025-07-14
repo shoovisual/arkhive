@@ -37,7 +37,7 @@
                             </div>
                         @endif
 
-                        <form action="{{ route('service.form.submit') }}" method="POST" class="flex flex-col gap-y-6 font-[Montserrat]">
+                        <form action="{{ route('service.form.submit') }}" onsubmit="return validateForm(this)"  method="POST" class="flex form flex-col gap-y-6 font-[Montserrat]">
                             @csrf
                             <input type="hidden" name="service_name" value="{{ $currentService->title }}">
 
@@ -54,13 +54,13 @@
                             @endif
 
                             <div class="flex flex-col gap-y-6 form gsap-slide-in">
-                                {{-- email --}}
-                                <input type="email" name="email" placeholder="Email" required class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
+                                <input type="email" name="email" placeholder="Email" required
+                                    class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
 
-                                {{-- Name and Phone --}}
                                 <div class="flex flex-col sm:flex-row gap-4">
-                                    <input type="text" name="name" placeholder="Name" required
+                                    <input type="text" name="name" id="name" placeholder="Name" required
                                         class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
+
                                     <input type="text" name="phone" placeholder="Phone" required
                                         class="w-full p-3 bg-ark-black/5 placeholder-white/60 text-white border border-ark-brown/30 backdrop-blur-xs rounded shadow focus:outline-none focus:ring-2 focus:ring-ark-brown">
                                 </div>
@@ -94,4 +94,30 @@
             ease: "power3.out"
         });
     });
+</script>
+
+<script>
+function containsLink(str) {
+    const pattern = /(https?:\/\/|www\.|\.\w{2,})/gi;
+    return pattern.test(str);
+}
+
+function validateForm(form) {
+    const name = form.name.value.trim();
+    const phone = form.phone.value.trim();
+    const email = form.email.value.trim();
+
+    if (containsLink(name) || containsLink(phone)) {
+        alert("Links are not allowed in Name or Phone fields.");
+        return false;
+    }
+
+    // Optional: ensure name has at least two words
+    if (name.split(" ").length < 2) {
+        alert("Please enter your full name (first and last name).");
+        return false;
+    }
+
+    return true; // allow form submission
+}
 </script>

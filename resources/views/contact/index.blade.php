@@ -79,8 +79,17 @@
                 </div>
                 <div>
                     <label for="phone" class="block text-white mb-2">Phone Number</label>
-                    <input type="text" id="phone" name="phone" placeholder="Enter Phone Number" class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50">
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter Phone Number"
+                        maxlength="13"
+                        pattern="^\+?\d{9,13}$"
+                        class="placeholder:font-[Montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50"
+                        autocomplete="off" required>
                 </div>
+
 
                 <div x-data="{ isOpen: false, selected: null, services: {{ json_encode($services->pluck('title')) }}, placeholder: 'Select Service' }" class="relative font-[Montserrat]">
 
@@ -131,4 +140,42 @@
 
 <!-- Add this in your layout file's head -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form'); // Adjust selector if needed
+    const nameInput = document.getElementById('name');
+    const messageInput = document.getElementById('message');
+
+    function containsLink(text) {
+        const linkRegex = /(https?:\/\/|www\.)[^\s]+/i;
+        return linkRegex.test(text);
+    }
+
+    function isValidFullName(name) {
+        return /^[A-Za-z]+(?:\s[A-Za-z]+)+$/.test(name.trim());
+    }
+
+    form.addEventListener('submit', function (e) {
+        const nameValue = nameInput.value.trim();
+        const messageValue = messageInput.value.trim();
+
+        if (!isValidFullName(nameValue)) {
+            e.preventDefault();
+            alert('Please enter your full name (first and last name only).');
+            nameInput.focus();
+            return;
+        }
+
+        if (containsLink(nameValue) || containsLink(messageValue)) {
+            e.preventDefault();
+            alert('Links are not allowed in the name or message.');
+            return;
+        }
+    });
+});
+
+</script>
+
+
 @endsection

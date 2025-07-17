@@ -31,9 +31,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="revisit-after" content="10 days">
-    <meta name="author" content="Adam Shoo">
-    <meta property="og:title" content="Arkhive Africa | Digital Marketing Agency Based In Dares Salaam, Tanzania" />
-    <meta property="og:description" content="I am Brand Identity and Creative Designer Based in Dar Es Salaam, Tanzania." />
+    <meta name="author" content="Arkhive Africa">
+    <meta property="og:title" content="Arkhive Africa | @yield('title')" />
+    <meta property="og:description" content="Arkhive Africa provides professional document management solutions: secure archiving and retrieval, efficient bulk scanning and indexing, and confidential shredding and recycling services. Streamline your records management." />
     <meta property="og:url" content="https://arkhive.africa/" />
     <meta property="og:site_name" content="Arkhive Africa Brand + Creative Agency" />
     <meta property="article:modified_time" content="2023-03-23T02:08:19+00:00" />

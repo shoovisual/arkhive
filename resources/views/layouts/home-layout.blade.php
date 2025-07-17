@@ -35,7 +35,7 @@
     <meta property="og:title" content="Arkhive Africa | @yield('title')" />
     <meta property="og:description" content="Arkhive Africa provides professional document management solutions: secure archiving and retrieval, efficient bulk scanning and indexing, and confidential shredding and recycling services. Streamline your records management." />
     <meta property="og:url" content="https://arkhive.africa/" />
-    <meta property="og:site_name" content="Arkhive Africa Brand + Creative Agency" />
+    <meta property="og:site_name" content="Arkhive Africa" />
     <meta property="article:modified_time" content="2023-03-23T02:08:19+00:00" />
 
     <!-- Google site verifications -->

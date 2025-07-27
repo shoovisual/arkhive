@@ -3,7 +3,6 @@
 <body>
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-
 <!-- Preloader -->
 <div id="preloader" class="fixed inset-0 z-50 bg-ark-black flex items-center justify-center">
   <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-ark-brown border-opacity-75"></div>

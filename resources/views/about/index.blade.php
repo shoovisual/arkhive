@@ -1,4 +1,8 @@
 @extends('layouts.master')
+@section('meta')
+    <meta property="og:description" content="Learn more about Arkhive Africa, your trusted partner for document management solutions. We specialize in secure archiving, efficient bulk scanning, and confidential shredding services." />
+    <meta property="og:keywords" content="About Arkhive Africa, Document management company, Secure archiving, Bulk scanning services, Confidential shredding, Document storage Africa" />
+@endsection
 @section('title', 'About Us')
 @section('content')
 

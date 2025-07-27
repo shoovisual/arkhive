@@ -1,4 +1,8 @@
 @extends('layouts.home-layout')
+@section('meta')
+    <meta property="og:description" content="Explore our comprehensive document scanning and indexing services at Arkhive Africa. We ensure your documents are digitized, organized, and easily accessible for efficient management." />
+    <meta property="og:keywords" content="Document scanning, Document indexing, Digital archiving, Document management, Bulk scanning services, Secure document storage" />
+@endsection
 @section('title', 'Document Scanning & Indexing')
 
 @push('scripts')

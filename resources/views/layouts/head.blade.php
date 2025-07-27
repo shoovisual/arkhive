@@ -20,8 +20,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta name="description" content="Arkhive Africa provides professional document management solutions: secure archiving and retrieval, efficient bulk scanning and indexing, and confidential shredding and recycling services. Streamline your records management.">
-    <meta name="keywords" content="Document storage, Document archiving, document archiving africa, records management tanzania, document retrieval services, bulk document scanning, paper scanning services, professional indexing, secure document shredding, confidential shredding africa, document recycling services">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -29,8 +27,9 @@
     <meta name="revisit-after" content="10 days">
     <meta name="author" content="Arkhive Africa">
     <meta property="og:title" content="Arkhive Africa | @yield('title')" />
-    <meta property="og:description" content="Arkhive Africa provides professional document management solutions: secure archiving and retrieval, efficient bulk scanning and indexing, and confidential shredding and recycling services. Streamline your records management." />
+    @yield('meta')
     <meta property="og:url" content="https://arkhive.africa/" />
+    <meta property="og:image" content="{{ asset('img/arkhive-icon.png') }}" />
     <meta property="og:site_name" content="Arkhive Africa" />
 
     <!-- Google site verifications -->

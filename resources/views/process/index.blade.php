@@ -1,4 +1,8 @@
 @extends('layouts.master')
+@section('meta')
+    <meta property="og:description" content="Discover the streamlined process of Arkhive Africa for efficient document management. From assessment to execution, we ensure your documents are handled with care and precision." />
+    <meta property="og:keywords" content="Document management process, Arkhive Africa process, Document archiving, Document retrieval, Document shredding, Document indexing" />
+@endsection
 @section('title', 'Our Process')
 @section('content')
 <div class="h-[70dvh] md:h-[70vh] lg:h-[90vh] relative overflow-hidden md:w-full flex mx-auto items-center px-3 md:px-20" style="background-image: url('img/document_storage.webp'); background-position: center; background-size: cover">

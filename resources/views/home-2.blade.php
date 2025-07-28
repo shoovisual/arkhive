@@ -1,6 +1,8 @@
 @extends('layouts.home-layout')
 
 @section('meta')
+    <meta name="description" content="Welcome to Arkhive Africa, your trusted partner for all your document management needs. We provide professional document management solutions: secure archiving and retrieval, efficient bulk scanning and indexing, and confidential shredding and recycling services. Streamline your records management." />
+    <meta name="keywords" content="Document storage, Document archiving, document archiving africa, records management tanzania, document retrieval services, bulk document scanning, paper scanning services, professional indexing, secure document shredding, confidential shredding africa, document recycling services" />
     <meta property="og:description" content="Welcome to Arkhive Africa, your trusted partner for all your document management needs. We provide professional document management solutions: secure archiving and retrieval, efficient bulk scanning and indexing, and confidential shredding and recycling services. Streamline your records management." />
     <meta property="og:keywords" content="Document storage, Document archiving, document archiving africa, records management tanzania, document retrieval services, bulk document scanning, paper scanning services, professional indexing, secure document shredding, confidential shredding africa, document recycling services" />
 @endsection

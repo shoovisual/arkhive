@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('meta')
+    <meta name="description" content="Get in touch with Arkhive Africa for all your document management needs. We offer secure archiving, efficient bulk scanning, and confidential shredding services. Contact us today!" />
+    <meta name="keywords" content="Contact Arkhive Africa, Arkhive Africa Contacts, Document management contact, Secure archiving, Bulk scanning contact, Confidential shredding contact" />
     <meta property="og:description" content="Get in touch with Arkhive Africa for all your document management needs. We offer secure archiving, efficient bulk scanning, and confidential shredding services. Contact us today!" />
     <meta property="og:keywords" content="Contact Arkhive Africa, Arkhive Africa Contacts, Document management contact, Secure archiving, Bulk scanning contact, Confidential shredding contact" />
 @endsection

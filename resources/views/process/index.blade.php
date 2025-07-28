@@ -1,5 +1,7 @@
 @extends('layouts.master')
 @section('meta')
+    <meta name="description" content="Discover the streamlined process of Arkhive Africa for efficient document management. From assessment to execution, we ensure your documents are handled with care and precision." />
+    <meta name="keywords" content="Document management process, Arkhive Africa process, Document archiving, Document retrieval, Document shredding, Document indexing" />
     <meta property="og:description" content="Discover the streamlined process of Arkhive Africa for efficient document management. From assessment to execution, we ensure your documents are handled with care and precision." />
     <meta property="og:keywords" content="Document management process, Arkhive Africa process, Document archiving, Document retrieval, Document shredding, Document indexing" />
 @endsection

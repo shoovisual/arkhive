@@ -1,5 +1,7 @@
 @extends('layouts.home-layout')
 @section('meta')
+    <meta name="description" content="Explore our comprehensive document shredding and recycling services at Arkhive Africa. We ensure your documents are securely destroyed and recycled, maintaining confidentiality and environmental responsibility." />
+    <meta name="keywords" content="Document shredding, Document recycling, Secure document destruction, Confidential shredding, Document disposal services, Eco-friendly shredding" />
     <meta property="og:description" content="Explore our comprehensive document shredding and recycling services at Arkhive Africa. We ensure your documents are securely destroyed and recycled, maintaining confidentiality and environmental responsibility." />
     <meta property="og:keywords" content="Document shredding, Document recycling, Secure document destruction, Confidential shredding, Document disposal services, Eco-friendly shredding" />
 @endsection

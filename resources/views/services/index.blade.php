@@ -1,5 +1,7 @@
 @extends('layouts.master')
 @section('meta')
+    <meta name="description" content="Explore our comprehensive document storage services at Arkhive Africa. We ensure your documents are digitized, organized, and easily accessible for efficient management." />
+    <meta name="keywords" content="Document scanning, Document indexing, Digital archiving, Document management, Bulk scanning services, Secure document storage" />
     <meta property="og:description" content="Explore our comprehensive document storage services at Arkhive Africa. We ensure your documents are digitized, organized, and easily accessible for efficient management." />
     <meta property="og:keywords" content="Document scanning, Document indexing, Digital archiving, Document management, Bulk scanning services, Secure document storage" />
 @endsection

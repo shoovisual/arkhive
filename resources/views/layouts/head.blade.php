@@ -26,8 +26,9 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="10 days">
     <meta name="author" content="Arkhive Africa">
-    <meta property="og:title" content="Arkhive Africa | @yield('title')" />
     @yield('meta')
+    <meta property="og:title" content="@yield('title') | Arkhive Africa" />
+
     <meta property="og:url" content="https://arkhive.africa/" />
     <meta property="og:image" content="{{ asset('img/arkhive-icon.png') }}" />
     <meta property="og:site_name" content="Arkhive Africa" />

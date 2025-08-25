@@ -71,12 +71,14 @@ class ContactController extends Controller
             $email = $validatedData['email'];
             $name = $validatedData['name'];
             $phone = $validatedData['phone'] ?? '';
+            $services = $validatedData['service'] ?? '';
 
             // Check if already subscribed to avoid duplicate subscriptions
             if (!Newsletter::isSubscribed($email)) {
                 Newsletter::subscribeOrUpdate($email, [
                     'FNAME' => $name,
                     'PHONE' => $phone,
+                    'INDUSTRY' => $services,
                 ]);
 
                 Log::info('Newsletter subscription successful', [

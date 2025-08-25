@@ -130,6 +130,12 @@
                     <textarea id="message" name="message" rows="6" class="w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required></textarea>
                 </div>
 
+                <div>
+                    <input type="checkbox" class="mr-2" name="subscribe" value="1" id="subscribe">
+                    <label for="subscribe" class="text-white">Subscribe to our newsletter</label>
+                </div>
+
+
 
                 <button type="submit" data-sitekey="{{ config('services.recaptcha.site_key') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown text-ark-black g-recaptcha font-medium px-4 py-3 rounded-md text-md cursor-pointer font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out self-start">Send Message</button>
             </form>

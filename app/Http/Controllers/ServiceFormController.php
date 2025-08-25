@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
 use App\Rules\reCaptcha;
+use Newsletter;
 
 
 class ServiceFormController extends Controller
@@ -20,7 +21,8 @@ class ServiceFormController extends Controller
         'email' => 'required|email|max:255',
         'phone' => 'required|string|max:20',
         'service_name' => 'required|string|max:255',
-        'g-recaptcha-response' => ['required', new reCaptcha()]
+        'g-recaptcha-response' => ['required', new reCaptcha()],
+        'subscribe' => 'nullable|boolean', // Newsletter subscription checkbox
     ]);
 
     try {
@@ -50,6 +52,12 @@ class ServiceFormController extends Controller
                 ));
 
             \Log::info('Service form email sent successfully');
+            
+            // Handle newsletter subscription if requested
+            if ($request->has('subscribe') && $request->subscribe == 1) {
+                $this->handleNewsletterSubscription($validatedData);
+            }
+            
             return back()->with('success', 'Thank you for your message. We will get back to you soon!');
         } catch (\Exception $e) {
             \Log::error('Service form submission error: ' . $e->getMessage());
@@ -57,6 +65,40 @@ class ServiceFormController extends Controller
             return back()
                 ->with('error', 'Sorry, there was an error sending your message. Please try again later.')
                 ->withInput();
+        }
+    }
+
+    /**
+     * Handle newsletter subscription for service form
+     */
+    private function handleNewsletterSubscription($data)
+    {
+        try {
+            $email = $data['email'];
+            $firstName = $data['first_name'] ?? '';
+            $lastName = $data['last_name'] ?? '';
+            
+            // Check if already subscribed
+            if (Newsletter::isSubscribed($email)) {
+                \Log::info("Newsletter: Email {$email} is already subscribed");
+                return;
+            }
+            
+            // Subscribe to newsletter
+            $result = Newsletter::subscribe($email, [
+                'FNAME' => $firstName,
+                'LNAME' => $lastName
+            ]);
+            
+            if ($result) {
+                \Log::info("Newsletter: Successfully subscribed {$email}");
+            } else {
+                \Log::warning("Newsletter: Failed to subscribe {$email}");
+            }
+            
+        } catch (\Exception $e) {
+            \Log::error('Newsletter subscription failed: ' . $e->getMessage());
+            // Don't throw exception - newsletter failure shouldn't block form submission
         }
     }
 

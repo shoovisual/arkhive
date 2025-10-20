@@ -16,6 +16,12 @@ Route::get('home-2', function () {
     return view('home-2', compact('services'));
 });
 
+Route::get('/home-alt', function () {
+    $services = \App\Models\Service::all();
+    $sectors = json_decode(file_get_contents(public_path('data/sectors.json')), true);
+    return view('home-alt', compact('services', 'sectors'));
+});
+
 Route::get('/process', function () {
     $services = \App\Models\Service::all();
     $sectors = json_decode(file_get_contents(public_path('data/sectors.json')), true);

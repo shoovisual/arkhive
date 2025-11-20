@@ -14,8 +14,7 @@
         $heroBackgrounds = [
             'img/hero-bg.webp',
             'img/document_storage.webp',
-            'img/document_secured_access.webp',
-            'img/contact-cover.webp'
+            'img/archiving-cover.webp',
         ];
     @endphp
     <section class="relative h-[95vh] w-full">

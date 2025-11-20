@@ -25,10 +25,10 @@
                     <div class="hero-content text-white space-y-6">
                         <div class="hero-text md:w-3xl">
                             <h1 class="text-3xl md:text-5xl lg:text-6xl text-white">From Compliance Risk to <span class="text-3xl md:text-5xl text-ark-brown lg:text-6xl">Business Assurance</span></h1>
-                            <p class="text-white mt-2 text-2xl font-[Montserrat]">PDPC Compliant Transform your records from a liability into a secure, accessible asset with Tanzania Personal Data Protection Act (PDPC 2022) compliance</p>
+                            <p class="text-white mt-2 text-2xl font-[Montserrat]">PDPA Compliant Transform your records from a liability into a secure, accessible asset with Tanzania Personal Data Protection Act (PDPA 2022) compliance</p>
                         </div>
                         <div class="flex gap-4 pt-2 font-[Montserrat]">
-                            <a href="{{ route('services.pdpc-compliance') }}" class="px-5 py-3 rounded-full border border-ark-brown bg-ark-black hover:bg-[#121212] text-white transition">Learn About PDPC Compliance</a>
+                            <a href="{{ route('services.pdpc-compliance') }}" class="px-5 py-3 rounded-full border border-ark-brown bg-ark-black hover:bg-[#121212] text-white transition">Learn About PDPA Compliance</a>
                             <a href="{{ route('contact') }}" class="px-5 py-3 rounded-full border border-white/20 bg-ark-black/60 hover:bg-ark-black text-white transition">Get a Quote</a>
                         </div>
                     </div>

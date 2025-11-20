@@ -92,12 +92,12 @@
                 <p class="text-lg text-white font-[Montserrat] mb-8 max-w-2xl mx-auto">
                     Download our one-page guide covering the key principles, data subject rights, and penalties under the Tanzanian PDPA.
                 </p>
-                <a href="#" class="inline-flex items-center gap-3 bg-ark-brown text-ark-black font-medium px-8 py-4 rounded-md text-lg font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out">
+                <button type="button" id="downloadPDPCBtn" class="inline-flex items-center gap-3 bg-ark-brown text-ark-black font-medium px-8 py-4 rounded-md text-lg font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out cursor-pointer">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
                     DOWNLOAD PDPA AWARENESS PDF
-                </a>
+                </button>
             </div>
         </div>
 
@@ -114,5 +114,205 @@
         </div>
     </div>
 </main>
+
+<!-- Success Popup -->
+<div id="successPopup" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[60] hidden items-center justify-center" style="display: none;">
+    <div class="bg-ark-black border border-ark-brown/30 rounded-lg p-8 max-w-md w-full mx-4 relative animate-fade-in">
+        <div class="text-center">
+            <div class="mb-4 flex justify-center">
+                <svg class="w-16 h-16 text-ark-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl text-ark-brown font-medium mb-4 font-[Montserrat]">Thank You!</h3>
+            <p class="text-white font-[Montserrat] mb-6">Thank you for downloading the PDPA Awareness Guide.</p>
+            <button id="closeSuccessPopup" class="bg-ark-brown text-ark-black font-medium px-8 py-3 rounded-md text-lg font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Download Modal -->
+<div id="downloadModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center" style="display: none;">
+    <div class="bg-ark-black border border-ark-brown/30 rounded-lg p-8 max-w-md w-full mx-4 relative">
+        <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-ark-brown transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        
+        <h3 class="text-2xl text-ark-brown font-medium mb-4 font-[Montserrat]">Download PDPA Awareness Guide</h3>
+        <p class="text-white font-[Montserrat] mb-6">Please provide your email address to download the PDPA Awareness Guide.</p>
+        
+        <form id="downloadForm" class="space-y-4">
+            @csrf
+            <div>
+                <label for="email" class="block text-white mb-2 font-[Montserrat]">Email Address</label>
+                <input type="email" id="email" name="email" required 
+                    class="w-full px-4 py-3 rounded-md border border-ark-brown/30 bg-ark-black/50 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50 font-[Montserrat]" 
+                    placeholder="your.email@example.com">
+                <div id="emailError" class="text-red-400 text-sm mt-1 hidden font-[Montserrat]"></div>
+            </div>
+            
+            <div class="flex gap-4">
+                <button type="submit" id="submitDownload" class="flex-1 bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out">
+                    Download
+                </button>
+                <button type="button" id="cancelDownload" class="px-6 py-3 rounded-md border border-white/20 bg-ark-black/60 hover:bg-ark-black text-white transition font-[Montserrat]">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const downloadBtn = document.getElementById('downloadPDPCBtn');
+    const modal = document.getElementById('downloadModal');
+    const closeModal = document.getElementById('closeModal');
+    const cancelBtn = document.getElementById('cancelDownload');
+    const downloadForm = document.getElementById('downloadForm');
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const submitBtn = document.getElementById('submitDownload');
+
+    // Open modal
+    downloadBtn.addEventListener('click', function() {
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+        emailInput.focus();
+    });
+
+    // Close modal
+    function closeModalFunc() {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+        downloadForm.reset();
+        emailError.classList.add('hidden');
+    }
+
+    closeModal.addEventListener('click', closeModalFunc);
+    cancelBtn.addEventListener('click', closeModalFunc);
+
+    // Close on outside click
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModalFunc();
+        }
+    });
+
+    // Success popup elements
+    const successPopup = document.getElementById('successPopup');
+    const closeSuccessPopup = document.getElementById('closeSuccessPopup');
+
+    // Show success popup
+    function showSuccessPopup() {
+        successPopup.classList.remove('hidden');
+        successPopup.style.display = 'flex';
+    }
+
+    // Close success popup
+    function closeSuccessPopupFunc() {
+        successPopup.classList.add('hidden');
+        successPopup.style.display = 'none';
+    }
+
+    closeSuccessPopup.addEventListener('click', closeSuccessPopupFunc);
+    
+    // Close success popup on outside click
+    successPopup.addEventListener('click', function(e) {
+        if (e.target === successPopup) {
+            closeSuccessPopupFunc();
+        }
+    });
+
+    // Handle form submission
+    downloadForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const email = emailInput.value.trim();
+        
+        // Reset error
+        emailError.classList.add('hidden');
+        
+        // Basic email validation
+        if (!email || !email.includes('@')) {
+            emailError.textContent = 'Please enter a valid email address';
+            emailError.classList.remove('hidden');
+            return;
+        }
+
+        // Disable submit button
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Downloading...';
+
+        try {
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('_token', document.querySelector('input[name="_token"]').value);
+
+            const response = await fetch('{{ route("services.pdpc-download") }}', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                }
+            });
+
+            if (response.ok) {
+                // Get the blob from response
+                const blob = await response.blob();
+                
+                // Create download link
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'PDPA-Awareness-Guide.pdf';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+
+                // Close modal
+                closeModalFunc();
+                
+                // Show custom success popup
+                showSuccessPopup();
+            } else {
+                const data = await response.json();
+                emailError.textContent = data.message || 'An error occurred. Please try again.';
+                emailError.classList.remove('hidden');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            emailError.textContent = 'An error occurred. Please try again later.';
+            emailError.classList.remove('hidden');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Download';
+        }
+    });
+});
+</script>
+
+<style>
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+</style>
+
 @endsection
 

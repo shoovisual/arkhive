@@ -11,30 +11,26 @@
 <main class="w-full">
     <!-- Hero Slider (Slick) -->
     @php
-        $orderedServices = isset($services) ? $services->sortBy('order') : collect([]);
-        function heroTagline($service) {
-            $t = strtolower($service->title ?? '');
-            if (str_contains($t, 'archiv')) return 'Secure document archiving and retrieval services';
-            if (str_contains($t, 'scan')) return 'Efficient bulk scanning and indexing services';
-            if (str_contains($t, 'shred')) return 'Secure document shredding and recycling services';
-            return 'Professional document management services tailored to you';
-        }
+        $heroBackgrounds = [
+            'img/hero-bg.webp',
+            'img/document_storage.webp',
+            'img/document_secured_access.webp',
+            'img/contact-cover.webp'
+        ];
     @endphp
-    <section class="relative h-[90vh] w-full">
+    <section class="relative h-[95vh] w-full">
         <div class="hero-slider">
-            @foreach($orderedServices as $service)
-                <div class="hero-slide" style="background-image: url('{{ asset($service->cover_image) }}');">
+            @foreach($heroBackgrounds as $background)
+                <div class="hero-slide" style="background-image: url('{{ asset($background) }}');">
                     <div class="hero-overlay"></div>
                     <div class="hero-content text-white space-y-6">
-                        <div class="hero-text">
-                            <h1 class="text-3xl md:text-5xl lg:text-6xl text-white">We are a <span class="text-3xl md:text-5xl text-ark-brown lg:text-6xl">Document</span> </h1>
-                            <h1 class="text-3xl text-ark-brown md:text-5xl lg:text-6xl leading-tight">{{ $service->title }} <span class="text-3xl text-white md:text-5xl lg:text-6xl">Certified</span> </h1>
-
-                            <p class="text-white mt-2 text-2xl">{{ heroTagline($service) }}</p>
+                        <div class="hero-text md:w-3xl">
+                            <h1 class="text-3xl md:text-5xl lg:text-6xl text-white">From Compliance Risk to <span class="text-3xl md:text-5xl text-ark-brown lg:text-6xl">Business Assurance</span></h1>
+                            <p class="text-white mt-2 text-2xl font-[Montserrat]">PDPC Compliant Transform your records from a liability into a secure, accessible asset with Tanzania Personal Data Protection Act (PDPC 2022) compliance</p>
                         </div>
                         <div class="flex gap-4 pt-2 font-[Montserrat]">
-                            <a href="{{ $service->url }}" class="px-5 py-3 rounded-full border border-white/20 bg-ark-black/60 hover:bg-ark-black text-white transition">Read More</a>
-                            <a href="{{ route('contact') }}" class="px-5 py-3 rounded-full border border-ark-brown bg-ark-black hover:bg-[#121212] text-white transition">Get a Quote</a>
+                            <a href="{{ route('services.pdpc-compliance') }}" class="px-5 py-3 rounded-full border border-ark-brown bg-ark-black hover:bg-[#121212] text-white transition">Learn About PDPC Compliance</a>
+                            <a href="{{ route('contact') }}" class="px-5 py-3 rounded-full border border-white/20 bg-ark-black/60 hover:bg-ark-black text-white transition">Get a Quote</a>
                         </div>
                     </div>
                 </div>
@@ -50,10 +46,10 @@
                 <h2 class="md:text-6xl text-4xl text-ark-brown font-medium  mb-8">We are a document management company operating since 2016</h2>
             </div>
             <div class="space-y-6 anim-child">
-                <p class="text-lg mb-6 md:w-xl text-white font-[Montserrat]">ARKHIVE helps businesses improve operational efficiency, achieve regulatory compliance, and save on long-term document management costs through our collaborative document management solutions.</p>
+                <p class="text-lg mb-6 md:w-xl text-white font-[Montserrat]">ARKHIVE: PDPC Compliant Records Management company based in Dar es Salaam. We secure your paper and digital assets through certified destruction, storage, and on time retrieval services</p>
                 <div class="flex flex-wrap gap-4 font-[Montserrat]">
-                    <a href="{{ route('services.index') }}" class="px-5 py-3 rounded-full border border-white/20 bg-ark-black/60 hover:bg-ark-black text-white">Check our services</a>
-                    <a href="{{ route('contact') }}" class="px-5 py-3 rounded-full border border-ark-brown bg-ark-black hover:bg-[#121212] text-white">Contact us</a>
+                    <a href="{{ route('services.pdpc-compliance') }}" class="px-5 py-3 rounded-full border border-ark-brown bg-ark-black/60 hover:bg-ark-black text-white">Learn More</a>
+                    <a href="{{ route('contact') }}" class="px-5 py-3 rounded-full border border-white/50 bg-ark-black hover:bg-[#121212] text-white">Contact us</a>
                 </div>
             </div>
         </div>

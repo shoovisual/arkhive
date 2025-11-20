@@ -66,4 +66,11 @@ class ServicesController extends Controller
         $services = Service::all();
         return view('services.document-shredding', compact('currentService', 'otherServices', 'sectors', 'services'));
     }
+
+    public function showPDPCCompliance(): View
+    {
+        $sectors = json_decode(file_get_contents(public_path('data/sectors.json')), true);
+        $services = Service::all();
+        return view('services.pdpc-compliance', compact('sectors', 'services'));
+    }
 }

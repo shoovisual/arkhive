@@ -33,6 +33,7 @@ Route::get('/services', [ServicesController::class, 'index'])->name('services.in
 Route::get('document-archiving', [ServicesController::class, 'showArchiving'])->name('services.archiving');
 Route::get('document-scanning', [ServicesController::class, 'showScanning'])->name('services.scanning');
 Route::get('document-shredding', [ServicesController::class, 'showShredding'])->name('services.shredding');
+Route::get('pdpc-compliance', [ServicesController::class, 'showPDPCCompliance'])->name('services.pdpc-compliance');
 
 Route::post('service-form', [ServiceFormController::class, 'submit'])->name('service.form.submit');
 

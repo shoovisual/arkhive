@@ -34,6 +34,7 @@ Route::get('document-archiving', [ServicesController::class, 'showArchiving'])->
 Route::get('document-scanning', [ServicesController::class, 'showScanning'])->name('services.scanning');
 Route::get('document-shredding', [ServicesController::class, 'showShredding'])->name('services.shredding');
 Route::get('pdpc-compliance', [ServicesController::class, 'showPDPCCompliance'])->name('services.pdpc-compliance');
+Route::get('pdpc-compliance-alt', [ServicesController::class, 'showPDPCComplianceAlt'])->name('services.pdpc-compliance-alt');
 Route::post('pdpc-compliance/download', [ServicesController::class, 'downloadPDPC'])->name('services.pdpc-download');
 
 Route::post('service-form', [ServiceFormController::class, 'submit'])->name('service.form.submit');

@@ -33,95 +33,95 @@
         </div>
         <div class="flex flex-col anim-section gap-y-4">
             <p class="text-lg mb-6 md:w-xl text-white font-[Montserrat]">
-                The Tanzania Personal Data Protection Act (PDPA 2022) requires rigorous accountability and demonstrable protection of all personal and sensitive data. For businesses dealing with vast volumes of paper and digital records, compliance can feel overwhelming.
+                The Tanzania Personal Data Protection Act (PDPA 2022) requires rigorous protection of personal and sensitive data. For businesses with vast volumes of records, compliance can feel overwhelming.
             </p>
             <p class="text-lg mb-6 md:w-xl text-white font-[Montserrat]">
-                ARKHIVE simplifies this burden. By providing secure document scanning, indexing, storage, retrieval management and certified destruction, we directly support your compliance framework, transforming your records from a liability into a secure, accessible asset.
+                ARKHIVE simplifies this. Through secure document scanning, indexing, storage, retrieval and certified destruction, we support your compliance framework, transforming records from liability to secure, accessible assets.
             </p>
         </div>
     </div>
 
-         {{-- Compliance Checklist Section --}}
-         <div class="mb-16">
-             <h3 class="text-4xl text-ark-brown font-medium mb-8">How ARKHIVE Directly Supports Your Compliance Checklist</h3>
-             <p class="text-lg text-white font-[Montserrat] mb-8 leading-relaxed">
-                 Your PDPA compliance requires action across several areas. ARKHIVE is your partner for key requirements under Data Security and Management and Data Subject Rights.
-             </p>
-             
-             {{-- Compliance Cards --}}
-             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-                 <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
-                     <h4 class="text-[26px] text-ark-brown font-medium mb-4">Manage Third-Party Providers</h4>
-                     <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[Montserrat]">Licensed and Professional Secure Third-Party Partnership (DPA)</p>
-                     </div>
-                     <div>
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[Montserrat]">We operate under a formal Data Processing Agreement (DPA) with defined security clauses, ensuring strict service provider management.</p>
-                     </div>
-                 </div>
+    {{-- Compliance Checklist Section --}}
+    <div class="mb-16">
+        <h3 class="text-4xl text-ark-brown font-medium mb-8">How ARKHIVE Supports Your Compliance</h3>
+        <p class="text-lg text-white font-[Montserrat] mb-8 leading-relaxed">
+            ARKHIVE partners with you for key PDPA requirements under Data Security and Data Subject Rights.
+        </p>
+        
+        {{-- Compliance Cards --}}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
+                <h4 class="text-[26px] text-ark-brown font-medium mb-4">Manage Third-Party Providers</h4>
+                <div class="mb-4">
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Solution:</p>
+                    <p class="text-white font-regular font-[Montserrat]">Licensed Secure Third-Party Partnership (DPA)</p>
+                </div>
+                <div>
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Benefit:</p>
+                    <p class="text-white font-regular font-[Montserrat]">Formal Data Processing Agreement with defined security clauses ensuring strict service provider management.</p>
+                </div>
+            </div>
 
-                 <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
-                     <h4 class="text-[26px] text-ark-brown font-medium mb-4">Implement Security Measures</h4>
-                     <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[Montserrat]">Certified Physical & Digital Security</p>
-                     </div>
-                     <div>
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[Montserrat]">Optimized storage conditions for paper records and advanced digital access controls/audit trails that prevent unauthorized access.</p>
-                     </div>
-                 </div>
+            <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
+                <h4 class="text-[26px] text-ark-brown font-medium mb-4">Implement Security Measures</h4>
+                <div class="mb-4">
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Solution:</p>
+                    <p class="text-white font-regular font-[Montserrat]">Certified Physical & Digital Security</p>
+                </div>
+                <div>
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Benefit:</p>
+                    <p class="text-white font-regular font-[Montserrat]">Optimized storage and advanced digital access controls with audit trails preventing unauthorized access.</p>
+                </div>
+            </div>
 
-                 <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
-                     <h4 class="text-[26px] text-ark-brown font-medium mb-4">Dispose of Data</h4>
-                     <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[Montserrat]">Certified Document Destruction</p>
-                     </div>
-                     <div>
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[Montserrat]">Auditable, secure shredding guarantees permanent and irrevocable destruction of unneeded personal data, fulfilling disposal policies. Certificate of Destruction provided.</p>
-                     </div>
-                 </div>
+            <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
+                <h4 class="text-[26px] text-ark-brown font-medium mb-4">Dispose of Data</h4>
+                <div class="mb-4">
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Solution:</p>
+                    <p class="text-white font-regular font-[Montserrat]">Certified Document Destruction</p>
+                </div>
+                <div>
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Benefit:</p>
+                    <p class="text-white font-regular font-[Montserrat]">Auditable, secure shredding guarantees permanent destruction of unneeded personal data. Certificate provided.</p>
+                </div>
+            </div>
 
-                 <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
-                     <h4 class="text-[26px] text-ark-brown font-medium mb-4">Respond to Access/Correction Requests</h4>
-                     <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[Montserrat]">Bulk Scanning, Indexing, and Rapid Retrieval</p>
-                     </div>
-                     <div>
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[Montserrat]">Convert paperwork into searchable digital files for rapid retrieval, enabling a timely response to Data Subject Access Rights (DSARs).</p>
-                     </div>
-                 </div>
+            <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
+                <h4 class="text-[26px] text-ark-brown font-medium mb-4">Respond to Access Requests</h4>
+                <div class="mb-4">
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Solution:</p>
+                    <p class="text-white font-regular font-[Montserrat]">Bulk Scanning, Indexing & Rapid Retrieval</p>
+                </div>
+                <div>
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Benefit:</p>
+                    <p class="text-white font-regular font-[Montserrat]">Convert paperwork into searchable digital files enabling timely response to Data Subject Access Rights.</p>
+                </div>
+            </div>
 
-                 <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
-                     <h4 class="text-[26px] text-ark-brown font-medium mb-4">Establish Data Retention Policies</h4>
-                     <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[Montserrat]">Policy-Driven Data Management</p>
-                     </div>
-                     <div>
-                         <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[Montserrat]">Our system enforces your defined retention and disposal policies through system alerts and scheduled, certified destruction.</p>
-                     </div>
-                 </div>
+            <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
+                <h4 class="text-[26px] text-ark-brown font-medium mb-4">Establish Retention Policies</h4>
+                <div class="mb-4">
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Solution:</p>
+                    <p class="text-white font-regular font-[Montserrat]">Policy-Driven Data Management</p>
+                </div>
+                <div>
+                    <p class="text-sm text-ark-brown/80 font-[Montserrat] mb-2 font-semibold">Benefit:</p>
+                    <p class="text-white font-regular font-[Montserrat]">System enforces retention and disposal policies through alerts and scheduled, certified destruction.</p>
+                </div>
+            </div>
 
-                 {{-- CTA Card --}}
-                 <div class="bg-ark-brown rounded-lg shadow-lg anim-section p-8 flex flex-col items-center justify-center text-center min-h-[300px]">
-                     <h4 class="text-3xl md:text-4xl text-ark-black font-medium mb-6">Want to know more?</h4>
-                     <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 text-ark-black font-medium text-xl md:text-2xl font-[Montserrat] hover:opacity-80 transition-opacity">
-                         Let's Talk
-                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                         </svg>
-                     </a>
-                 </div>
-             </div>
-         </div>
+            {{-- CTA Card --}}
+            <div class="bg-ark-brown rounded-lg shadow-lg anim-section p-8 flex flex-col items-center justify-center text-center min-h-[300px]">
+                <h4 class="text-3xl md:text-4xl text-ark-black font-medium mb-6">Want to know more?</h4>
+                <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 text-ark-black font-medium text-xl md:text-2xl font-[Montserrat] hover:opacity-80 transition-opacity">
+                    Let's Talk
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
 
     {{-- Download Section --}}
     <div class="lg:grid grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:flex md:flex-row-reverse items-center gap-8 my-10">
@@ -131,7 +131,7 @@
         <div class="flex flex-col anim-section">
             <h3 class="text-4xl text-ark-brown font-medium mb-6">Need a Quick Compliance Overview?</h3>
             <p class="text-lg mb-6 md:w-xl text-white font-[Montserrat]">
-                Download our one-page guide covering the key principles, data subject rights, and penalties under the Tanzanian PDPA.
+                Download our one-page guide covering key principles, data subject rights, and penalties under the Tanzanian PDPA.
             </p>
             <div class="flex flex-col md:justify-center lg:justify-start sm:flex-row gap-4">
                 <button type="button" id="downloadPDPCBtn" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/50 transition-colors rounded cursor-pointer inline-flex items-center justify-center gap-2">
@@ -140,9 +140,6 @@
                     </svg>
                     Download PDPA Guide
                 </button>
-                <!-- <a href="{{ route('contact') }}" class="border border-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/10 transition-colors rounded">
-                    Contact Us
-                </a> -->
             </div>
         </div>
     </div>
@@ -427,3 +424,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </style>
 
 @endsection
+

@@ -78,6 +78,13 @@ class ServicesController extends Controller
         return view('services.pdpc-compliance', compact('sectors', 'services'));
     }
 
+    public function showPDPCComplianceAlt(): View
+    {
+        $sectors = json_decode(file_get_contents(public_path('data/sectors.json')), true);
+        $services = Service::all();
+        return view('services.pdpc-compliance-alt', compact('sectors', 'services'));
+    }
+
     public function downloadPDPC(Request $request)
     {
         // Validate email

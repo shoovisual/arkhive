@@ -10,6 +10,7 @@ class HomeController extends Controller
     public function index(): View
     {
         $services = Service::orderBy('order')->get();
-        return view('home-alt', compact('services'));
+        $sectors = json_decode(file_get_contents(public_path('data/sectors.json')), true);
+        return view('home-alt', compact('services', 'sectors'));
     }
 }

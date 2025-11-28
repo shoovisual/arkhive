@@ -10,6 +10,6 @@ class HomeController extends Controller
     public function index(): View
     {
         $services = Service::orderBy('order')->get();
-        return view('welcome', compact('services'));
+        return view('home-alt', compact('services'));
     }
 }

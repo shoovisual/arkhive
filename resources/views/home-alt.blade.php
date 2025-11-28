@@ -5,8 +5,9 @@
     <meta property="og:description" content="Secure document archiving, efficient bulk scanning & indexing, and confidential shredding & recycling." />
     <meta property="og:keywords" content="Document archiving, Bulk scanning, Confidential shredding" />
 @endsection
-@section('title', 'Alternative Home')
+@section('title', 'Home')
 @section('content')
+
 
 <main class="w-full">
     <!-- Hero Slider (Slick) -->

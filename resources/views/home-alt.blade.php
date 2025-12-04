@@ -24,8 +24,8 @@
                 <div class="hero-slide" style="background-image: url('{{ asset($background) }}');">
                     <div class="hero-overlay"></div>
                     <div class="hero-content text-white space-y-6">
-                        <div class="hero-text md:w-xl">
-                            <h1 class="text-3xl md:text-5xl lg:text-6xl text-white">From Compliance Risk to <span class="text-3xl md:text-5xl text-ark-brown lg:text-6xl">Business Assurance</span></h1>
+                        <div class="hero-text md:w-2xl">
+                            <h1 class="text-3xl md:text-5xl lg:text-7xl font-[garamond] text-white">From Compliance Risk to <span class="text-3xl md:text-5xl text-ark-brown lg:text-7xl">Business Assurance</span></h1>
                             <p class="text-white mt-4 text-xl font-[Montserrat]">PDPA Compliant: Turn records from risk to secure asset, fully Tanzania PDPA 2022 compliant.</p>
                         </div>
                         <div class="flex gap-4 pt-2 font-[Montserrat]">

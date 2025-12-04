@@ -1,4 +1,4 @@
-@if (!Request::is('/'))
+{{-- @if (!Request::is('/')) --}}
 
 @php
     $serviceRoutes = ['services.archiving', 'services.scanning', 'services.shredding'];
@@ -130,5 +130,5 @@
             </div>
         </div>
     </footer>
-@endif
+{{-- @endif --}}
 

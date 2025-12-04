@@ -49,5 +49,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 
-
+    @verbatim
+        <script type="application/ld+json" class="yoast-schema-graph">
+            {
+                "@context": "https://schema.org",
+                "@graph": [{
+                    "@type": "WebPage",
+                    "@id": "https://arkhive.africa/",
+                    "url": "https://arkhive.africa/",
+                    "name": "Arkhive Africa | Digital Marketing Agency Based In Dares Salaam, Tanzania",
+                    "isPartOf": {
+                        "@id": "https://arkhive.africa/#website"
+                    },
+                    "datePublished": "2020-06-30T16:18:56+00:00",
+                    "dateModified": "2023-03-23T02:08:19+00:00",
+                    "description": "A full-service branding, design, development, and advertising agency for ambitious, purpose-driven organizations. The future favours the bold",
+                    "breadcrumb": {
+                        "@id": "https://arkhive.africa/#breadcrumb"
+                    },
+                    "inLanguage": "en-US",
+                    "potentialAction": [{
+                        "@type": "ReadAction",
+                        "target": ["https://arkhive.africa/"]
+                    }]
+                }, {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://arkhive.africa/#breadcrumb",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home"
+                    }]
+                }, {
+                    "@type": "WebSite",
+                    "@id": "https://arkhive.africa/#website",
+                    "url": "https://arkhive.africa/",
+                    "name": "Arkhive Africa",
+                    "description": "Change is Good.",
+                    "potentialAction": [{
+                        "@type": "SearchAction",
+                        "target": {
+                            "@type": "EntryPoint",
+                            "urlTemplate": "https://arkhive.africa/?s={search_term_string}"
+                        },
+                        "query-input": "required name=search_term_string"
+                    }],
+                    "inLanguage": "en-US"
+                }]
+            }
+        </script>
+    @endverbatim
 </head>

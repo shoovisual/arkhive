@@ -10,9 +10,7 @@
 </div>
     @include('sections.header')
     @yield('content')
-    {{-- @if(!Request::is('/')) --}}
         @include('sections.footer')
-    {{-- @endif --}}
 
 
 

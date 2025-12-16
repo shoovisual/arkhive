@@ -48,7 +48,7 @@
             {{ json_decode($currentService->sub_services)[0]->title }}
         </h2>
         <div class="service-list col-span-4">
-            <ul class="text-xl grid grid-cols-1 md:grid-cols-2 font-[Montserrat] gap-y-2 text-white">
+            <ul class="text-xl grid grid-cols-1 md:grid-cols-2 font-[ubuntu] gap-y-2 text-white">
                 @foreach(json_decode($currentService->sub_services)[0]->features as $feature)
                 <li class="flex gap-x-4">
                     <span class="mt-2">
@@ -74,7 +74,7 @@
             {{ json_decode($currentService->sub_services)[1]->title }}
         </h2>
         <div class="service-list col-span-4">
-            <ul class="text-xl grid grid-cols-1 md:grid-cols-2 font-[Montserrat] gap-y-2 text-white">
+            <ul class="text-xl grid grid-cols-1 md:grid-cols-2 font-[ubuntu] gap-y-2 text-white">
                 @foreach(json_decode($currentService->sub_services)[1]->features as $feature)
                 <li class="flex gap-x-4">
                     <span class="mt-2">

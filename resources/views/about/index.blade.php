@@ -5,7 +5,7 @@
     <meta property="og:description" content="Learn more about Arkhive Africa, your trusted partner for document management solutions. We specialize in secure archiving, efficient bulk scanning, and confidential shredding services." />
     <meta property="og:keywords" content="About Arkhive Africa, Document management company, Secure archiving, Bulk scanning services, Confidential shredding, Document storage Africa" />
 @endsection
-@section('title', 'About Us')
+@section('title', 'About us')
 @section('content')
 
 
@@ -14,7 +14,7 @@
     <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
         <div class="relative md:flex anim-section w-auto lg:w-6xl flex-col px-5 z-10 text-white">
             <h2 class="text-[38px] anim-child md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">@yield('title')</h2>
-            <p class="text-xl md:w-xl font-[Montserrat] anim-child">We are dedicated to providing the best document management solutions for our clients.</p>
+            <p class="text-xl md:w-xl font-[ubuntu] anim-child">We are dedicated to providing the best document management solutions for our clients.</p>
         </div>
     </div>
 </div>
@@ -25,7 +25,7 @@
             <h2 class="md:text-6xl text-4xl text-ark-brown font-medium  mb-8">We are a document management company operating since 2016</h2>
 
             {{-- <div class="contact-btn">
-                <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[Montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
+                <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-ark-brown/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
             </div> --}}
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -38,32 +38,32 @@
             <img src="{{ asset('img/about-section.webp') }}" alt="Arkhive Document Storage" class="object-cover gsap-scroll-image md:h-[250px] lg:h-[400px]  w-full rounded-lg shadow-lg">
         </div>
         <div class="flex flex-col anim-section">
-            <p class="text-lg mb-6 md:w-xl text-white font-[Montserrat]">
+            <p class="text-lg mb-6 md:w-xl text-white font-[ubuntu]">
                 We are highly professional experts with a combined experience of over 10 years in the industry
             </p>
             <div class=" text-white py-10">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 stats-wrapper">
-                    <div class="stat-box text-center font-[Montserrat] px-6">
+                    <div class="stat-box text-center font-[ubuntu] px-6">
                         <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="2000000">0</div>
                         <div class="text-md">Stored <br />Documents</div>
                     </div>
-                    <div class="stat-box text-center font-[Montserrat] px-6 border-l md:border-x border-white">
+                    <div class="stat-box text-center font-[ubuntu] px-6 border-l md:border-x border-white">
                         <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="120">0</div>
                         <div class="text-md">Trusted <br /> Customers</div>
                     </div>
-                    <div class="stat-box text-center font-[Montserrat] px-6">
+                    <div class="stat-box text-center font-[ubuntu] px-6">
                         <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="10">0</div>
                         <div class="text-md">Years of <br /> Experience</div>
                     </div>
-                    <div class="stat-box text-center font-[Montserrat] px-6 border-l border-white">
+                    <div class="stat-box text-center font-[ubuntu] px-6 border-l border-white">
                         <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="8">0</div>
                         <div class="text-md">Industries <br /> Served</div>
                     </div>
                 </div>
 
                 <div class="flex flex-col md:justify-center lg:justify-start sm:flex-row gap-4">
-                    <a href="/contact" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/50 transition-colors rounded"> Let&apos;s Talk </a>
-                    <a href="#services" class="border border-ark-brown px-6 py-3 text-center font-[Montserrat] font-medium hover:bg-ark-brown/10 transition-colors rounded">Check Our Services</a>
+                    <a href="/contact" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[ubuntu] font-medium hover:bg-ark-brown/50 transition-colors rounded"> Let&apos;s Talk </a>
+                    <a href="#services" class="border border-ark-brown px-6 py-3 text-center font-[ubuntu] font-medium hover:bg-ark-brown/10 transition-colors rounded">Check Our Services</a>
                 </div>
             </div>
         </div>
@@ -75,10 +75,10 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div class="col-span-1">
-                <h3 class="text-6xl text-ark-brown font-medium mb-8">Our People</h3>
+                <h3 class="text-6xl text-ark-brown font-medium mb-8">Our people</h3>
             </div>
             <div class="col-span-4">
-                <p class="text-lg text-white font-[Montserrat] lg:px-6 lg:border-l border-ark-brown/40">
+                <p class="text-lg text-white font-[ubuntu] lg:px-6 lg:border-l border-ark-brown/40">
                     Our people are our strength. Our highly trained team manages your documents with expertise and meticulous attention to detail. Rigorous background checks, including police checks, ensure the utmost security and integrity for your sensitive information at every stage.
                 </p>
             </div>
@@ -109,13 +109,13 @@
 <div class="my-12">
     <div class="max-w-7xl mx-auto px-10">
         <div class="anim-section">
-        <h3 class="text-6xl text-ark-brown font-medium mb-8">Our Core Values</h3>
+        <h3 class="text-6xl text-ark-brown font-medium mb-8">Our core values</h3>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             @foreach($coreValues as $title => $description)
                 <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg">
                     <h4 class="text-[26px] text-ark-brown font-medium mb-4">{{ $title }}</h4>
-                    <p class="text-white font-regular font-[Montserrat]">{{ $description }}</p>
+                    <p class="text-white font-regular font-[ubuntu]">{{ $description }}</p>
                 </div>
             @endforeach
         </div>
@@ -128,12 +128,12 @@
     <div class="container flex justify-center py-5 items-center mx-auto">
         <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
             <div class="flex flex-col mb-8 md:mb-0 gap-y-4">
-                <h2 class="text-2xl text-ark-brown font-[Montserrat]">Got a document headache?</h2>
-                <h2 class="text-6xl text-white">Tell Us Everything.</h2>
+                <h2 class="text-2xl text-ark-brown font-[ubuntu]">Got a document headache?</h2>
+                <h2 class="text-6xl text-white">Tell us everything.</h2>
             </div>
             <div class="flex md:justify-center items-center">
                 <div class="contact-btn">
-                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[Montserrat] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
+                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
                 </div>
             </div>
         </div>
@@ -151,12 +151,12 @@
     <div class="container flex justify-center py-10 items-center mx-auto">
         <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
             <div class="flex flex-col gap-y-4">
-                <h2 class="text-2xl text-ark-brown font-[Montserrat]">Got a document headache?</h2>
-                <h2 class="text-6xl text-white">Tell Us Everything.</h2>
+                <h2 class="text-2xl text-ark-brown font-[ubuntu]">Got a document headache?</h2>
+                <h2 class="text-6xl text-white">Tell us everything.</h2>
             </div>
             <div class="flex md:justify-center md:mt-0 mt-8 items-center">
                 <div class="contact-btn">
-                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[Montserrat] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
+                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
                 </div>
             </div>
         </div>

@@ -36,7 +36,7 @@
             </div>
             <div class="navbar-right flex md:gap-x-[5em] gap-x-3 justify-center items-center">
                 <!-- New Button for Submitting Brief -->
-                <a href="{{ route('contact') }}" class="relative regular-button bg-ark-black hover:bg-[#121212] font-[Montserrat] w-fit group md:px-6 md:py-3 px-3 py-2 rounded-full border-ark-brown border text-white md:text-lg text-[14px] font-medium transition-all duration-300">
+                <a href="{{ route('contact') }}" class="relative regular-button bg-ark-black hover:bg-[#121212] font-[ubuntu] w-fit group md:px-6 md:py-3 px-3 py-2 rounded-full border-ark-brown border text-white md:text-lg text-[14px] font-medium transition-all duration-300">
                     Contact us
                 </a>
                 <div class="menu-opener cursor-pointer">
@@ -66,7 +66,7 @@
 </script>
 
 <!-- Full Screen Menu Overlay -->
-<div id="fullScreenMenu" class="fixed inset-0 bg-[#1B1B1B]/40 backdrop-blur-xs transform font-[Montserrat] translate-y-[-100%] transition-all duration-700 ease-in-out z-[9999]">
+<div id="fullScreenMenu" class="fixed inset-0 bg-[#1B1B1B]/40 backdrop-blur-xs transform font-[ubuntu] translate-y-[-100%] transition-all duration-700 ease-in-out z-[9999]">
     <div class="container h-full flex mx-auto w-full items-center flex-col">
         <div class="flex justify-between items-center py-8 px-4 md:px-12 lg:px-24">
             <span class="text-white/50 text-sm">Navigation</span>

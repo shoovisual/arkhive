@@ -26,7 +26,7 @@ class ServiceSeeder extends Seeder
                 'order' => 2,
                 'sub_services' => json_encode([
                     [
-                        'title' => 'Document Archiving',
+                        'title' => 'Document archiving',
                         'description' => 'Secure storage facilities for your physical documents with climate control and fire protection',
                         'features' => [
                             'Archiving is complex—ARKHIVE provides expert systematization and secure record safeguarding.',
@@ -37,7 +37,7 @@ class ServiceSeeder extends Seeder
                         ]
                     ],
                     [
-                        'title' => 'Document Retrieval',
+                        'title' => 'Document retrieval',
                         'description' => 'Cloud-based digital storage solutions with advanced encryption and backup systems',
                         'features' => [
                             'Our systems ensure fast and efficient retrieval, with secure delivery by our own trusted couriers.',
@@ -62,7 +62,7 @@ class ServiceSeeder extends Seeder
                 'order' => 3,
                 'sub_services' => json_encode([
                     [
-                        'title' => 'Bulk Document Scanning',
+                        'title' => 'Bulk document scanning',
                         'description' => 'High-volume document scanning services with OCR technology',
                         'features' => [
                             'Digitizes paper records and captures data (off or on-site).',
@@ -73,7 +73,7 @@ class ServiceSeeder extends Seeder
                         ]
                     ],
                     [
-                        'title' => 'Professional Indexing',
+                        'title' => 'Professional indexing',
                         'description' => 'Professional indexing services for easy document retrieval and management',
                         'features' => [
                             'ARKHIVE will advise and index your digitized records in line with your search and access requirements, giving you the ability to pull up a record in minutes.',
@@ -95,7 +95,7 @@ class ServiceSeeder extends Seeder
                 'order' => 1,
                 'sub_services' => json_encode([
                     [
-                        'title' => 'Secure Shredding',
+                        'title' => 'Secure shredding',
                         'description' => 'Confidential document destruction with certified security protocols',
                         'features' => [
                             'Cross-cut shredding technology',
@@ -105,7 +105,7 @@ class ServiceSeeder extends Seeder
                         ]
                     ],
                     [
-                        'title' => 'Document Recycling',
+                        'title' => 'Document recycling',
                         'description' => 'Environmentally responsible document disposal and recycling services',
                         'features' => [
                             'Eco-friendly processing',

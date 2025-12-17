@@ -26,16 +26,16 @@
     <div class="lg:max-w-7xl mx-auto lg:px-10 px-5 py-20 grid grid-cols-1 md:grid-cols-6 gap-12">
         <div class="contact-info col-span-2 flex flex-col gap-y-6">
             <h3 class="text-4xl text-ark-brown font-medium mb-4">Contact details</h3>
-            <div class="flex gap-x-4 text-white text-md font-[ubuntu]">
+            <div class="flex gap-x-4 text-white text-md font-[montserrat]">
                 <i class="bi bi-geo-alt-fill text-ark-brown text-2xl"></i>
                 <a href="https://maps.app.goo.gl/3NDbT5jLuoF39YsX6">Ubungo Business Park, Morogoro Road, P.O. BOX 79910, Dar es Salaam, Tanzania.</a>
             </div>
-            <div class="flex gap-x-4 text-white text-md font-[ubuntu]">
+            <div class="flex gap-x-4 text-white text-md font-[montserrat]">
                 <i class="bi bi-telephone-fill text-ark-brown text-2xl"></i>
                 <a href="https://wa.me/255747888555" target="_blank"><i class="bi bi-whatsapp text-ark-brown text-2xl"></i></a>
                 <a href="tel:+255747888555"> +255 747 888 555 </a>
             </div>
-            <div class="flex gap-x-4 text-white text-md font-[ubuntu]">
+            <div class="flex gap-x-4 text-white text-md font-[montserrat]">
                 <i class="bi bi-envelope-fill text-ark-brown text-2xl"></i>
                 <a href="mailto:clientservices@arkhive.africa">clientservices@arkhive.africa</a>
             </div>
@@ -50,7 +50,7 @@
         {{-- Contact Form Section (Placeholder) --}}
         <div class="contact-form col-span-4">
             <h3 class="text-4xl text-ark-brown font-medium mb-4">Send us a message</h3>
-            <p class="text-md text-white font-[ubuntu] mb-6">
+            <p class="text-md text-white font-[montserrat] mb-6">
                 Fill out the form below and we will get back to you as soon as possible.
             </p>
             @if(session('success'))
@@ -60,7 +60,7 @@
             @endif
 
             @if(session('error'))
-                <div class="bg-red-100 border font-[ubuntu] border-red-400 text-red-700 px-4 py-4 rounded relative mb-4" role="alert">
+                <div class="bg-red-100 border font-[montserrat] border-red-400 text-red-700 px-4 py-4 rounded relative mb-4" role="alert">
                     <span class="block sm:inline">{{ session('error') }}</span>
                 </div>
             @endif
@@ -75,15 +75,15 @@
                 </div>
             @endif
 
-            <form action="{{ route('contact.store') }}" method="POST" id="contact-form" class="flex font-[ubuntu] flex-col gap-y-4">
+            <form action="{{ route('contact.store') }}" method="POST" id="contact-form" class="flex font-[montserrat] flex-col gap-y-4">
                 @csrf
                 <div>
                     <label for="name" class="block text-white mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter Full Name" class="placeholder:font-[ubuntu] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
+                    <input type="text" id="name" name="name" placeholder="Enter Full Name" class="placeholder:font-[montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
                 </div>
                 <div>
                     <label for="email" class="block text-white mb-2">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email" class="placeholder:font-[ubuntu] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
+                    <input type="email" id="email" name="email" placeholder="Your email" class="placeholder:font-[montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50" required>
                 </div>
                 <div>
                     <label for="phone" class="block text-white mb-2">Phone Number</label>
@@ -94,12 +94,12 @@
                         placeholder="Enter Phone Number"
                         maxlength="13"
                         pattern="^\+?\d{9,13}$"
-                        class="placeholder:font-[ubuntu] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50"
+                        class="placeholder:font-[montserrat] placeholder:text-white/20 w-full px-4 py-4 rounded-md border shadow-lg bg-ark-brown/0 backdrop-blur-sm border-b border-ark-brown/30 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50"
                         autocomplete="off" required>
                 </div>
 
 
-                <div x-data="{ isOpen: false, selected: null, services: {{ json_encode($services->pluck('title')) }}, placeholder: 'Select Service' }" class="relative font-[ubuntu]">
+                <div x-data="{ isOpen: false, selected: null, services: {{ json_encode($services->pluck('title')) }}, placeholder: 'Select Service' }" class="relative font-[montserrat]">
 
                     <input type="hidden" name="service" x-model="selected" required>
 
@@ -137,7 +137,7 @@
 
 
 
-                <button type="submit" data-sitekey="{{ config('services.recaptcha.site_key') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown text-ark-black g-recaptcha font-medium px-4 py-3 rounded-md text-md cursor-pointer font-[ubuntu] hover:bg-ark-brown/80 transition duration-300 ease-in-out self-start">Send Message</button>
+                <button type="submit" data-sitekey="{{ config('services.recaptcha.site_key') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown text-ark-black g-recaptcha font-medium px-4 py-3 rounded-md text-md cursor-pointer font-[montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out self-start">Send Message</button>
             </form>
         </div>
     </div>

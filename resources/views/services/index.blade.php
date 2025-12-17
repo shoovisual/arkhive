@@ -12,7 +12,7 @@
         <div class="relative md:flex anim-section w-auto lg:w-6xl flex-col px-5 z-10 text-white">
             <h2 class="text-[38px]  md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">Our Services</h2>
             <p class="text-[29px] leading-[1] italic text-white md:w-xl md:text-left">"When you need a document, how long does it take to find it? Our clients' audits and critical operations are made smooth and faster with effective access to their documents"</p>
-            <p class="text-md mt-4 md:w-xl font-[ubuntu]"><span class="font-bold">Neema,</span> <span> Operations Manager.</span></p>
+            <p class="text-md mt-4 md:w-xl font-[montserrat]"><span class="font-bold">Neema,</span> <span> Operations Manager.</span></p>
         </div>
 
     </div>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="service-desc text-center px-5  md:mb-10 items-center justify-center">
                         <h3 class="text-[36px] text-ark-brown font-medium">{{ $service->title }}</h3>
-                        <p class="text-white font-[ubuntu] my-4  text-lg">{{ $service->description }}</p>
+                        <p class="text-white font-[montserrat] my-4  text-lg">{{ $service->description }}</p>
                     </div>
                     <div class="card-footer hidden md:block absolute  bottom-0 w-full py-3 right-0 rounded-b-xl text-center">
                         <p class="text-2xl text-white font-medium px-4 py-2 group-hover:ml-5 transition-all duration-300 rounded-md"><i class="bi bi-chevron-right"></i></p>
@@ -45,12 +45,12 @@
             <div class="container flex justify-center py-5 items-center mx-auto">
                 <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
                     <div class="flex flex-col mb-8 md:mb-0 gap-y-4">
-                        <h2 class="text-2xl text-ark-brown font-[ubuntu]">Got a document headache?</h2>
+                        <h2 class="text-2xl text-ark-brown font-[montserrat]">Got a document headache?</h2>
                         <h2 class="text-6xl text-white">Tell us everything.</h2>
                     </div>
                     <div class="flex md:justify-center items-center">
                         <div class="contact-btn">
-                            <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
+                            <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[montserrat] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>

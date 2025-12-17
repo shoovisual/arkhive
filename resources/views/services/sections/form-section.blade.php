@@ -11,10 +11,10 @@
 <div class="image-slider">
         <div class="max-w-7xl mx-auto p-4 lg:p-10">
             <div class="flex md:flex-row flex-col justify-center items-center gap-4">
-                {{-- <div class="image-card md:w-1/2 flex justify-center col-span-2 mx-auto item-center text-white gap-y-4 p-2 font-[ubuntu]">
+                {{-- <div class="image-card md:w-1/2 flex justify-center col-span-2 mx-auto item-center text-white gap-y-4 p-2 font-[montserrat]">
                     <img src="{{ $currentService->cover_image }}" alt="Document archiving" class="aspect-video rounded-lg object-cover">
                 </div> --}}
-                <div class="col-span-3 gap-y-4 font-[ubuntu]">
+                <div class="col-span-3 gap-y-4 font-[montserrat]">
                     <div class="contact-form">
                         @if(session('success'))
                             <div x-data="{ show: true }"
@@ -44,7 +44,7 @@
                             </div>
                         @endif
 
-                        <form action="{{ route('service.form.submit') }}" onsubmit="return validateForm(this)" id="service-form"  method="POST" class="flex form flex-col gap-y-6 font-[ubuntu]">
+                        <form action="{{ route('service.form.submit') }}" onsubmit="return validateForm(this)" id="service-form"  method="POST" class="flex form flex-col gap-y-6 font-[montserrat]">
                             @csrf
                             <input type="hidden" name="service_name" value="{{ $currentService->title }}">
 
@@ -73,7 +73,7 @@
                                 </div>
 
                                 {{-- Submit Button --}}
-                                <button type="submit" data-sitekey="{{ config('services.recaptcha.site_key') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown g-recaptcha text-black w-full font-medium px-6 py-3 rounded-md text-md cursor-pointer font-[ubuntu] shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
+                                <button type="submit" data-sitekey="{{ config('services.recaptcha.site_key') }}" data-callback='onSubmit' data-action='submit' class="bg-ark-brown g-recaptcha text-black w-full font-medium px-6 py-3 rounded-md text-md cursor-pointer font-[montserrat] shadow hover:bg-ark-brown transition duration-300 ease-in-out self-start">
                                     Get free consultation
                                 </button>
                             </div>

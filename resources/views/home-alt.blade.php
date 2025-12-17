@@ -18,18 +18,18 @@
             'img/archiving-cover.webp',
         ];
     @endphp
-    <section class="relative h-[95vh] w-full">
+    <section class="relative h-[90dvh] md:h-[95vh] w-full">
         <div class="hero-slider">
             @foreach($heroBackgrounds as $background)
                 <div class="hero-slide" style="background-image: url('{{ asset($background) }}');">
                     <div class="hero-overlay"></div>
                     <div class="hero-content text-white space-y-6">
                         <div class="hero-text">
-                            <h1 class="text-3xl md:text-6xl lg:text-[92px] font-[garamond] text-white">From compliance risk to <span class="text-3xl md:text-5xl text-ark-brown lg:text-[92px]">business assurance</span></h1>
-                            <p class="text-white mt-4 text-xl font-[ubuntu]">PDPA Compliant: Turn records from risk to secure asset, fully Tanzania PDPA 2022 compliant.</p>
+                            <h1 class="text-3xl md:text-6xl lg:text-[92px] font-[montserrat] text-white">From compliance risk to <span class="text-ark-brown">business assurance</span></h1>
+                            <p class="text-white mt-4 text-lg md:text-xl font-[montserrat]">PDPA Compliant: Turn records from risk to secure asset, fully Tanzania PDPA 2022 compliant.</p>
                         </div>
-                        <div class="flex gap-4 pt-2 font-[ubuntu]">
-                            <a href="{{ route('services.pdpc-compliance') }}" class="px-5 py-3 rounded-md border border-ark-brown bg-ark-black hover:bg-[#121212] text-white transition">Learn About PDPA Compliance</a>
+                        <div class="flex gap-4 pt-2 md:text-lg text-sm font-[montserrat]">
+                            <a href="{{ route('services.pdpc-compliance') }}" class="px-5 py-3 rounded-md border border-ark-brown bg-ark-black hover:bg-[#121212] text-white transition" title="Learn About PDPA Compliance">Read More</a>
                             <a href="{{ route('contact') }}" class="px-5 py-3 rounded-md border border-white/20 bg-ark-black/60 hover:bg-ark-black text-white transition">Get quote</a>
                         </div>
                     </div>
@@ -43,13 +43,13 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start anim-section">
             <div class="space-y-4 anim-child">
                 {{-- <h2 class="md:text-6xl text-4xl text-white font-medium  mb-8">HELLO!</h2> --}}
-                <h2 class="md:text-6xl text-4xl text-ark-brown font-medium  mb-8">We are a document management company operating since 2016</h2>
+                <h2 class="md:text-5xl text-2xl text-ark-brown font-medium  mb-8">We are a <span class="text-white"> document management company</span> operating since 2016</h2>
             </div>
             <div class="space-y-6 anim-child">
-                <p class="text-lg mb-6 md:w-xl text-white font-[ubuntu]">ARKHIVE: PDPC Compliant Records Management company based in Dar es Salaam. We secure your paper and digital assets through certified destruction, storage, and on time retrieval services</p>
-                <div class="flex flex-wrap gap-4 font-[ubuntu]">
+                <p class="text-lg mb-6 md:w-xl text-white font-[montserrat]">ARKHIVE: PDPC Compliant Records Management company based in Dar es Salaam. We secure your paper and digital assets through certified destruction, storage, and on time retrieval services</p>
+                <div class="flex flex-wrap gap-4 font-[montserrat]">
                     <a href="{{ route('services.pdpc-compliance') }}" class="px-5 py-3 rounded-md border border-ark-brown bg-ark-black/60 hover:bg-ark-black text-white">Learn More</a>
-                    <a href="{{ route('contact') }}" class="px-5 py-3 rounded-md border border-white/50 bg-ark-black hover:bg-[#121212] text-white">Contact us</a>
+                    <a href="{{ route('contact') }}" class="px-5 py-3 rounded-md border border-white/20 bg-ark-black hover:bg-[#121212] text-white">Contact us</a>
                 </div>
             </div>
         </div>
@@ -66,12 +66,12 @@
         <div class="container flex justify-center py-5 items-center mx-auto">
             <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
                 <div class="flex flex-col mb-8 md:mb-0 gap-y-4">
-                    <h2 class="text-2xl text-ark-brown font-[ubuntu]">Got a document headache?</h2>
+                    <h2 class="text-2xl text-ark-brown font-[montserrat]">Got a document headache?</h2>
                     <h2 class="text-6xl text-white">Tell us everything.</h2>
                 </div>
                 <div class="flex md:justify-center items-center">
                     <div class="contact-btn">
-                        <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
+                        <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[montserrat] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -161,8 +161,8 @@ $(function(){
   var enableDots = slideCount > 1;
 
   $slider.slick({
-    // dots: enableDots,
-    arrows: slideCount > 1,
+    dots: enableDots,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: slideCount > 1,

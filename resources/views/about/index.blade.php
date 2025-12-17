@@ -14,7 +14,7 @@
     <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
         <div class="relative md:flex anim-section w-auto lg:w-6xl flex-col px-5 z-10 text-white">
             <h2 class="text-[38px] anim-child md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">@yield('title')</h2>
-            <p class="text-xl md:w-xl font-[ubuntu] anim-child">We are dedicated to providing the best document management solutions for our clients.</p>
+            <p class="text-xl md:w-xl font-[montserrat] anim-child">We are dedicated to providing the best document management solutions for our clients.</p>
         </div>
     </div>
 </div>
@@ -22,10 +22,10 @@
 <div class="md:max-w-7xl py-10 mx-auto px-10">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-10">
         <div class="flex flex-col anim-section gap-y-4">
-            <h2 class="md:text-6xl text-4xl text-ark-brown font-medium  mb-8">We are a document management company operating since 2016</h2>
+            <h2 class="md:text-5xl text-2xl text-ark-brown font-medium  mb-8">We are a <span class="text-white"> document management company</span> operating since 2016</h2>
 
             {{-- <div class="contact-btn">
-                <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-ark-brown/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
+                <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
             </div> --}}
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -38,32 +38,32 @@
             <img src="{{ asset('img/about-section.webp') }}" alt="Arkhive Document Storage" class="object-cover gsap-scroll-image md:h-[250px] lg:h-[400px]  w-full rounded-lg shadow-lg">
         </div>
         <div class="flex flex-col anim-section">
-            <p class="text-lg mb-6 md:w-xl text-white font-[ubuntu]">
+            <p class="text-lg mb-6 md:w-xl text-white font-[montserrat]">
                 We are highly professional experts with a combined experience of over 10 years in the industry
             </p>
             <div class=" text-white py-10">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 stats-wrapper">
-                    <div class="stat-box text-center font-[ubuntu] px-6">
+                    <div class="stat-box text-center font-[montserrat] px-6">
                         <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="2000000">0</div>
                         <div class="text-md">Stored <br />Documents</div>
                     </div>
-                    <div class="stat-box text-center font-[ubuntu] px-6 border-l md:border-x border-white">
+                    <div class="stat-box text-center font-[montserrat] px-6 border-l md:border-x border-white">
                         <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="120">0</div>
                         <div class="text-md">Trusted <br /> Customers</div>
                     </div>
-                    <div class="stat-box text-center font-[ubuntu] px-6">
+                    <div class="stat-box text-center font-[montserrat] px-6">
                         <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="10">0</div>
                         <div class="text-md">Years of <br /> Experience</div>
                     </div>
-                    <div class="stat-box text-center font-[ubuntu] px-6 border-l border-white">
+                    <div class="stat-box text-center font-[montserrat] px-6 border-l border-white">
                         <div class="text-4xl text-ark-brown font-medium mb-2 count-up" data-count="8">0</div>
                         <div class="text-md">Industries <br /> Served</div>
                     </div>
                 </div>
 
                 <div class="flex flex-col md:justify-center lg:justify-start sm:flex-row gap-4">
-                    <a href="/contact" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[ubuntu] font-medium hover:bg-ark-brown/50 transition-colors rounded"> Let&apos;s Talk </a>
-                    <a href="#services" class="border border-ark-brown px-6 py-3 text-center font-[ubuntu] font-medium hover:bg-ark-brown/10 transition-colors rounded">Check Our Services</a>
+                    <a href="/contact" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[montserrat] font-medium hover:bg-ark-brown/50 transition-colors rounded"> Let&apos;s Talk </a>
+                    <a href="#services" class="border border-ark-brown px-6 py-3 text-center font-[montserrat] font-medium hover:bg-ark-brown/10 transition-colors rounded">Check Our Services</a>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                 <h3 class="text-6xl text-ark-brown font-medium mb-8">Our people</h3>
             </div>
             <div class="col-span-4">
-                <p class="text-lg text-white font-[ubuntu] lg:px-6 lg:border-l border-ark-brown/40">
+                <p class="text-lg text-white font-[montserrat] lg:px-6 lg:border-l border-ark-brown/40">
                     Our people are our strength. Our highly trained team manages your documents with expertise and meticulous attention to detail. Rigorous background checks, including police checks, ensure the utmost security and integrity for your sensitive information at every stage.
                 </p>
             </div>
@@ -91,14 +91,14 @@
                     <path d="M28.52,33.28h9.51c2.63,0,4.75-2.13,4.75-4.75v-9.51c0-2.63-2.13-4.75-4.75-4.75h-9.51v-2.38c0-3.94,3.19-7.13,7.13-7.13h2.38c1.31,0,2.38-1.06,2.38-2.38s-1.06-2.38-2.38-2.38h-2.38c-6.56,0-11.88,5.32-11.89,11.89v16.64c0,2.63,2.13,4.75,4.75,4.75ZM4.75,33.28h9.51c2.63,0,4.75-2.13,4.75-4.75v-9.51c0-2.63-2.13-4.75-4.75-4.75H4.75v-2.38c0-3.94,3.19-7.13,7.13-7.13h2.38c1.31,0,2.38-1.06,2.38-2.38s-1.06-2.38-2.38-2.38h-2.38C5.32,0,0,5.32,0,11.89v16.64c0,2.63,2.13,4.75,4.75,4.75Z"/>
                 </svg>
             </div>
-            <p class="md:text-5xl text-3xl text-white">Focused on <span class="text-ark-brown">enhancing</span> the efficiency and effectiveness of organizations by bringing <span class="text-ark-brown">Order</span> and <span class="text-ark-brown">Access</span> to recorded information. </p>
+            <p class="md:text-5xl text-xl text-white">Focused on <span class="text-ark-brown">enhancing</span> the efficiency and effectiveness of organizations by bringing <span class="text-ark-brown">Order</span> and <span class="text-ark-brown">Access</span> to recorded information. </p>
         </blockquote>
 
 
     </div>
 </section>
 
-<div class="h-[70vh] border-y border-ark-brown/10 bg-cover hidden lg:block bg-center bg-no-repeat bg-fixed" style="background-image: url('img/timeline-01.png');">
+<div class="h-[60vh] border-y border-ark-brown/10 bg-cover hidden lg:block bg-center bg-no-repeat" style="background-image: url('img/timeline-01.png');">
     {{-- <img src="{{ asset('img/timeline-01.png') }}" alt=""> --}}
 </div>
 
@@ -115,7 +115,7 @@
             @foreach($coreValues as $title => $description)
                 <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg">
                     <h4 class="text-[26px] text-ark-brown font-medium mb-4">{{ $title }}</h4>
-                    <p class="text-white font-regular font-[ubuntu]">{{ $description }}</p>
+                    <p class="text-white font-regular font-[montserrat]">{{ $description }}</p>
                 </div>
             @endforeach
         </div>
@@ -128,12 +128,12 @@
     <div class="container flex justify-center py-5 items-center mx-auto">
         <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
             <div class="flex flex-col mb-8 md:mb-0 gap-y-4">
-                <h2 class="text-2xl text-ark-brown font-[ubuntu]">Got a document headache?</h2>
+                <h2 class="text-2xl text-ark-brown font-[montserrat]">Got a document headache?</h2>
                 <h2 class="text-6xl text-white">Tell us everything.</h2>
             </div>
             <div class="flex md:justify-center items-center">
                 <div class="contact-btn">
-                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
+                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[montserrat] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
                 </div>
             </div>
         </div>
@@ -151,12 +151,12 @@
     <div class="container flex justify-center py-10 items-center mx-auto">
         <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
             <div class="flex flex-col gap-y-4">
-                <h2 class="text-2xl text-ark-brown font-[ubuntu]">Got a document headache?</h2>
+                <h2 class="text-2xl text-ark-brown font-[montserrat]">Got a document headache?</h2>
                 <h2 class="text-6xl text-white">Tell us everything.</h2>
             </div>
             <div class="flex md:justify-center md:mt-0 mt-8 items-center">
                 <div class="contact-btn">
-                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
+                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[montserrat] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
                 </div>
             </div>
         </div>

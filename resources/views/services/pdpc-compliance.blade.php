@@ -16,7 +16,7 @@
     <div class="flex justify-center md:flex-col items-center mx-auto w-full lg:max-w-6xl">
         <div class="relative md:flex anim-section w-auto lg:w-6xl flex-col px-5 z-10 text-white">
             <h2 class="text-[38px] anim-child md:text-left md:text-[64px] lg:w-xl md:leading-15 font-[500] mb-8">@yield('title')</h2>
-            <p class="text-xl md:w-xl font-[ubuntu] anim-child">From Compliance Risk to Business Assurance</p>
+            <p class="text-xl md:w-xl font-[montserrat] anim-child">From Compliance Risk to Business Assurance</p>
         </div>
     </div>
 </div>
@@ -32,10 +32,10 @@
             </div>
         </div>
         <div class="flex flex-col anim-section gap-y-4">
-            <p class="text-lg mb-6 md:w-xl text-white font-[ubuntu]">
+            <p class="text-lg mb-6 md:w-xl text-white font-[montserrat]">
                 The Tanzania Personal Data Protection Act (PDPA 2022) requires rigorous accountability and demonstrable protection of all personal and sensitive data. For businesses dealing with vast volumes of paper and digital records, compliance can feel overwhelming.
             </p>
-            <p class="text-lg mb-6 md:w-xl text-white font-[ubuntu]">
+            <p class="text-lg mb-6 md:w-xl text-white font-[montserrat]">
                 ARKHIVE simplifies this burden. By providing secure document scanning, indexing, storage, retrieval management and certified destruction, we directly support your compliance framework, transforming your records from a liability into a secure, accessible asset.
             </p>
         </div>
@@ -44,7 +44,7 @@
          {{-- Compliance Checklist Section --}}
          <div class="mb-16">
              <h3 class="text-4xl text-ark-brown font-medium mb-8">How ARKHIVE Directly Supports Your Compliance Checklist</h3>
-             <p class="text-lg text-white font-[ubuntu] mb-8 leading-relaxed">
+             <p class="text-lg text-white font-[montserrat] mb-8 leading-relaxed">
                  Your PDPA compliance requires action across several areas. ARKHIVE is your partner for key requirements under Data Security and Management and Data Subject Rights.
              </p>
              
@@ -53,67 +53,67 @@
                  <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
                      <h4 class="text-[26px] text-ark-brown font-medium mb-4">Manage Third-Party Providers</h4>
                      <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[ubuntu]">Licensed and Professional Secure Third-Party Partnership (DPA)</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
+                         <p class="text-white font-regular font-[montserrat]">Licensed and Professional Secure Third-Party Partnership (DPA)</p>
                      </div>
                      <div>
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[ubuntu]">We operate under a formal Data Processing Agreement (DPA) with defined security clauses, ensuring strict service provider management.</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">Compliance Benefit:</p>
+                         <p class="text-white font-regular font-[montserrat]">We operate under a formal Data Processing Agreement (DPA) with defined security clauses, ensuring strict service provider management.</p>
                      </div>
                  </div>
 
                  <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
                      <h4 class="text-[26px] text-ark-brown font-medium mb-4">Implement Security Measures</h4>
                      <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[ubuntu]">Certified Physical & Digital Security</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
+                         <p class="text-white font-regular font-[montserrat]">Certified Physical & Digital Security</p>
                      </div>
                      <div>
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[ubuntu]">Optimized storage conditions for paper records and advanced digital access controls/audit trails that prevent unauthorized access.</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">Compliance Benefit:</p>
+                         <p class="text-white font-regular font-[montserrat]">Optimized storage conditions for paper records and advanced digital access controls/audit trails that prevent unauthorized access.</p>
                      </div>
                  </div>
 
                  <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
                      <h4 class="text-[26px] text-ark-brown font-medium mb-4">Dispose of Data</h4>
                      <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[ubuntu]">Certified Document Destruction</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
+                         <p class="text-white font-regular font-[montserrat]">Certified Document Destruction</p>
                      </div>
                      <div>
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[ubuntu]">Auditable, secure shredding guarantees permanent and irrevocable destruction of unneeded personal data, fulfilling disposal policies. Certificate of Destruction provided.</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">Compliance Benefit:</p>
+                         <p class="text-white font-regular font-[montserrat]">Auditable, secure shredding guarantees permanent and irrevocable destruction of unneeded personal data, fulfilling disposal policies. Certificate of Destruction provided.</p>
                      </div>
                  </div>
 
                  <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
                      <h4 class="text-[26px] text-ark-brown font-medium mb-4">Respond to Access/Correction Requests</h4>
                      <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[ubuntu]">Bulk Scanning, Indexing, and Rapid Retrieval</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
+                         <p class="text-white font-regular font-[montserrat]">Bulk Scanning, Indexing, and Rapid Retrieval</p>
                      </div>
                      <div>
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[ubuntu]">Convert paperwork into searchable digital files for rapid retrieval, enabling a timely response to Data Subject Access Rights (DSARs).</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">Compliance Benefit:</p>
+                         <p class="text-white font-regular font-[montserrat]">Convert paperwork into searchable digital files for rapid retrieval, enabling a timely response to Data Subject Access Rights (DSARs).</p>
                      </div>
                  </div>
 
                  <div class="bg-ark-black/5 backdrop-blur-sm border border-ark-brown/40 p-6 rounded-lg shadow-lg anim-section hover:border-ark-brown/60 transition-colors">
                      <h4 class="text-[26px] text-ark-brown font-medium mb-4">Establish Data Retention Policies</h4>
                      <div class="mb-4">
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">ARKHIVE Service Solution:</p>
-                         <p class="text-white font-regular font-[ubuntu]">Policy-Driven Data Management</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">ARKHIVE Service Solution:</p>
+                         <p class="text-white font-regular font-[montserrat]">Policy-Driven Data Management</p>
                      </div>
                      <div>
-                         <p class="text-sm text-ark-brown/80 font-[ubuntu] mb-2 font-semibold">Compliance Benefit:</p>
-                         <p class="text-white font-regular font-[ubuntu]">Our system enforces your defined retention and disposal policies through system alerts and scheduled, certified destruction.</p>
+                         <p class="text-sm text-ark-brown/80 font-[montserrat] mb-2 font-semibold">Compliance Benefit:</p>
+                         <p class="text-white font-regular font-[montserrat]">Our system enforces your defined retention and disposal policies through system alerts and scheduled, certified destruction.</p>
                      </div>
                  </div>
 
                  {{-- CTA Card --}}
                  <div class="bg-ark-brown rounded-lg shadow-lg anim-section p-8 flex flex-col items-center justify-center text-center min-h-[300px]">
                      <h4 class="text-3xl md:text-4xl text-ark-black font-medium mb-6">Want to know more?</h4>
-                     <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 text-ark-black font-medium text-xl md:text-2xl font-[ubuntu] hover:opacity-80 transition-opacity">
+                     <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 text-ark-black font-medium text-xl md:text-2xl font-[montserrat] hover:opacity-80 transition-opacity">
                          Let's Talk
                          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -130,17 +130,17 @@
         </div>
         <div class="flex flex-col anim-section">
             <h3 class="text-4xl text-ark-brown font-medium mb-6">Need a Quick Compliance Overview?</h3>
-            <p class="text-lg mb-6 md:w-xl text-white font-[ubuntu]">
+            <p class="text-lg mb-6 md:w-xl text-white font-[montserrat]">
                 Download our one-page guide covering the key principles, data subject rights, and penalties under the Tanzanian PDPA.
             </p>
             <div class="flex flex-col md:justify-center lg:justify-start sm:flex-row gap-4">
-                <button type="button" id="downloadPDPCBtn" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[ubuntu] font-medium hover:bg-ark-brown/50 transition-colors rounded cursor-pointer inline-flex items-center justify-center gap-2">
+                <button type="button" id="downloadPDPCBtn" class="border border-ark-brown bg-ark-brown px-6 py-3 text-center font-[montserrat] font-medium hover:bg-ark-brown/50 transition-colors rounded cursor-pointer inline-flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
                     Download PDPA Guide
                 </button>
-                <!-- <a href="{{ route('contact') }}" class="border border-ark-brown px-6 py-3 text-center font-[ubuntu] font-medium hover:bg-ark-brown/10 transition-colors rounded">
+                <!-- <a href="{{ route('contact') }}" class="border border-ark-brown px-6 py-3 text-center font-[montserrat] font-medium hover:bg-ark-brown/10 transition-colors rounded">
                     Contact Us
                 </a> -->
             </div>
@@ -154,12 +154,12 @@
     <div class="container flex justify-center py-5 items-center mx-auto">
         <div class="relative grid grid-cols-1 md:grid-cols-2 px-5 z-10">
             <div class="flex flex-col mb-8 md:mb-0 gap-y-4">
-                <h2 class="text-2xl text-ark-brown font-[ubuntu]">Ready to Ensure PDPA Compliance?</h2>
+                <h2 class="text-2xl text-ark-brown font-[montserrat]">Ready to Ensure PDPA Compliance?</h2>
                 <h2 class="text-6xl text-white">Let's Talk.</h2>
             </div>
             <div class="flex md:justify-center items-center">
                 <div class="contact-btn">
-                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
+                    <a href="{{ route('contact') }}" class="bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[montserrat] hover:bg-white/80 transition duration-300 ease-in-out">Contact Us <i class="bi ml-3 bi-chevron-right"></i></a>
                 </div>
             </div>
         </div>
@@ -177,9 +177,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
             </div>
-            <h3 class="text-2xl text-ark-brown font-medium mb-4 font-[ubuntu]">Thank You!</h3>
-            <p class="text-white font-[ubuntu] mb-6">Thank you for downloading the PDPA Awareness Guide.</p>
-            <button id="closeSuccessPopup" class="bg-ark-brown text-ark-black font-medium px-8 py-3 rounded-md text-lg font-[ubuntu] hover:bg-ark-brown/80 transition duration-300 ease-in-out">
+            <h3 class="text-2xl text-ark-brown font-medium mb-4 font-[montserrat]">Thank You!</h3>
+            <p class="text-white font-[montserrat] mb-6">Thank you for downloading the PDPA Awareness Guide.</p>
+            <button id="closeSuccessPopup" class="bg-ark-brown text-ark-black font-medium px-8 py-3 rounded-md text-lg font-[montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out">
                 Close
             </button>
         </div>
@@ -195,24 +195,24 @@
             </svg>
         </button>
         
-        <h3 class="text-2xl text-ark-brown font-medium mb-4 font-[ubuntu]">Download PDPA Awareness Guide</h3>
-        <p class="text-white font-[ubuntu] mb-6">Please provide your email address to download the PDPA Awareness Guide.</p>
+        <h3 class="text-2xl text-ark-brown font-medium mb-4 font-[montserrat]">Download PDPA Awareness Guide</h3>
+        <p class="text-white font-[montserrat] mb-6">Please provide your email address to download the PDPA Awareness Guide.</p>
         
         <form id="downloadForm" class="space-y-4">
             @csrf
             <div>
-                <label for="email" class="block text-white mb-2 font-[ubuntu]">Email Address</label>
+                <label for="email" class="block text-white mb-2 font-[montserrat]">Email Address</label>
                 <input type="email" id="email" name="email" required 
-                    class="w-full px-4 py-3 rounded-md border border-ark-brown/30 bg-ark-black/50 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50 font-[ubuntu]" 
+                    class="w-full px-4 py-3 rounded-md border border-ark-brown/30 bg-ark-black/50 text-white focus:outline-none focus:ring-2 focus:ring-ark-brown/50 font-[montserrat]" 
                     placeholder="your.email@example.com">
-                <div id="emailError" class="text-red-400 text-sm mt-1 hidden font-[ubuntu]"></div>
+                <div id="emailError" class="text-red-400 text-sm mt-1 hidden font-[montserrat]"></div>
             </div>
             
             <div class="flex gap-4">
-                <button type="submit" id="submitDownload" class="flex-1 bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[ubuntu] hover:bg-ark-brown/80 transition duration-300 ease-in-out">
+                <button type="submit" id="submitDownload" class="flex-1 bg-ark-brown text-ark-black font-medium px-6 py-3 rounded-md text-lg font-[montserrat] hover:bg-ark-brown/80 transition duration-300 ease-in-out">
                     Download
                 </button>
-                <button type="button" id="cancelDownload" class="px-6 py-3 rounded-md border border-white/20 bg-ark-black/60 hover:bg-ark-black text-white transition font-[ubuntu]">
+                <button type="button" id="cancelDownload" class="px-6 py-3 rounded-md border border-white/20 bg-ark-black/60 hover:bg-ark-black text-white transition font-[montserrat]">
                     Cancel
                 </button>
             </div>

@@ -73,7 +73,7 @@
                 <!-- Contact Section -->
                 <div>
                     <h3 class="text-2xl font-medium mb-4">Contact</h3>
-                    <div class="space-y-2 font-[ubuntu]">
+                    <div class="space-y-2 font-[montserrat]">
                         <div class="phone mt-6 group flex items-center gap-4">
                             <a href="tel:+255747888555" class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-telephone-fill"></i></a>
                             <a href="https://wa.me/255747888555" target="_blank" class="icon"><i class="px-[14px] py-[12px] rounded-full bg-ark-brown text-ark-black text-lg bi bi-whatsapp"></i></a>
@@ -102,7 +102,7 @@
                 <!-- Legal Section -->
                 <div>
                     <h3 class="text-2xl font-medium mb-4">Legal</h3>
-                    <ul class="space-y-2 block md:flex md:space-x-6 lg:block font-[ubuntu]">
+                    <ul class="space-y-2 block md:flex md:space-x-6 lg:block font-[montserrat]">
                         <li><a href="{{ route('legal.terms') }}" class="hover:text-ark-brown transition-all duration-300">Terms & Conditions</a></li>
                         <li><a href="{{ route('legal.privacy') }}" class="hover:text-ark-brown transition-all duration-300">Privacy Policy</a></li>
                         <li><a href="{{ route('legal.cookie') }}" class="hover:text-ark-brown transition-all duration-300">Cookie Policy</a></li>
@@ -114,7 +114,7 @@
             <!-- Bottom Section -->
             <div class="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <!-- Copyright -->
-                <div class="text-md font-[ubuntu]">
+                <div class="text-md font-[montserrat]">
                     <p class="text-white/70 text-sm">©{{ date('Y') }} All Rights Reserved. Arkhive Africa</p>
                 </div>
 

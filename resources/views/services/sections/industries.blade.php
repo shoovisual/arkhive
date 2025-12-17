@@ -2,7 +2,7 @@
 <div class="bg-ark-black/10 py-16">
     <div class="max-w-7xl mx-auto px-10">
         <div class="">
-            <h2 class="md:text-6xl text-4xl text-ark-brown  font-medium mb-4">Working with a wide <br> range of sectors</h2>
+            <h2 class="md:text-6xl text-4xl text-ark-brown  font-medium mb-4">Working with a <span class="text-white">wide <br> range of sectors</span> </h2>
             <p class="text-lg mb-5  font-[montserrat] text-white">We work with a wide range of sectors, including:</p>
         </div>
         <div class="grid grid-cols-1 items-center md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-8">

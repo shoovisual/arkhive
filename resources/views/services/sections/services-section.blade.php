@@ -10,7 +10,7 @@
                 </p>
             </div>
             <div class="quote mt-10 md:mt-3">
-                <p class="text-md md:text-[24px] leading-[1] italic text-white md:w-xl md:text-left">"When you need a document, how long does it take to find it? Our clients' audits and critical operations are made smooth and faster with effective access to their documents"</p>
+                <p class="text-sm md:text-[21px] leading-[1] italic text-white md:w-xl md:text-left">"When you need a document, how long does it take to find it? Our clients' audits and critical operations are made smooth and faster with effective access to their documents"</p>
                 <p class="text-md mt-4 md:w-xl font-[montserrat] text-white"><span class="font-bold">Neema,</span> <span> Operations Manager.</span></p>
             </div>
         </div>

@@ -162,7 +162,7 @@ $(function(){
 
   $slider.slick({
     dots: enableDots,
-    arrows: true,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: slideCount > 1,

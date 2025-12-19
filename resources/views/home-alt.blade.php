@@ -15,13 +15,13 @@
         $heroBackgrounds = [
             'img/hero-bg.webp',
             'img/document_storage.webp',
-            'img/archiving-cover.webp',
+            'img/arkhive-cover.webp',
         ];
     @endphp
     <section class="relative h-[90dvh] md:h-[95vh] w-full">
         <div class="hero-slider">
             @foreach($heroBackgrounds as $background)
-                <div class="hero-slide" style="background-image: url('{{ asset($background) }}');">
+                <div class="hero-slide" style="background-image: url('{{ asset($background) }}'); background-size: cover; background-position: bottom">
                     <div class="hero-overlay"></div>
                     <div class="hero-content text-white space-y-6">
                         <div class="hero-text">

@@ -45,7 +45,7 @@ class NotSpamEmail implements Rule
         // No, local part can be long.
 
         // Check for suspicious patterns like alternating dot and char n.e.m.e...
-        if (preg_match('/(\w\.)+\w/', $localPart) && substr_count($localPart, '.') > 3) {
+        if (preg_match('/(\w\.)+\w/', $localPart) && substr_count($localPart, '.') > 1) {
              // matches "a.b.c.d"
              return false;
         }

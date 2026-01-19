@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
 use App\Rules\reCaptcha;
+use App\Rules\NotSpamName;
+use App\Rules\NotSpamEmail;
 use Newsletter;
 
 
@@ -17,8 +19,8 @@ class ServiceFormController extends Controller
 {
     // Validate the request data
     $validatedData = $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|max:255',
+        'name' => ['required', 'string', 'max:255', new NotSpamName()],
+        'email' => ['required', 'email', 'max:255', new NotSpamEmail()],
         'phone' => 'required|string|max:20',
         'service_name' => 'required|string|max:255',
         'g-recaptcha-response' => ['required', new reCaptcha()],

@@ -9,6 +9,8 @@ use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use App\Rules\reCaptcha;
+use App\Rules\NotSpamName;
+use App\Rules\NotSpamEmail;
 
 class ContactController extends Controller
 {
@@ -24,8 +26,8 @@ class ContactController extends Controller
     {
         // Validate the request data
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'name' => ['required', 'string', 'max:255', new NotSpamName()],
+            'email' => ['required', 'email', 'max:255', new NotSpamEmail()],
             'phone' => 'required|string|max:13|regex:/^\+?[0-9]{9,13}$/|',
             'service' => 'required|string|exists:services,title',
             'message' => 'required|string|max:1000',

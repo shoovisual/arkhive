@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use App\Mail\PDPCDownloadMail;
+use App\Rules\NotSpamEmail;
 
 class ServicesController extends Controller
 {
@@ -89,7 +90,7 @@ class ServicesController extends Controller
     {
         // Validate email
         $validatedData = $request->validate([
-            'email' => 'required|email|max:255',
+            'email' => ['required', 'email', 'max:255', new NotSpamEmail()],
         ]);
 
         try {
